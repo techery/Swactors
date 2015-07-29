@@ -4,6 +4,7 @@ struct Session {
     let token:String
 }
 
+
 class SessionActor : Actor {
     
     struct Login : Request {
@@ -13,14 +14,16 @@ class SessionActor : Actor {
         typealias Result = Session
     }
     
-    struct Logout {
+    class Logout {
         
     }
     
     let apiActor:ActorRef<APIActor>
+    let mappingActor:ActorRef<MappingActor>
     
     required init(_ sys: ActorSystem) {
         apiActor = sys.actorOf(APIActor)
+        mappingActor = sys.actorOf(MappingActor)
         super.init(sys)
     }
     
@@ -32,9 +35,12 @@ class SessionActor : Actor {
         
         on { (msg:Login) -> Future<Login.Result> in
             let f = self.apiActor.ask(APIActor.Get(path:msg.email))
-            return f.map({ (value) -> Session in
-                return Session(token: value)
+            return f.map({ (result) -> Session in
+                return Session(token: result)
             })
+//            return f.onSuccess({ (payload) -> Future<Session> in
+//                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
+//            })
         }
     }
 }

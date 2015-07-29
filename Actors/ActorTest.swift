@@ -10,6 +10,7 @@ class Playground {
     let system = MainActorSystem() { builder in
         builder.add(SessionActor)
         builder.add(APIActor)
+        builder.add(MappingActor)
     }
     
     let sessionActor:ActorRef<SessionActor>
@@ -30,12 +31,8 @@ class Playground {
     }
     
     func main() {
-        let apiFuture = sessionActor.ask(SessionActor.Login(email: "http://localhost:8080", password: "1"))
-        
-        apiFuture.onSuccess { (result) -> Void in
-            println(result)
-        }.onFail { (error) -> Void in
-            println(error)
+        for index in 0...10000 {
+            self.sessionActor.ask(SessionActor.Login(email: "https://facebook.com", password: "1"))
         }
     }
 }

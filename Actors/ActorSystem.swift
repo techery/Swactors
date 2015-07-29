@@ -5,11 +5,13 @@ public protocol ActorSystem {
     func addActorProvider(actorProvider:ActorProvider)
 }
 
-public class MainActorSystem : ActorSystem {
+@objc
+public class MainActorSystem : NSObject, ActorSystem {
     
     var actorProviders:[String:ActorProvider] = [String:ActorProvider]()
     
     init(_ builder:(builder:ActorSystemBuilder) -> Void) {
+        super.init()
         builder(builder: ActorSystemBuilder(self))
     }
     
@@ -31,7 +33,7 @@ public class MainActorSystem : ActorSystem {
     }
 }
 
-
+@objc
 public class ActorSystemBuilder {
     let system:ActorSystem
     

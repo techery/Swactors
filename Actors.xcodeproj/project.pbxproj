@@ -15,9 +15,6 @@
 		AD5C634C1B67867700129B5C /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C634B1B67867700129B5C /* Actor.swift */; };
 		AD5C634E1B67868700129B5C /* ActorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C634D1B67868700129B5C /* ActorSystem.swift */; };
 		AD94783D1B67B55B00AFD645 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478281B67B55B00AFD645 /* Executor.swift */; };
-		AD94783E1B67B55B00AFD645 /* NSData-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782A1B67B55B00AFD645 /* NSData-Ext.swift */; };
-		AD94783F1B67B55B00AFD645 /* NSFileManager-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782B1B67B55B00AFD645 /* NSFileManager-Ext.swift */; };
-		AD9478401B67B55B00AFD645 /* NSOperation+FutureKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782C1B67B55B00AFD645 /* NSOperation+FutureKit.swift */; };
 		AD9478411B67B55B00AFD645 /* FTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782E1B67B55B00AFD645 /* FTask.swift */; };
 		AD9478421B67B55B00AFD645 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782F1B67B55B00AFD645 /* Future.swift */; };
 		AD9478431B67B55B00AFD645 /* FutureBatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478301B67B55B00AFD645 /* FutureBatch.swift */; };
@@ -43,6 +40,9 @@
 		AD9478651B6815B500AFD645 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785F1B6815B500AFD645 /* HTTPTask.swift */; };
 		AD9478661B6815B500AFD645 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478601B6815B500AFD645 /* HTTPUpload.swift */; };
 		AD9478681B68165B00AFD645 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478671B68165B00AFD645 /* APIActor.swift */; };
+		AD94786A1B69000200AFD645 /* MappingActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478691B69000200AFD645 /* MappingActor.swift */; };
+		AD94786D1B6961D200AFD645 /* NSActors.m in Sources */ = {isa = PBXBuildFile; fileRef = AD94786C1B6961D200AFD645 /* NSActors.m */; };
+		AD94786F1B69654300AFD645 /* Obbcj.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94786E1B69654300AFD645 /* Obbcj.swift */; };
 		ADC415621B66C390001830DC /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC415611B66C390001830DC /* ActorTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +78,6 @@
 		AD5C634B1B67867700129B5C /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		AD5C634D1B67868700129B5C /* ActorSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorSystem.swift; sourceTree = "<group>"; };
 		AD9478281B67B55B00AFD645 /* Executor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
-		AD94782A1B67B55B00AFD645 /* NSData-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData-Ext.swift"; sourceTree = "<group>"; };
-		AD94782B1B67B55B00AFD645 /* NSFileManager-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager-Ext.swift"; sourceTree = "<group>"; };
 		AD94782C1B67B55B00AFD645 /* NSOperation+FutureKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOperation+FutureKit.swift"; sourceTree = "<group>"; };
 		AD94782E1B67B55B00AFD645 /* FTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTask.swift; sourceTree = "<group>"; };
 		AD94782F1B67B55B00AFD645 /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
@@ -108,6 +106,10 @@
 		AD94785F1B6815B500AFD645 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		AD9478601B6815B500AFD645 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
 		AD9478671B68165B00AFD645 /* APIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
+		AD9478691B69000200AFD645 /* MappingActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActor.swift; sourceTree = "<group>"; };
+		AD94786B1B6961D200AFD645 /* NSActors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSActors.h; sourceTree = "<group>"; };
+		AD94786C1B6961D200AFD645 /* NSActors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSActors.m; sourceTree = "<group>"; };
+		AD94786E1B69654300AFD645 /* Obbcj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obbcj.swift; sourceTree = "<group>"; };
 		ADC415611B66C390001830DC /* ActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,8 +219,6 @@
 		AD9478291B67B55B00AFD645 /* FoundationExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				AD94782A1B67B55B00AFD645 /* NSData-Ext.swift */,
-				AD94782B1B67B55B00AFD645 /* NSFileManager-Ext.swift */,
 				AD94782C1B67B55B00AFD645 /* NSOperation+FutureKit.swift */,
 			);
 			path = FoundationExtensions;
@@ -247,9 +247,13 @@
 		AD9478571B68124100AFD645 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AD94786B1B6961D200AFD645 /* NSActors.h */,
+				AD94786C1B6961D200AFD645 /* NSActors.m */,
 				ADC415611B66C390001830DC /* ActorTest.swift */,
 				AD9478581B68124700AFD645 /* SessionActor.swift */,
 				AD9478671B68165B00AFD645 /* APIActor.swift */,
+				AD9478691B69000200AFD645 /* MappingActor.swift */,
+				AD94786E1B69654300AFD645 /* Obbcj.swift */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -398,7 +402,6 @@
 			files = (
 				AD9478641B6815B500AFD645 /* HTTPStatusCode.swift in Sources */,
 				AD94784A1B67B55B00AFD645 /* NSObject-Ext-ThreadSafe.swift in Sources */,
-				AD9478401B67B55B00AFD645 /* NSOperation+FutureKit.swift in Sources */,
 				AD9478501B67F57400AFD645 /* MessageHandler.swift in Sources */,
 				AD9478491B67B55B00AFD645 /* ExtensionVars.swift in Sources */,
 				ADC415621B66C390001830DC /* ActorTest.swift in Sources */,
@@ -407,7 +410,6 @@
 				AD94784B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m in Sources */,
 				AD9478561B67FAD900AFD645 /* ActorOperation.swift in Sources */,
 				AD9478611B6815B500AFD645 /* HTTPRequestSerializer.swift in Sources */,
-				AD94783F1B67B55B00AFD645 /* NSFileManager-Ext.swift in Sources */,
 				AD9478481B67B55B00AFD645 /* SyncWaitHandler.swift in Sources */,
 				AD9478431B67B55B00AFD645 /* FutureBatch.swift in Sources */,
 				AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */,
@@ -417,15 +419,17 @@
 				AD94784C1B67B55B00AFD645 /* OSAtomicInt.swift in Sources */,
 				AD94784E1B67D76600AFD645 /* ActorProvider.swift in Sources */,
 				AD9478521B67F58900AFD645 /* MessageDispatcher.swift in Sources */,
+				AD94786D1B6961D200AFD645 /* NSActors.m in Sources */,
 				AD9478591B68124700AFD645 /* SessionActor.swift in Sources */,
 				AD5C634C1B67867700129B5C /* Actor.swift in Sources */,
 				AD9478441B67B55B00AFD645 /* FutureFIFO.swift in Sources */,
 				AD9478621B6815B500AFD645 /* HTTPResponseSerializer.swift in Sources */,
 				AD5C634E1B67868700129B5C /* ActorSystem.swift in Sources */,
+				AD94786F1B69654300AFD645 /* Obbcj.swift in Sources */,
 				AD9478421B67B55B00AFD645 /* Future.swift in Sources */,
-				AD94783E1B67B55B00AFD645 /* NSData-Ext.swift in Sources */,
 				AD9478651B6815B500AFD645 /* HTTPTask.swift in Sources */,
 				AD9478411B67B55B00AFD645 /* FTask.swift in Sources */,
+				AD94786A1B69000200AFD645 /* MappingActor.swift in Sources */,
 				AD5903821B6021D600D41DA0 /* AppDelegate.swift in Sources */,
 				AD9478541B67FAD000AFD645 /* ActorExecutor.swift in Sources */,
 				AD94783D1B67B55B00AFD645 /* Executor.swift in Sources */,

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>502CA6DF-FB28-432A-9402-3D3A558739E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D50E65D3DCF5F0A7DD4EFE8C389995A606CDE435</key>
+		<string>github.com:techery/Swactors.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Actors.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D50E65D3DCF5F0A7DD4EFE8C389995A606CDE435</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:techery/Swactors.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D50E65D3DCF5F0A7DD4EFE8C389995A606CDE435</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D50E65D3DCF5F0A7DD4EFE8C389995A606CDE435</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Actors</string>
+		</dict>
+	</array>
+</dict>
+</plist>

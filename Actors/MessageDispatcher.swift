@@ -7,18 +7,26 @@ public protocol Request {
 class MessageDispatcher {
     var messageHandlers:[String:MessageHandler] = [String:MessageHandler]()
     
-    func on<T>(handler:(msg:T) -> Void) {
+    func classNameFromType<T>(type:T.Type) -> String {
         let className: String = reflect(T.self).summary
+        
+//        let genericPartStart = className.rangeOfString("<", options: NSStringCompareOptions., range: <#Range<String.Index>?#>, locale: <#NSLocale?#>)
+        
+        return className
+    }
+    
+    func on<T>(handler:(msg:T) -> Void) {
+        let className: String = classNameFromType(T.self)
         messageHandlers[className] = VoidMessageHandler(handler)
     }
     
     func on<T:Request>(handler:(msg:T) -> Future<T.Result>) {
-        let className: String = reflect(T.self).summary
+        let className: String = classNameFromType(T.self)
         messageHandlers[className] = FutureMessageHandler(handler)
     }
     
     func on<T:Request>(handler:(msg:T) -> T.Result) {
-        let className: String = reflect(T.self).summary
+        let className: String = classNameFromType(T.self)
         messageHandlers[className] = ResultMessageHandler(handler)
     }
     

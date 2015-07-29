@@ -2,6 +2,8 @@ import Foundation
 
 class APIActor: Actor {
     
+    let operationQueue:NSOperationQueue = NSOperationQueue()
+    
     struct Get : Request {
         let path:String
         
@@ -9,6 +11,8 @@ class APIActor: Actor {
     }
     
     override func setup() {
+        operationQueue.maxConcurrentOperationCount = 1
+        
         on { (msg:Get) -> Future<Get.Result> in
             return self.get(msg)
         }
@@ -18,7 +22,7 @@ class APIActor: Actor {
         let promise = Promise<String>()
         var request = HTTPTask()
         
-        request.GET(message.path, parameters: nil, completionHandler: {(response: HTTPResponse) in
+        var operation = request.create(message.path, method: .GET, parameters: nil) { (response) -> Void in
             if let err = response.error {
                 promise.completeWithFail(err)
                 return
@@ -34,7 +38,11 @@ class APIActor: Actor {
             }
             
             promise.completeWithFail("Empty body received")
-        })
+        }
+        
+        if let op = operation {
+            operationQueue.addOperation(op)
+        }
         
         return promise.future
     }

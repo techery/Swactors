@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../NSActors.h">
+   </FileRef>
+   <FileRef
+      location = "group:../NSActors.m">
+   </FileRef>
+   <FileRef
       location = "self:Actors.xcodeproj">
    </FileRef>
 </Workspace>
