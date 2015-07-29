@@ -9,11 +9,41 @@
 /* Begin PBXBuildFile section */
 		AD5903821B6021D600D41DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903811B6021D600D41DA0 /* AppDelegate.swift */; };
 		AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903831B6021D600D41DA0 /* ViewController.swift */; };
-		AD5903871B6021D600D41DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5903851B6021D600D41DA0 /* Main.storyboard */; };
 		AD5903891B6021D600D41DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5903881B6021D600D41DA0 /* Assets.xcassets */; };
-		AD59038C1B6021D600D41DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD59038A1B6021D600D41DA0 /* LaunchScreen.storyboard */; };
 		AD5903971B6021D600D41DA0 /* ActorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903961B6021D600D41DA0 /* ActorsTests.swift */; };
 		AD5903A21B6021D600D41DA0 /* ActorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903A11B6021D600D41DA0 /* ActorsUITests.swift */; };
+		AD5C634C1B67867700129B5C /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C634B1B67867700129B5C /* Actor.swift */; };
+		AD5C634E1B67868700129B5C /* ActorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5C634D1B67868700129B5C /* ActorSystem.swift */; };
+		AD94783D1B67B55B00AFD645 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478281B67B55B00AFD645 /* Executor.swift */; };
+		AD94783E1B67B55B00AFD645 /* NSData-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782A1B67B55B00AFD645 /* NSData-Ext.swift */; };
+		AD94783F1B67B55B00AFD645 /* NSFileManager-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782B1B67B55B00AFD645 /* NSFileManager-Ext.swift */; };
+		AD9478401B67B55B00AFD645 /* NSOperation+FutureKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782C1B67B55B00AFD645 /* NSOperation+FutureKit.swift */; };
+		AD9478411B67B55B00AFD645 /* FTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782E1B67B55B00AFD645 /* FTask.swift */; };
+		AD9478421B67B55B00AFD645 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94782F1B67B55B00AFD645 /* Future.swift */; };
+		AD9478431B67B55B00AFD645 /* FutureBatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478301B67B55B00AFD645 /* FutureBatch.swift */; };
+		AD9478441B67B55B00AFD645 /* FutureFIFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478311B67B55B00AFD645 /* FutureFIFO.swift */; };
+		AD9478451B67B55B00AFD645 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD9478331B67B55B00AFD645 /* Info.plist */; };
+		AD9478461B67B55B00AFD645 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478341B67B55B00AFD645 /* Promise.swift */; };
+		AD9478471B67B55B00AFD645 /* Synchronization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478351B67B55B00AFD645 /* Synchronization.swift */; };
+		AD9478481B67B55B00AFD645 /* SyncWaitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478361B67B55B00AFD645 /* SyncWaitHandler.swift */; };
+		AD9478491B67B55B00AFD645 /* ExtensionVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478381B67B55B00AFD645 /* ExtensionVars.swift */; };
+		AD94784A1B67B55B00AFD645 /* NSObject-Ext-ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478391B67B55B00AFD645 /* NSObject-Ext-ThreadSafe.swift */; };
+		AD94784B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD94783B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m */; };
+		AD94784C1B67B55B00AFD645 /* OSAtomicInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94783C1B67B55B00AFD645 /* OSAtomicInt.swift */; };
+		AD94784E1B67D76600AFD645 /* ActorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94784D1B67D76600AFD645 /* ActorProvider.swift */; };
+		AD9478501B67F57400AFD645 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94784F1B67F57400AFD645 /* MessageHandler.swift */; };
+		AD9478521B67F58900AFD645 /* MessageDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478511B67F58900AFD645 /* MessageDispatcher.swift */; };
+		AD9478541B67FAD000AFD645 /* ActorExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478531B67FAD000AFD645 /* ActorExecutor.swift */; };
+		AD9478561B67FAD900AFD645 /* ActorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478551B67FAD900AFD645 /* ActorOperation.swift */; };
+		AD9478591B68124700AFD645 /* SessionActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478581B68124700AFD645 /* SessionActor.swift */; };
+		AD9478611B6815B500AFD645 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785B1B6815B500AFD645 /* HTTPRequestSerializer.swift */; };
+		AD9478621B6815B500AFD645 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785C1B6815B500AFD645 /* HTTPResponseSerializer.swift */; };
+		AD9478631B6815B500AFD645 /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785D1B6815B500AFD645 /* HTTPSecurity.swift */; };
+		AD9478641B6815B500AFD645 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785E1B6815B500AFD645 /* HTTPStatusCode.swift */; };
+		AD9478651B6815B500AFD645 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785F1B6815B500AFD645 /* HTTPTask.swift */; };
+		AD9478661B6815B500AFD645 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478601B6815B500AFD645 /* HTTPUpload.swift */; };
+		AD9478681B68165B00AFD645 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478671B68165B00AFD645 /* APIActor.swift */; };
+		ADC415621B66C390001830DC /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC415611B66C390001830DC /* ActorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +67,7 @@
 		AD59037E1B6021D600D41DA0 /* Actors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5903811B6021D600D41DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5903831B6021D600D41DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD5903861B6021D600D41DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5903881B6021D600D41DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD59038B1B6021D600D41DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD59038D1B6021D600D41DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD5903921B6021D600D41DA0 /* ActorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5903961B6021D600D41DA0 /* ActorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsTests.swift; sourceTree = "<group>"; };
@@ -47,6 +75,40 @@
 		AD59039D1B6021D600D41DA0 /* ActorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5903A11B6021D600D41DA0 /* ActorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsUITests.swift; sourceTree = "<group>"; };
 		AD5903A31B6021D600D41DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD5C634B1B67867700129B5C /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		AD5C634D1B67868700129B5C /* ActorSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorSystem.swift; sourceTree = "<group>"; };
+		AD9478281B67B55B00AFD645 /* Executor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
+		AD94782A1B67B55B00AFD645 /* NSData-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData-Ext.swift"; sourceTree = "<group>"; };
+		AD94782B1B67B55B00AFD645 /* NSFileManager-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager-Ext.swift"; sourceTree = "<group>"; };
+		AD94782C1B67B55B00AFD645 /* NSOperation+FutureKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOperation+FutureKit.swift"; sourceTree = "<group>"; };
+		AD94782E1B67B55B00AFD645 /* FTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTask.swift; sourceTree = "<group>"; };
+		AD94782F1B67B55B00AFD645 /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		AD9478301B67B55B00AFD645 /* FutureBatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureBatch.swift; sourceTree = "<group>"; };
+		AD9478311B67B55B00AFD645 /* FutureFIFO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureFIFO.swift; sourceTree = "<group>"; };
+		AD9478321B67B55B00AFD645 /* FutureKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FutureKit.h; sourceTree = "<group>"; };
+		AD9478331B67B55B00AFD645 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9478341B67B55B00AFD645 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		AD9478351B67B55B00AFD645 /* Synchronization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synchronization.swift; sourceTree = "<group>"; };
+		AD9478361B67B55B00AFD645 /* SyncWaitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncWaitHandler.swift; sourceTree = "<group>"; };
+		AD9478381B67B55B00AFD645 /* ExtensionVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionVars.swift; sourceTree = "<group>"; };
+		AD9478391B67B55B00AFD645 /* NSObject-Ext-ThreadSafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-Ext-ThreadSafe.swift"; sourceTree = "<group>"; };
+		AD94783A1B67B55B00AFD645 /* ObjectiveCExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCExceptionHandler.h; sourceTree = "<group>"; };
+		AD94783B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCExceptionHandler.m; sourceTree = "<group>"; };
+		AD94783C1B67B55B00AFD645 /* OSAtomicInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSAtomicInt.swift; sourceTree = "<group>"; };
+		AD94784D1B67D76600AFD645 /* ActorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorProvider.swift; sourceTree = "<group>"; };
+		AD94784F1B67F57400AFD645 /* MessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
+		AD9478511B67F58900AFD645 /* MessageDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDispatcher.swift; sourceTree = "<group>"; };
+		AD9478531B67FAD000AFD645 /* ActorExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorExecutor.swift; sourceTree = "<group>"; };
+		AD9478551B67FAD900AFD645 /* ActorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorOperation.swift; sourceTree = "<group>"; };
+		AD9478581B68124700AFD645 /* SessionActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionActor.swift; sourceTree = "<group>"; };
+		AD94785B1B6815B500AFD645 /* HTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		AD94785C1B6815B500AFD645 /* HTTPResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseSerializer.swift; sourceTree = "<group>"; };
+		AD94785D1B6815B500AFD645 /* HTTPSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSecurity.swift; sourceTree = "<group>"; };
+		AD94785E1B6815B500AFD645 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		AD94785F1B6815B500AFD645 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		AD9478601B6815B500AFD645 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
+		AD9478671B68165B00AFD645 /* APIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
+		ADC415611B66C390001830DC /* ActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +139,8 @@
 		AD5903751B6021D500D41DA0 = {
 			isa = PBXGroup;
 			children = (
+				AD94785A1B6815B500AFD645 /* SwiftHTTP */,
+				AD9478271B67B55B00AFD645 /* FutureKit */,
 				AD5903801B6021D600D41DA0 /* Actors */,
 				AD5903951B6021D600D41DA0 /* ActorsTests */,
 				AD5903A01B6021D600D41DA0 /* ActorsUITests */,
@@ -97,12 +161,18 @@
 		AD5903801B6021D600D41DA0 /* Actors */ = {
 			isa = PBXGroup;
 			children = (
+				AD9478571B68124100AFD645 /* Demo */,
 				AD5903811B6021D600D41DA0 /* AppDelegate.swift */,
 				AD5903831B6021D600D41DA0 /* ViewController.swift */,
-				AD5903851B6021D600D41DA0 /* Main.storyboard */,
 				AD5903881B6021D600D41DA0 /* Assets.xcassets */,
-				AD59038A1B6021D600D41DA0 /* LaunchScreen.storyboard */,
 				AD59038D1B6021D600D41DA0 /* Info.plist */,
+				AD5C634B1B67867700129B5C /* Actor.swift */,
+				AD5C634D1B67868700129B5C /* ActorSystem.swift */,
+				AD94784D1B67D76600AFD645 /* ActorProvider.swift */,
+				AD94784F1B67F57400AFD645 /* MessageHandler.swift */,
+				AD9478511B67F58900AFD645 /* MessageDispatcher.swift */,
+				AD9478531B67FAD000AFD645 /* ActorExecutor.swift */,
+				AD9478551B67FAD900AFD645 /* ActorOperation.swift */,
 			);
 			path = Actors;
 			sourceTree = "<group>";
@@ -123,6 +193,78 @@
 				AD5903A31B6021D600D41DA0 /* Info.plist */,
 			);
 			path = ActorsUITests;
+			sourceTree = "<group>";
+		};
+		AD9478271B67B55B00AFD645 /* FutureKit */ = {
+			isa = PBXGroup;
+			children = (
+				AD9478281B67B55B00AFD645 /* Executor.swift */,
+				AD9478291B67B55B00AFD645 /* FoundationExtensions */,
+				AD94782D1B67B55B00AFD645 /* FTask */,
+				AD94782F1B67B55B00AFD645 /* Future.swift */,
+				AD9478301B67B55B00AFD645 /* FutureBatch.swift */,
+				AD9478311B67B55B00AFD645 /* FutureFIFO.swift */,
+				AD9478321B67B55B00AFD645 /* FutureKit.h */,
+				AD9478331B67B55B00AFD645 /* Info.plist */,
+				AD9478341B67B55B00AFD645 /* Promise.swift */,
+				AD9478351B67B55B00AFD645 /* Synchronization.swift */,
+				AD9478361B67B55B00AFD645 /* SyncWaitHandler.swift */,
+				AD9478371B67B55B00AFD645 /* Utils */,
+			);
+			path = FutureKit;
+			sourceTree = "<group>";
+		};
+		AD9478291B67B55B00AFD645 /* FoundationExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD94782A1B67B55B00AFD645 /* NSData-Ext.swift */,
+				AD94782B1B67B55B00AFD645 /* NSFileManager-Ext.swift */,
+				AD94782C1B67B55B00AFD645 /* NSOperation+FutureKit.swift */,
+			);
+			path = FoundationExtensions;
+			sourceTree = "<group>";
+		};
+		AD94782D1B67B55B00AFD645 /* FTask */ = {
+			isa = PBXGroup;
+			children = (
+				AD94782E1B67B55B00AFD645 /* FTask.swift */,
+			);
+			path = FTask;
+			sourceTree = "<group>";
+		};
+		AD9478371B67B55B00AFD645 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD9478381B67B55B00AFD645 /* ExtensionVars.swift */,
+				AD9478391B67B55B00AFD645 /* NSObject-Ext-ThreadSafe.swift */,
+				AD94783A1B67B55B00AFD645 /* ObjectiveCExceptionHandler.h */,
+				AD94783B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m */,
+				AD94783C1B67B55B00AFD645 /* OSAtomicInt.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AD9478571B68124100AFD645 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				ADC415611B66C390001830DC /* ActorTest.swift */,
+				AD9478581B68124700AFD645 /* SessionActor.swift */,
+				AD9478671B68165B00AFD645 /* APIActor.swift */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		AD94785A1B6815B500AFD645 /* SwiftHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				AD94785B1B6815B500AFD645 /* HTTPRequestSerializer.swift */,
+				AD94785C1B6815B500AFD645 /* HTTPResponseSerializer.swift */,
+				AD94785D1B6815B500AFD645 /* HTTPSecurity.swift */,
+				AD94785E1B6815B500AFD645 /* HTTPStatusCode.swift */,
+				AD94785F1B6815B500AFD645 /* HTTPTask.swift */,
+				AD9478601B6815B500AFD645 /* HTTPUpload.swift */,
+			);
+			path = SwiftHTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD59038C1B6021D600D41DA0 /* LaunchScreen.storyboard in Resources */,
+				AD9478451B67B55B00AFD645 /* Info.plist in Resources */,
 				AD5903891B6021D600D41DA0 /* Assets.xcassets in Resources */,
-				AD5903871B6021D600D41DA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +396,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9478641B6815B500AFD645 /* HTTPStatusCode.swift in Sources */,
+				AD94784A1B67B55B00AFD645 /* NSObject-Ext-ThreadSafe.swift in Sources */,
+				AD9478401B67B55B00AFD645 /* NSOperation+FutureKit.swift in Sources */,
+				AD9478501B67F57400AFD645 /* MessageHandler.swift in Sources */,
+				AD9478491B67B55B00AFD645 /* ExtensionVars.swift in Sources */,
+				ADC415621B66C390001830DC /* ActorTest.swift in Sources */,
+				AD9478471B67B55B00AFD645 /* Synchronization.swift in Sources */,
+				AD9478461B67B55B00AFD645 /* Promise.swift in Sources */,
+				AD94784B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m in Sources */,
+				AD9478561B67FAD900AFD645 /* ActorOperation.swift in Sources */,
+				AD9478611B6815B500AFD645 /* HTTPRequestSerializer.swift in Sources */,
+				AD94783F1B67B55B00AFD645 /* NSFileManager-Ext.swift in Sources */,
+				AD9478481B67B55B00AFD645 /* SyncWaitHandler.swift in Sources */,
+				AD9478431B67B55B00AFD645 /* FutureBatch.swift in Sources */,
 				AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */,
+				AD9478681B68165B00AFD645 /* APIActor.swift in Sources */,
+				AD9478631B6815B500AFD645 /* HTTPSecurity.swift in Sources */,
+				AD9478661B6815B500AFD645 /* HTTPUpload.swift in Sources */,
+				AD94784C1B67B55B00AFD645 /* OSAtomicInt.swift in Sources */,
+				AD94784E1B67D76600AFD645 /* ActorProvider.swift in Sources */,
+				AD9478521B67F58900AFD645 /* MessageDispatcher.swift in Sources */,
+				AD9478591B68124700AFD645 /* SessionActor.swift in Sources */,
+				AD5C634C1B67867700129B5C /* Actor.swift in Sources */,
+				AD9478441B67B55B00AFD645 /* FutureFIFO.swift in Sources */,
+				AD9478621B6815B500AFD645 /* HTTPResponseSerializer.swift in Sources */,
+				AD5C634E1B67868700129B5C /* ActorSystem.swift in Sources */,
+				AD9478421B67B55B00AFD645 /* Future.swift in Sources */,
+				AD94783E1B67B55B00AFD645 /* NSData-Ext.swift in Sources */,
+				AD9478651B6815B500AFD645 /* HTTPTask.swift in Sources */,
+				AD9478411B67B55B00AFD645 /* FTask.swift in Sources */,
 				AD5903821B6021D600D41DA0 /* AppDelegate.swift in Sources */,
+				AD9478541B67FAD000AFD645 /* ActorExecutor.swift in Sources */,
+				AD94783D1B67B55B00AFD645 /* Executor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,25 +462,6 @@
 			targetProxy = AD59039E1B6021D600D41DA0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AD5903851B6021D600D41DA0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD5903861B6021D600D41DA0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AD59038A1B6021D600D41DA0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD59038B1B6021D600D41DA0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AD5903A41B6021D600D41DA0 /* Debug */ = {
@@ -399,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Actors/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.Actors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Actors/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.Actors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,6 +638,7 @@
 				AD5903A81B6021D600D41DA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD5903A91B6021D600D41DA0 /* Build configuration list for PBXNativeTarget "ActorsTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +647,7 @@
 				AD5903AB1B6021D600D41DA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD5903AC1B6021D600D41DA0 /* Build configuration list for PBXNativeTarget "ActorsUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +656,7 @@
 				AD5903AE1B6021D600D41DA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
