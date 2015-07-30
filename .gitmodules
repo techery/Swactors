@@ -1,0 +1,9 @@
+[submodule "Argo"]
+	path = Argo
+	url = https://github.com/thoughtbot/Argo.git
+[submodule "Box"]
+	path = Box
+	url = https://github.com/robrix/Box.git
+[submodule "Runes"]
+	path = Runes
+	url = https://github.com/thoughtbot/Runes.git

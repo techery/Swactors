@@ -1,9 +1,5 @@
 import Foundation
 
-struct Session {
-    let token:String
-}
-
 
 class SessionActor : Actor {
     
@@ -35,12 +31,9 @@ class SessionActor : Actor {
         
         on { (msg:Login) -> Future<Login.Result> in
             let f = self.apiActor.ask(APIActor.Get(path:msg.email))
-            return f.map({ (result) -> Session in
-                return Session(token: result)
+            return f.onSuccess({ (payload) -> Future<Session> in
+                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
             })
-//            return f.onSuccess({ (payload) -> Future<Session> in
-//                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
-//            })
         }
     }
 }
