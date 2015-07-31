@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol ActorSystem {
-    func actorOf<A:Actor>(actorType:A.Type) -> ActorRef<ActorHandler>
+    func actorOf<A:Actor>(actorType:A.Type) -> ActorRef<A>
     func addActorProvider(actorProvider:ActorProvider)
 }
 
@@ -15,7 +15,7 @@ public class MainActorSystem : NSObject, ActorSystem {
         builder(builder: ActorSystemBuilder(self))
     }
     
-    private func getActor<A:Actor>(actorType:A.Type)  -> ActorHandler {
+    private func getActor<A:Actor>(actorType:A.Type)  -> A {
         let actorName = NSStringFromClass(actorType)
         
         let actorProvider = actorProviders[actorName]!
@@ -28,9 +28,8 @@ public class MainActorSystem : NSObject, ActorSystem {
         actorProviders[actorName] = actorProvider
     }
     
-    public func actorOf<A:Actor>(actorType:A.Type) -> ActorRef<ActorHandler> {
-        let handler = getActor(A)
-        return ActorRef(handler)
+    public func actorOf<A:Actor>(actorType:A.Type) -> ActorRef<A> {
+        return ActorRef(getActor(actorType))
     }
 }
 

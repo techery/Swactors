@@ -42,8 +42,8 @@ public class Actor : ActorHandler {
 public class ActorRef<A:ActorHandler> {
     private let actor:ActorHandler;
     
-    init(_ anActor:ActorHandler) {
-        actor = anActor
+    init(_ anActor:A) {
+        actor = ActorExecutor(anActor)
     }
     
     func tell(msg:Any) {
