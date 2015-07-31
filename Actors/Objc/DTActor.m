@@ -53,12 +53,12 @@
 
 
 @interface DTActorRef()
-@property (nonatomic, strong) DTActor *actor;
+@property (nonatomic, strong) id<DTActorHandler> actor;
 @end
 
 @implementation DTActorRef
 
-- (instancetype)initWithActor:(DTActor *)actor {
+- (instancetype)initWithActor:(id<DTActorHandler>)actor {
     if (self = [super init]) {
         _actor = actor;
     }

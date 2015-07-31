@@ -15,7 +15,7 @@
 #pragma mark -  DTActorSystem
 
 - (DTActorRef *)actorOfClass:(Class)class {
-    DTActor *actor = [self getActor:class];
+    id<DTActorHandler> actor = [self getActor:class];
     DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor];
     return actorRef;
 }
@@ -27,7 +27,7 @@
 
 #pragma mark - Private
 
-- (DTActor *)getActor:(Class)actorType {
+- (id<DTActorHandler>)getActor:(Class)actorType {
     NSString *key = NSStringFromClass(actorType);
     id<DTActorProvider> actorProvider = _actorsProviders[key];
     return [actorProvider create:self];

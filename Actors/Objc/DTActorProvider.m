@@ -5,10 +5,11 @@
 
 #import "DTActorProvider.h"
 #import "DTActor.h"
+#import "DTActorExecutor.h"
 
 
 @interface DTSingletonActorProvider ()
-@property (nonatomic, readwrite) DTActor *actor;
+@property (nonatomic, readwrite) id<DTActorHandler> actorHandler;
 @end
 
 @implementation DTSingletonActorProvider
@@ -27,12 +28,14 @@
 
 #pragma mark - DTActorProvider
 
-- (DTActor *)create:(id <DTActorSystem>)actorSystem {
-    if (!self.actor) {
-        self.actor = [self.actorType actorWithActorSystem:actorSystem];
+- (id<DTActorHandler>)create:(id <DTActorSystem>)actorSystem {
+    if (!self.actorHandler) {
+        DTActor *actor = [self.actorType actorWithActorSystem:actorSystem];
+        DTActorExecutor *executor = [DTActorExecutor executorWithActorHandler:actor];
+        self.actorHandler = executor;
     }
 
-    return self.actor;
+    return self.actorHandler;
 }
 
 @end

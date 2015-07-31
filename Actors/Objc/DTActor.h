@@ -44,7 +44,7 @@
 
 @interface DTActorRef: NSObject
 
-- (instancetype)initWithActor:(DTActor *)actor;
+- (instancetype)initWithActor:(id<DTActorHandler>)actor;
 
 - (void)tell:(id)message;
 - (RXPromise *)ask:(id)message;
