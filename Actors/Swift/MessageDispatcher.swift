@@ -5,7 +5,7 @@ public protocol Request {
 }
 
 class MessageDispatcher {
-    var messageHandlers:[String:MessageHandler] = [String:MessageHandler]()
+    var messageHandlers:[String:DTMessageHandler] = [String: DTMessageHandler]()
     
     func classNameFromType<T>(type:T.Type) -> String {
         let className: String = reflect(T.self).summary

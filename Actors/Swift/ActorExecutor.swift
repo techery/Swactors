@@ -13,10 +13,10 @@ public class ActorExecutor : ActorHandler {
     }
     
     public func handle(msg:Any) -> Future<Any> {
-        let opetation = ActorOperation(msg, actorHandler)
+        let operation = ActorOperation(msg, actorHandler)
         
-        operationQueue.addOperation(opetation)
+        operationQueue.addOperation(operation)
         
-        return opetation.future
+        return operation.future
     }
 }

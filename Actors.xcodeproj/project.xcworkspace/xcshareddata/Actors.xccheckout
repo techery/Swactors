@@ -24,11 +24,11 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0A5C3A6DB1EA9211CEFA5384E9882B4D710699A4</key>
-		<string>../../Runes/</string>
+		<string>../../Runes</string>
 		<key>39CB70283A1C33AFB5FF861E924945826EDC74FE</key>
 		<string>../..Argo</string>
 		<key>57C931977B7D2307CC013C2BD93F90CF7C676790</key>
-		<string>../../Box/</string>
+		<string>../../Box</string>
 		<key>D50E65D3DCF5F0A7DD4EFE8C389995A606CDE435</key>
 		<string>../..</string>
 	</dict>

@@ -1,10 +1,10 @@
 import Foundation
 
-protocol MessageHandler {
+protocol DTMessageHandler {
     func handle(message:Any) -> Future<Any>
 }
 
-class VoidMessageHandler<T> : MessageHandler {
+class VoidMessageHandler<T> : DTMessageHandler {
     let handler:(msg:T) -> Void
     
     init(_ h:(msg:T) -> Void) {
@@ -21,7 +21,7 @@ class VoidMessageHandler<T> : MessageHandler {
     }
 }
 
-class FutureMessageHandler<I, O> : MessageHandler {
+class FutureMessageHandler<I, O> : DTMessageHandler {
     let handler:(msg:I) -> Future<O>
     
     init(_ h:(msg:I) -> Future<O>) {
@@ -37,7 +37,7 @@ class FutureMessageHandler<I, O> : MessageHandler {
     }
 }
 
-class ResultMessageHandler<I, O> : MessageHandler {
+class ResultMessageHandler<I, O> : DTMessageHandler {
     let handler:(msg:I) -> O
     
     init(_ h:(msg:I) -> O) {
