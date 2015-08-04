@@ -20,16 +20,22 @@
     self = [super init];
     if (self) {
         _actorSystem = actorSystem;
+        _dispatcher = [DTMessageDispatcher new];
+        [self setup];
     }
 
     return self;
 }
 
-+ (instancetype)actorWithActorSystem:(id <DTActorSystem>)actorSystem {
++ (instancetype)actorWithActorSystem:(id<DTActorSystem>)actorSystem {
     return [[self alloc] initWithActorSystem:actorSystem];
 }
 
 #pragma mark - Public
+
+- (void)setup {
+    
+}
 
 - (void)on:(Class)messageType do:(DTVoidMessageBlock)handler {
     [self.dispatcher on:messageType do:handler];

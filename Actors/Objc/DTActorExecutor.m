@@ -14,10 +14,13 @@
 
 @implementation DTActorExecutor
 
-- (instancetype)initWithActorHandler:(id <DTActorHandler>)actorHandler {
+- (instancetype)initWithActorHandler:(id<DTActorHandler>)actorHandler {
     self = [super init];
     if (self) {
-        self.actorHandler = actorHandler;
+        _operationQueue = [NSOperationQueue new];
+        _operationQueue.maxConcurrentOperationCount = 1;
+        
+        _actorHandler = actorHandler;
     }
 
     return self;

@@ -34,9 +34,11 @@
 - (instancetype)initWithActorSystem:(id <DTActorSystem>)actorSystem;
 + (instancetype)actorWithActorSystem:(id <DTActorSystem>)actorSystem;
 
-- (void)on:(Class)messageType do:(DTVoidMessageBlock)handler;
-- (void)on:(Class)messageType doFuture:(DTFutureMessageBlock)handler;
-- (void)on:(Class)messageType doResult:(DTResultMessageBlock)handler;
+- (void)setup;
+
+- (void)on:(Class)messageType do:(void (^)(id))handler;
+- (void)on:(Class)messageType doFuture:(RXPromise *(^)(id))handler;
+- (void)on:(Class)messageType doResult:(id (^)(id))handler;
 
 @end
 

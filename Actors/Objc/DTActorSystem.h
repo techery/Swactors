@@ -17,9 +17,6 @@
 
 @end
 
-@interface DTMainActorSystem : NSObject <DTActorSystem>
-@end
-
 @interface DTActorSystemBuilder: NSObject
 
 @property (nonatomic, readonly) id<DTActorSystem> actorSystem;
@@ -29,4 +26,8 @@
 
 - (void)addActor:(Class)actorType;
 
+@end
+
+@interface DTMainActorSystem : NSObject <DTActorSystem>
+- (instancetype)initWithBuilderBlock:(void (^)(DTActorSystemBuilder *))builderBlock;
 @end

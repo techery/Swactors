@@ -12,6 +12,16 @@
     NSMutableDictionary *_actorsProviders;
 }
 
+- (instancetype)initWithBuilderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
+    if (self = [super init]) {
+        _actorsProviders = [NSMutableDictionary new];
+        DTActorSystemBuilder *bulder = [[DTActorSystemBuilder alloc] initWithActorSystem:self];
+        builderBlock(bulder);
+    }
+    
+    return self;
+}
+
 #pragma mark -  DTActorSystem
 
 - (DTActorRef *)actorOfClass:(Class)class {
