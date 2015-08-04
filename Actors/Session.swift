@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct Session {
-    let token:String
+@objc
+class Session: NSObject {
+    var token:String = ""
+    
+    override init() {}
 }
 

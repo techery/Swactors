@@ -9,12 +9,16 @@
 #import "NSActors.h"
 #import "Actors-Swift.h"
 
+#import "DTActor.h"
+
 @implementation NSActors
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        DTActor *a;
+        
         ObjcX *objc = [[ObjcX alloc] init];
         
         int len = [objc get:@"qwdqd"];

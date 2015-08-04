@@ -8,6 +8,6 @@
 
 class DActor: DTActor {
     func on<I:AnyObject>(handler:(msg:I) -> RXPromise) {
-        on(I.self, doFuture: handler)
+//        on(I.self, doFuture: handler)
     }
 }

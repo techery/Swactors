@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
+		4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */; };
+		4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */; };
+		4D32D64E1B70B1AF00044180 /* EKManagedObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6341B70B1AF00044180 /* EKManagedObjectMapping.m */; };
+		4D32D64F1B70B1AF00044180 /* EKManagedObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6361B70B1AF00044180 /* EKManagedObjectModel.m */; };
+		4D32D6501B70B1AF00044180 /* EKMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6381B70B1AF00044180 /* EKMapper.m */; };
+		4D32D6511B70B1AF00044180 /* EKMappingBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D63A1B70B1AF00044180 /* EKMappingBlocks.m */; };
+		4D32D6521B70B1AF00044180 /* EKObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D63D1B70B1AF00044180 /* EKObjectMapping.m */; };
+		4D32D6531B70B1AF00044180 /* EKObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D63F1B70B1AF00044180 /* EKObjectModel.m */; };
+		4D32D6541B70B1AF00044180 /* EKPropertyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6411B70B1AF00044180 /* EKPropertyHelper.m */; };
+		4D32D6551B70B1AF00044180 /* EKPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6431B70B1AF00044180 /* EKPropertyMapping.m */; };
+		4D32D6561B70B1AF00044180 /* EKRelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6451B70B1AF00044180 /* EKRelationshipMapping.m */; };
+		4D32D6571B70B1AF00044180 /* EKSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6471B70B1AF00044180 /* EKSerializer.m */; };
+		4D32D6581B70B1AF00044180 /* NSArray+FlattenArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */; };
+		4D32D6591B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */; };
+		4D32D65B1B70B33C00044180 /* Session+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D65A1B70B33C00044180 /* Session+EasyMapping.swift */; };
+		4D32D65D1B70DE7C00044180 /* MappingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D65C1B70DE7C00044180 /* MappingProvider.swift */; };
 		4DB985631B69D57600958268 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB985621B69D57600958268 /* Session.swift */; };
 		AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903831B6021D600D41DA0 /* ViewController.swift */; };
 		AD5903891B6021D600D41DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5903881B6021D600D41DA0 /* Assets.xcassets */; };
@@ -82,6 +98,38 @@
 
 /* Begin PBXFileReference section */
 		4D32D6221B6FBA0100044180 /* DActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActor.swift; sourceTree = "<group>"; };
+		4D32D62E1B70B1AF00044180 /* EasyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyMapping.h; sourceTree = "<group>"; };
+		4D32D62F1B70B1AF00044180 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKCoreDataImporter.h; sourceTree = "<group>"; };
+		4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKCoreDataImporter.m; sourceTree = "<group>"; };
+		4D32D6311B70B1AF00044180 /* EKManagedObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectMapper.h; sourceTree = "<group>"; };
+		4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKManagedObjectMapper.m; sourceTree = "<group>"; };
+		4D32D6331B70B1AF00044180 /* EKManagedObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectMapping.h; sourceTree = "<group>"; };
+		4D32D6341B70B1AF00044180 /* EKManagedObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKManagedObjectMapping.m; sourceTree = "<group>"; };
+		4D32D6351B70B1AF00044180 /* EKManagedObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectModel.h; sourceTree = "<group>"; };
+		4D32D6361B70B1AF00044180 /* EKManagedObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKManagedObjectModel.m; sourceTree = "<group>"; };
+		4D32D6371B70B1AF00044180 /* EKMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKMapper.h; sourceTree = "<group>"; };
+		4D32D6381B70B1AF00044180 /* EKMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKMapper.m; sourceTree = "<group>"; };
+		4D32D6391B70B1AF00044180 /* EKMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKMappingBlocks.h; sourceTree = "<group>"; };
+		4D32D63A1B70B1AF00044180 /* EKMappingBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKMappingBlocks.m; sourceTree = "<group>"; };
+		4D32D63B1B70B1AF00044180 /* EKMappingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKMappingProtocol.h; sourceTree = "<group>"; };
+		4D32D63C1B70B1AF00044180 /* EKObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKObjectMapping.h; sourceTree = "<group>"; };
+		4D32D63D1B70B1AF00044180 /* EKObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKObjectMapping.m; sourceTree = "<group>"; };
+		4D32D63E1B70B1AF00044180 /* EKObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKObjectModel.h; sourceTree = "<group>"; };
+		4D32D63F1B70B1AF00044180 /* EKObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKObjectModel.m; sourceTree = "<group>"; };
+		4D32D6401B70B1AF00044180 /* EKPropertyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPropertyHelper.h; sourceTree = "<group>"; };
+		4D32D6411B70B1AF00044180 /* EKPropertyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPropertyHelper.m; sourceTree = "<group>"; };
+		4D32D6421B70B1AF00044180 /* EKPropertyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKPropertyMapping.h; sourceTree = "<group>"; };
+		4D32D6431B70B1AF00044180 /* EKPropertyMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKPropertyMapping.m; sourceTree = "<group>"; };
+		4D32D6441B70B1AF00044180 /* EKRelationshipMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKRelationshipMapping.h; sourceTree = "<group>"; };
+		4D32D6451B70B1AF00044180 /* EKRelationshipMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKRelationshipMapping.m; sourceTree = "<group>"; };
+		4D32D6461B70B1AF00044180 /* EKSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKSerializer.h; sourceTree = "<group>"; };
+		4D32D6471B70B1AF00044180 /* EKSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKSerializer.m; sourceTree = "<group>"; };
+		4D32D6481B70B1AF00044180 /* NSArray+FlattenArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FlattenArray.h"; sourceTree = "<group>"; };
+		4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FlattenArray.m"; sourceTree = "<group>"; };
+		4D32D64A1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+EasyMappingAdditions.h"; sourceTree = "<group>"; };
+		4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
+		4D32D65A1B70B33C00044180 /* Session+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+EasyMapping.swift"; sourceTree = "<group>"; };
+		4D32D65C1B70DE7C00044180 /* MappingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingProvider.swift; sourceTree = "<group>"; };
 		4DB985621B69D57600958268 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
@@ -172,6 +220,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D32D62D1B70B1AF00044180 /* EasyMapping */ = {
+			isa = PBXGroup;
+			children = (
+				4D32D62E1B70B1AF00044180 /* EasyMapping.h */,
+				4D32D62F1B70B1AF00044180 /* EKCoreDataImporter.h */,
+				4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */,
+				4D32D6311B70B1AF00044180 /* EKManagedObjectMapper.h */,
+				4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */,
+				4D32D6331B70B1AF00044180 /* EKManagedObjectMapping.h */,
+				4D32D6341B70B1AF00044180 /* EKManagedObjectMapping.m */,
+				4D32D6351B70B1AF00044180 /* EKManagedObjectModel.h */,
+				4D32D6361B70B1AF00044180 /* EKManagedObjectModel.m */,
+				4D32D6371B70B1AF00044180 /* EKMapper.h */,
+				4D32D6381B70B1AF00044180 /* EKMapper.m */,
+				4D32D6391B70B1AF00044180 /* EKMappingBlocks.h */,
+				4D32D63A1B70B1AF00044180 /* EKMappingBlocks.m */,
+				4D32D63B1B70B1AF00044180 /* EKMappingProtocol.h */,
+				4D32D63C1B70B1AF00044180 /* EKObjectMapping.h */,
+				4D32D63D1B70B1AF00044180 /* EKObjectMapping.m */,
+				4D32D63E1B70B1AF00044180 /* EKObjectModel.h */,
+				4D32D63F1B70B1AF00044180 /* EKObjectModel.m */,
+				4D32D6401B70B1AF00044180 /* EKPropertyHelper.h */,
+				4D32D6411B70B1AF00044180 /* EKPropertyHelper.m */,
+				4D32D6421B70B1AF00044180 /* EKPropertyMapping.h */,
+				4D32D6431B70B1AF00044180 /* EKPropertyMapping.m */,
+				4D32D6441B70B1AF00044180 /* EKRelationshipMapping.h */,
+				4D32D6451B70B1AF00044180 /* EKRelationshipMapping.m */,
+				4D32D6461B70B1AF00044180 /* EKSerializer.h */,
+				4D32D6471B70B1AF00044180 /* EKSerializer.m */,
+				4D32D6481B70B1AF00044180 /* NSArray+FlattenArray.h */,
+				4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */,
+				4D32D64A1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.h */,
+				4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */,
+			);
+			path = EasyMapping;
+			sourceTree = "<group>";
+		};
 		4DB985611B69D56900958268 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				AD9478691B69000200AFD645 /* MappingActor.swift */,
+				4D32D65A1B70B33C00044180 /* Session+EasyMapping.swift */,
+				4D32D65C1B70DE7C00044180 /* MappingProvider.swift */,
 			);
 			name = Mapping;
 			sourceTree = "<group>";
@@ -191,6 +278,7 @@
 		AD5903751B6021D500D41DA0 = {
 			isa = PBXGroup;
 			children = (
+				4D32D62D1B70B1AF00044180 /* EasyMapping */,
 				AD94785A1B6815B500AFD645 /* SwiftHTTP */,
 				AD9478271B67B55B00AFD645 /* FutureKit */,
 				AD5903801B6021D600D41DA0 /* Actors */,
@@ -477,21 +565,33 @@
 				AD9478461B67B55B00AFD645 /* Promise.swift in Sources */,
 				AD94784B1B67B55B00AFD645 /* ObjectiveCExceptionHandler.m in Sources */,
 				AD9478611B6815B500AFD645 /* HTTPRequestSerializer.swift in Sources */,
+				4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */,
+				4D32D6551B70B1AF00044180 /* EKPropertyMapping.m in Sources */,
+				4D32D65D1B70DE7C00044180 /* MappingProvider.swift in Sources */,
 				AD9478481B67B55B00AFD645 /* SyncWaitHandler.swift in Sources */,
 				AD9478431B67B55B00AFD645 /* FutureBatch.swift in Sources */,
+				4D32D6591B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m in Sources */,
+				4D32D6521B70B1AF00044180 /* EKObjectMapping.m in Sources */,
+				4D32D6581B70B1AF00044180 /* NSArray+FlattenArray.m in Sources */,
 				AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */,
 				AD9478681B68165B00AFD645 /* APIActor.swift in Sources */,
+				4D32D6571B70B1AF00044180 /* EKSerializer.m in Sources */,
 				AD9478631B6815B500AFD645 /* HTTPSecurity.swift in Sources */,
 				AD9478661B6815B500AFD645 /* HTTPUpload.swift in Sources */,
 				AD94784C1B67B55B00AFD645 /* OSAtomicInt.swift in Sources */,
 				4DB985631B69D57600958268 /* Session.swift in Sources */,
 				AD94786D1B6961D200AFD645 /* NSActors.m in Sources */,
+				4D32D64F1B70B1AF00044180 /* EKManagedObjectModel.m in Sources */,
 				AD9478591B68124700AFD645 /* SessionActor.swift in Sources */,
 				AD9478441B67B55B00AFD645 /* FutureFIFO.swift in Sources */,
+				4D32D6541B70B1AF00044180 /* EKPropertyHelper.m in Sources */,
 				AD9478621B6815B500AFD645 /* HTTPResponseSerializer.swift in Sources */,
 				AD94786F1B69654300AFD645 /* Obbcj.swift in Sources */,
+				4D32D6511B70B1AF00044180 /* EKMappingBlocks.m in Sources */,
 				AD9478421B67B55B00AFD645 /* Future.swift in Sources */,
+				4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */,
 				AD9478651B6815B500AFD645 /* HTTPTask.swift in Sources */,
+				4D32D65B1B70B33C00044180 /* Session+EasyMapping.swift in Sources */,
 				AD9478411B67B55B00AFD645 /* FTask.swift in Sources */,
 				AD94786A1B69000200AFD645 /* MappingActor.swift in Sources */,
 				4D32D6231B6FBA0100044180 /* DActor.swift in Sources */,
@@ -500,20 +600,24 @@
 				C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */,
 				C14207B3F2EDBED177C0FC42 /* DTMessageHandler.m in Sources */,
 				C142005901630145DB6826A8 /* DTMessageDispatcher.m in Sources */,
+				4D32D6501B70B1AF00044180 /* EKMapper.m in Sources */,
 				C14202288663AE1CD0C7F214 /* DTActorOperation.m in Sources */,
 				C1420FD96390317645DEA696 /* RXPromise.mm in Sources */,
+				4D32D64E1B70B1AF00044180 /* EKManagedObjectMapping.m in Sources */,
 				C1420CE3AC89F87D8AE57524 /* RXSettledResult.mm in Sources */,
 				C1420C436BDD8EB74D047D3C /* RXPromise+RXExtension.mm in Sources */,
 				C1420486D021D02C4AD0D5CF /* DTActorExecutor.m in Sources */,
 				C14204083805FEAF429EE7F2 /* DTActorProvider.m in Sources */,
 				C14206985D533AC14CC3ED09 /* DTMessageHandler.swift in Sources */,
 				C14200613D2A54EAE6904A6D /* ActorExecutor.swift in Sources */,
+				4D32D6561B70B1AF00044180 /* EKRelationshipMapping.m in Sources */,
 				C14201F562E4EBCF5A81D203 /* AppDelegate.swift in Sources */,
 				C14206FA002F227D0065E849 /* ActorSystem.swift in Sources */,
 				C14200078A265A3ADC02C2EE /* ActorOperation.swift in Sources */,
 				C14203EE09FC97DC091FA899 /* Actor.swift in Sources */,
 				C14209B1171512D5129EF87A /* ActorProvider.swift in Sources */,
 				C1420E5ED06C585C26CDD697 /* MessageDispatcher.swift in Sources */,
+				4D32D6531B70B1AF00044180 /* EKObjectModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

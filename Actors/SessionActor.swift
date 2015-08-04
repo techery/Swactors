@@ -34,8 +34,7 @@ class SessionActor : DTActor {
             let f = self.apiActor.ask(APIActor.Get(path: "http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com/api/sessions", parameters:["username": msg.email, "password" : msg.password]))
             return f.then({ result in
                 if let payload = result as? String {
-//                    return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
-                    return nil
+                    return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
                 } else {
                     return nil
                 }
