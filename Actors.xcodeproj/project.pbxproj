@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
 		4D5C54E71B69CBC4000DD26B /* Argo.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5C54DD1B69CB4E000DD26B /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DB985481B69CCFA00958268 /* Box.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB985431B69CCD300958268 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DB9855E1B69CD5C00958268 /* Runes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB985531B69CD3F00958268 /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -192,11 +193,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D32D6221B6FBA0100044180 /* DActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActor.swift; sourceTree = "<group>"; };
 		4D5C54D51B69CB4E000DD26B /* Argo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Argo.xcodeproj; path = Argo/Argo.xcodeproj; sourceTree = "<group>"; };
 		4DB985371B69CCD300958268 /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Box.xcodeproj; path = Box/Box.xcodeproj; sourceTree = "<group>"; };
 		4DB9854A1B69CD3F00958268 /* Runes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Runes.xcodeproj; path = Runes/Runes.xcodeproj; sourceTree = "<group>"; };
 		4DB985621B69D57600958268 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4DB985651B69D5FC00958268 /* Session+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Decodable.swift"; sourceTree = "<group>"; };
+		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
+		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
 		AD59037E1B6021D600D41DA0 /* Actors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5903831B6021D600D41DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD5903881B6021D600D41DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 				AD59038D1B6021D600D41DA0 /* Info.plist */,
 				C142076B86402C5789630285 /* Objc */,
 				C14205BC5C165170486FEE6C /* Swift */,
+				4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */,
 			);
 			path = Actors;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 		C142076B86402C5789630285 /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				4DBCB4971B6F4D8000E42FA7 /* DTActors.h */,
 				C1420B37F6F988BA4CC6E86F /* DTActor.m */,
 				C142020C018979FD91F62E59 /* DTActor.h */,
 				C14201316C5C70002DB46856 /* DTActorSystem.m */,
@@ -520,6 +526,7 @@
 				C1420E17F5C4916FD6C1B709 /* DTActorExecutor.h */,
 				C1420021FD6387119C8C784D /* DTActorProvider.m */,
 				C142044EA2101545D27BA78E /* DTActorProvider.h */,
+				4D32D6221B6FBA0100044180 /* DActor.swift */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -769,6 +776,7 @@
 				AD9478651B6815B500AFD645 /* HTTPTask.swift in Sources */,
 				AD9478411B67B55B00AFD645 /* FTask.swift in Sources */,
 				AD94786A1B69000200AFD645 /* MappingActor.swift in Sources */,
+				4D32D6231B6FBA0100044180 /* DActor.swift in Sources */,
 				AD94783D1B67B55B00AFD645 /* Executor.swift in Sources */,
 				C1420DEB18996727EBEB810F /* DTActor.m in Sources */,
 				C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */,
@@ -861,10 +869,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -900,9 +909,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

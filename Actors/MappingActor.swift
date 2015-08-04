@@ -3,23 +3,31 @@
 import Foundation
 import Argo
 
-struct MappingRequest<T> : Request {
+class MappingRequest : NSObject {
     let payload:String
-    let resultType:T.Type
-    
-    typealias Result = T
+    let resultType:AnyObject.Type
+
+    init(payload: String, resultType: AnyObject.Type) {
+        self.payload = payload
+        self.resultType = resultType
+    }
 }
 
-class MappingActor: Actor {
+class MappingActor: DTActor {
     
     override func setup() {
-        on { (msg:MappingRequest<Any>) -> MappingRequest<Any>.Result in
-            return self.map(msg)
-        }
+        on(MappingRequest.self, doResult: { (msg) -> AnyObject! in
+            if let message = msg as? MappingRequest {
+                let r:message.resultType = self.map(message.payload)!
+                return ""
+            } else {
+                return nil
+            }
+        })
     }
     
-    func map<T: Decodable where T == T.DecodedType>(message:MappingRequest<T>) -> T? {
-        let data = message.payload.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+    func map<T: Decodable where T == T.DecodedType>(message:String) -> T? {
+        let data = message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
         
         let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: nil)
         
@@ -32,7 +40,7 @@ class MappingActor: Actor {
     }
 
     
-    func map<T>(message:MappingRequest<T>) -> MappingRequest<T>.Result? {
+    func map<T>(message:String) -> T? {
         return nil
     }
 }

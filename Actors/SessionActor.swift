@@ -1,39 +1,47 @@
 import Foundation
 
 
-class SessionActor : Actor {
-    
-    struct Login : Request {
+class SessionActor : DTActor {
+
+    class Login : NSObject {
         let email:String
         let password:String
         
         typealias Result = Session
+        
+        init(email: String, password: String) {
+            self.email = email
+            self.password = password
+        }
     }
     
     class Logout {
         
     }
     
-    let apiActor:ActorRef<APIActor>
-    let mappingActor:ActorRef<MappingActor>
+    let apiActor:DTActorRef
+    let mappingActor:DTActorRef
     
-    required init(_ sys: ActorSystem) {
-        apiActor = sys.actorOf(APIActor)
-        mappingActor = sys.actorOf(MappingActor)
-        super.init(sys)
+    override init!(actorSystem: DTActorSystem!) {
+        apiActor = actorSystem.actorOfClass(APIActor)
+        mappingActor = actorSystem.actorOfClass(MappingActor)        
+        super.init(actorSystem: actorSystem)
     }
     
     override func setup() {
-        
-        on { (message:Logout) in
-            
-        }
-        
-        on { (msg:Login) -> Future<Login.Result> in
-            let f = self.apiActor.ask(APIActor.Get(path:msg.email))
-            return f.onSuccess({ (payload) -> Future<Session> in
-                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
+        let returningClass = Login.self
+        on(Login.self, doFuture: {(msg) -> RXPromise in
+            let f = self.apiActor.ask(APIActor.Get(path: "http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com/api/sessions", parameters:["username": msg.email, "password" : msg.password]))
+            return f.then({ result in
+                if let payload = result as? String {
+                    return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
+                } else {
+                    return nil
+                }
+                
+                }, { error in
+                    return error
             })
-        }
+        })
     }
 }

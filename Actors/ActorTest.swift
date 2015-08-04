@@ -7,18 +7,18 @@ class Playground {
         case Post(String, String)
     }
     
-    let system = MainActorSystem() { builder in
-        builder.add(SessionActor)
-        builder.add(APIActor)
-        builder.add(MappingActor)
+    let system = DTMainActorSystem() { builder in
+        builder.addActor(SessionActor)
+        builder.addActor(APIActor)
+        builder.addActor(MappingActor)
     }
     
-    let sessionActor:ActorRef<SessionActor>
-    let apiActor:ActorRef<APIActor>
+    let sessionActor:DTActorRef
+    let apiActor:DTActorRef
     
     init() {
-        sessionActor = system.actorOf(SessionActor)
-        apiActor = system.actorOf(APIActor)
+        sessionActor = system.actorOfClass(SessionActor)
+        apiActor = system.actorOfClass(APIActor)
     }
     
     func logFuture(future:Future<SessionActor.Login.Result>) {
@@ -31,8 +31,13 @@ class Playground {
     }
     
     func main() {
-        for index in 0...10000 {
-            self.sessionActor.ask(SessionActor.Login(email: "https://facebook.com", password: "1"))
-        }
+        let f = self.sessionActor.ask(SessionActor.Login(email: "888888", password: "travel1ns1de"))
+        f.then({result in
+            println(result)
+            return nil
+            }, { error in
+            println(error)
+            return nil                
+        })
     }
 }
