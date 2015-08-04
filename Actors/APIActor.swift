@@ -1,49 +1,61 @@
 import Foundation
 
-class APIActor: Actor {
+class APIActor: DTActor {
     
     let operationQueue:NSOperationQueue = NSOperationQueue()
     
-    struct Get : Request {
+    class Get : NSObject, Request {
         let path:String
+        let parameters: [String: String]
         
         typealias Result = String
+        
+        init(path: String, parameters: [String: String]) {
+            self.path = path
+            self.parameters = parameters
+        }
     }
     
     override func setup() {
         operationQueue.maxConcurrentOperationCount = 1
         
-        on { (msg:Get) -> Future<Get.Result> in
-            return self.get(msg)
-        }
+        on(Get.self, doFuture: {(msg) -> RXPromise! in
+            if let message = msg as? Get {
+                return self.get(message)
+            } else {
+                let promise = RXPromise()
+                promise.rejectWithReason("Wrong message type")
+                return promise
+            }
+        })
     }
     
-    func get(message:Get) -> Future<String> {
-        let promise = Promise<String>()
+    func get(message:Get) -> RXPromise {
+        let promise = RXPromise()
         var request = HTTPTask()
         
-        var operation = request.create(message.path, method: .GET, parameters: nil) { (response) -> Void in
+        var operation = request.create(message.path, method: .POST, parameters: message.parameters) { (response) -> Void in
             if let err = response.error {
-                promise.completeWithFail(err)
+                promise.rejectWithReason(err)
                 return
             }
             
             if let data = response.responseObject as? NSData {
                 let str = NSString(data: data, encoding: NSUTF8StringEncoding)
                 if let responseString = str as? String {
-                    promise.completeWithSuccess(responseString)
+                    promise.resolveWithResult(responseString)
                 } else {
-                    promise.completeWithFail("Can't parse response")
+                    promise.rejectWithReason("Can't parse response")
                 }
             }
             
-            promise.completeWithFail("Empty body received")
+            promise.rejectWithReason("Empty body received")
         }
         
         if let op = operation {
             operationQueue.addOperation(op)
         }
         
-        return promise.future
+        return promise
     }
 }
