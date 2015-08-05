@@ -10,7 +10,7 @@ class APIActor: DActor {
         
         typealias Result = String
         
-        init(path: String, parameters: [String: String]) {
+        init(path: String, parameters: [String: String] = [:]) {
             self.path = path
             self.parameters = parameters
         }

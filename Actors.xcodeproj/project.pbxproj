@@ -13,6 +13,8 @@
 		4D2CC6B31B721CA6007BBEA4 /* Session+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6B01B721CA6007BBEA4 /* Session+EasyMapping.swift */; };
 		4D2CC6B61B721CB1007BBEA4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6B51B721CB1007BBEA4 /* Session.swift */; };
 		4D2CC6B91B721CBC007BBEA4 /* SessionActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6B81B721CBC007BBEA4 /* SessionActor.swift */; };
+		4D2CC6BB1B724BCD007BBEA4 /* SettingsActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6BA1B724BCD007BBEA4 /* SettingsActor.swift */; };
+		4D2CC6BE1B724E1A007BBEA4 /* AuthActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6BD1B724E1A007BBEA4 /* AuthActor.swift */; };
 		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
 		4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */; };
 		4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */; };
@@ -104,6 +106,8 @@
 		4D2CC6B01B721CA6007BBEA4 /* Session+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+EasyMapping.swift"; sourceTree = "<group>"; };
 		4D2CC6B51B721CB1007BBEA4 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4D2CC6B81B721CBC007BBEA4 /* SessionActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionActor.swift; sourceTree = "<group>"; };
+		4D2CC6BA1B724BCD007BBEA4 /* SettingsActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsActor.swift; sourceTree = "<group>"; };
+		4D2CC6BD1B724E1A007BBEA4 /* AuthActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthActor.swift; sourceTree = "<group>"; };
 		4D32D6221B6FBA0100044180 /* DActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActor.swift; sourceTree = "<group>"; };
 		4D32D62E1B70B1AF00044180 /* EasyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyMapping.h; sourceTree = "<group>"; };
 		4D32D62F1B70B1AF00044180 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKCoreDataImporter.h; sourceTree = "<group>"; };
@@ -257,6 +261,14 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		4D2CC6BC1B724E0B007BBEA4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CC6BD1B724E1A007BBEA4 /* AuthActor.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
 		4D32D62D1B70B1AF00044180 /* EasyMapping */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +411,14 @@
 			path = SwiftHTTP;
 			sourceTree = "<group>";
 		};
+		C142029C5B0663BAED93693B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CC6BA1B724BCD007BBEA4 /* SettingsActor.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C14205BC5C165170486FEE6C /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +469,7 @@
 		C1420A5DC87F044F4939A946 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4D2CC6BC1B724E0B007BBEA4 /* Auth */,
 				4D2CC6B71B721CBC007BBEA4 /* Session */,
 				4D2CC6B41B721CB1007BBEA4 /* Model */,
 				4D2CC6AD1B721CA6007BBEA4 /* Mapping */,
@@ -457,6 +478,7 @@
 				C14208A80D2EA4701740EDB8 /* NSActors.h */,
 				C1420F18427E33045F3E62EC /* ActorTest.swift */,
 				C14209A51B807716C0ABCDC7 /* Obbcj.swift */,
+				C142029C5B0663BAED93693B /* Settings */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -597,6 +619,7 @@
 				AD9478661B6815B500AFD645 /* HTTPUpload.swift in Sources */,
 				AD94784C1B67B55B00AFD645 /* OSAtomicInt.swift in Sources */,
 				4D32D64F1B70B1AF00044180 /* EKManagedObjectModel.m in Sources */,
+				4D2CC6BB1B724BCD007BBEA4 /* SettingsActor.swift in Sources */,
 				4D2CC6B11B721CA6007BBEA4 /* MappingActor.swift in Sources */,
 				AD9478441B67B55B00AFD645 /* FutureFIFO.swift in Sources */,
 				4D32D6541B70B1AF00044180 /* EKPropertyHelper.m in Sources */,
@@ -628,6 +651,7 @@
 				C14200613D2A54EAE6904A6D /* ActorExecutor.swift in Sources */,
 				4D32D6561B70B1AF00044180 /* EKRelationshipMapping.m in Sources */,
 				C14201F562E4EBCF5A81D203 /* AppDelegate.swift in Sources */,
+				4D2CC6BE1B724E1A007BBEA4 /* AuthActor.swift in Sources */,
 				C14206FA002F227D0065E849 /* ActorSystem.swift in Sources */,
 				C14200078A265A3ADC02C2EE /* ActorOperation.swift in Sources */,
 				C14203EE09FC97DC091FA899 /* Actor.swift in Sources */,

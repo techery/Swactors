@@ -17,7 +17,7 @@ class SessionAPIActor: DActor {
         let method: String
         let parameters: [String: String]
 
-        init (relativePath: String, method: String, parameters: [String: String]) {
+        init (relativePath: String, method: String, parameters: [String: String] = [:]) {
             self.relativePath = relativePath
             self.method = method
             self.parameters = parameters

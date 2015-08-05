@@ -32,17 +32,20 @@ class SessionActor : DActor {
         let returningClass = Login.self
         
         on { (msg: Login) -> RXPromise in
-            let f = self.apiActor.ask(SessionAPIActor.Session(login: msg.email, password: msg.password))
-            return f.then({ result in
-                if let payload = result as? String {
-                    return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
-                } else {
-                    return nil
-                }
-                
-                }, { error in
-                    return error
-            })
+            return self.askSession(msg.email, password: msg.password)
         }
+    }
+    
+    private func askSession(login: String, password: String) -> RXPromise {
+        let session = self.apiActor.ask(SessionAPIActor.Session(login: login, password: password))
+        let mappedSession = session.then({ result in
+            if let payload = result as? String {
+                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
+            } else {
+                return nil
+            }
+            }, nil)
+        
+        return mappedSession
     }
 }

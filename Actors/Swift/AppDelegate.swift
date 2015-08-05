@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+/*
 class AuthActor {
     func run() {
         print("1")
@@ -213,7 +213,7 @@ class Mapper {
     }
 }
 
-
+*/
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
