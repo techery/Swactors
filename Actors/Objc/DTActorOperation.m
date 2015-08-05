@@ -24,9 +24,9 @@
 }
 
 - (void)setExecuting:(BOOL)executing {
-    [super willChangeValueForKey:@"executing"];
+    [super willChangeValueForKey:@"isExecuting"];
     _executing = executing;
-    [super didChangeValueForKey:@"executing"];
+    [super didChangeValueForKey:@"isExecuting"];
 }
 
 - (BOOL)isFinished {
@@ -34,9 +34,9 @@
 }
 
 - (void)setFinished:(BOOL)finished {
-    [super willChangeValueForKey:@"finished"];
+    [super willChangeValueForKey:@"isFinished"];
     _finished = finished;
-    [super didChangeValueForKey:@"finished"];
+    [super didChangeValueForKey:@"isFinished"];
 }
 
 - (void)start {
@@ -48,6 +48,7 @@
 - (void)finish {
     self.finished = YES;
     self.executing = NO;
+//    [self cancel];
 }
 
 @end
