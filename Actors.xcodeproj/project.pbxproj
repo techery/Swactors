@@ -220,6 +220,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2CC6A81B720CF1007BBEA4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AD9478671B68165B00AFD645 /* APIActor.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		4D2CC6A91B720CFF007BBEA4 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				AD9478581B68124700AFD645 /* SessionActor.swift */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
 		4D32D62D1B70B1AF00044180 /* EasyMapping */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,13 +386,13 @@
 		AD9478571B68124100AFD645 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4D2CC6A91B720CFF007BBEA4 /* Session */,
+				4D2CC6A81B720CF1007BBEA4 /* API */,
 				4DB985641B69D5E900958268 /* Mapping */,
 				4DB985611B69D56900958268 /* Model */,
 				AD94786B1B6961D200AFD645 /* NSActors.h */,
 				AD94786C1B6961D200AFD645 /* NSActors.m */,
 				ADC415611B66C390001830DC /* ActorTest.swift */,
-				AD9478581B68124700AFD645 /* SessionActor.swift */,
-				AD9478671B68165B00AFD645 /* APIActor.swift */,
 				AD94786E1B69654300AFD645 /* Obbcj.swift */,
 			);
 			name = Demo;

@@ -37,7 +37,7 @@
     
 }
 
-- (void)on:(Class)messageType do:(DTVoidMessageBlock)handler {
+- (void)on:(Class)messageType _do:(void (^)(id))handler {
     [self.dispatcher on:messageType do:handler];
 }
 

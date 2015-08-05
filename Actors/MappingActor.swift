@@ -13,20 +13,13 @@ class MappingRequest : NSObject {
     }
 }
 
-class MappingActor: DTActor {
+class MappingActor: DActor {
     private let mappingProvider: MappingProvider = MappingProvider()
     
     override func setup() {
-        on(MappingRequest.self, doFuture: { (msg) -> RXPromise! in
-            let promise = RXPromise()
-            if let message = msg as? MappingRequest {
-                promise.bind(self.map(message.payload, toType: message.resultType))
-            } else {
-                promise.rejectWithReason("Wrong message type")
-            }
-            
-            return promise
-        })
+        on { (msg: MappingRequest) -> RXPromise in
+            return self.map(msg.payload, toType: msg.resultType)
+        }
     }
     
     func map(payload: String, toType: AnyClass) -> RXPromise {

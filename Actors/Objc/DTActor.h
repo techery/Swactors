@@ -36,7 +36,7 @@
 
 - (void)setup;
 
-- (void)on:(Class)messageType do:(void (^)(id))handler;
+- (void)on:(Class)messageType _do:(void (^)(id))handler;
 - (void)on:(Class)messageType doFuture:(RXPromise *(^)(id))handler;
 - (void)on:(Class)messageType doResult:(id (^)(id))handler;
 

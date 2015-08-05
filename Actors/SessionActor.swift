@@ -1,7 +1,7 @@
 import Foundation
 
 
-class SessionActor : DTActor {
+class SessionActor : DActor {
 
     class Login : NSObject {
         let email:String
@@ -30,8 +30,9 @@ class SessionActor : DTActor {
     
     override func setup() {
         let returningClass = Login.self
-        on(Login.self, doFuture: {(msg) -> RXPromise in
-            let f = self.apiActor.ask(APIActor.Get(path: "http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com/api/sessions", parameters:["username": msg.email, "password" : msg.password]))
+        
+        on { (msg: Login) -> RXPromise in
+            let f = self.apiActor.ask(APIActor.Post(path: "http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com/api/sessions", parameters:["username": msg.email, "password" : msg.password]))
             return f.then({ result in
                 if let payload = result as? String {
                     return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
@@ -42,6 +43,6 @@ class SessionActor : DTActor {
                 }, { error in
                     return error
             })
-        })
+        }
     }
 }

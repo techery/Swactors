@@ -1,10 +1,10 @@
 import Foundation
 
-class APIActor: DTActor {
+class APIActor: DActor {
     
     let operationQueue:NSOperationQueue = NSOperationQueue()
     
-    class Get : NSObject, Request {
+    class Request: NSObject {
         let path:String
         let parameters: [String: String]
         
@@ -16,25 +16,32 @@ class APIActor: DTActor {
         }
     }
     
+    // MARK: - Messages
+    
+    class Post : Request {}
+    class Get : Request {}
+
+    // MARK: - DTActor
+    
     override func setup() {
         operationQueue.maxConcurrentOperationCount = 1
         
-        on(Get.self, doFuture: {(msg) -> RXPromise! in
-            if let message = msg as? Get {
-                return self.get(message)
-            } else {
-                let promise = RXPromise()
-                promise.rejectWithReason("Wrong message type")
-                return promise
-            }
-        })
+        on { (msg: Post) -> RXPromise in
+            return self.request(msg, method: HTTPMethod.POST)
+        }
+        
+        on { (msg: Get) -> RXPromise in
+            return self.request(msg, method: HTTPMethod.GET)
+        }
     }
     
-    func get(message:Get) -> RXPromise {
+    // MARK: - Private
+        
+    private func request(message:Request, method: HTTPMethod) -> RXPromise {
         let promise = RXPromise()
         var request = HTTPTask()
         
-        var operation = request.create(message.path, method: .POST, parameters: message.parameters) { (response) -> Void in
+        var operation = request.create(message.path, method: method, parameters: message.parameters) { (response) -> Void in
             if let err = response.error {
                 promise.rejectWithReason(err)
                 return
