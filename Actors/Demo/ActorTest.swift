@@ -9,6 +9,7 @@ class Playground {
     
     let system = DTMainActorSystem() { builder in
         builder.addActor(SessionActor)
+        builder.addActor(SessionAPIActor)
         builder.addActor(APIActor)
         builder.addActor(MappingActor)
     }

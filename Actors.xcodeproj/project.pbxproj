@@ -55,6 +55,7 @@
 		C14200613D2A54EAE6904A6D /* ActorExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420040BAD30D5873F67D5F /* ActorExecutor.swift */; };
 		C14201F562E4EBCF5A81D203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420FE900B8CE69F6561D81 /* AppDelegate.swift */; };
 		C14202288663AE1CD0C7F214 /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
+		C14202590152848CEE242DBF /* SessionAPIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14204F1F4EACB2FD9F40F51 /* SessionAPIActor.swift */; };
 		C14203EE09FC97DC091FA899 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420D7A0953CEEB1302B7E7 /* Actor.swift */; };
 		C14204083805FEAF429EE7F2 /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
 		C1420486D021D02C4AD0D5CF /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
@@ -178,6 +179,7 @@
 		C14202E55191E5AA05C56A41 /* RXPromise.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXPromise.mm; sourceTree = "<group>"; };
 		C1420407177572DF9EA4137C /* ActorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorProvider.swift; sourceTree = "<group>"; };
 		C142044EA2101545D27BA78E /* DTActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorProvider.h; sourceTree = "<group>"; };
+		C14204F1F4EACB2FD9F40F51 /* SessionAPIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPIActor.swift; sourceTree = "<group>"; };
 		C142052A49AA8A2D6B01816D /* DTActorSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorSystem.h; sourceTree = "<group>"; };
 		C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXSettledResult.mm; sourceTree = "<group>"; };
 		C142061CF26C7F7CD488B068 /* DTActorOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorOperation.m; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				4D2CC6B81B721CBC007BBEA4 /* SessionActor.swift */,
+				C14204F1F4EACB2FD9F40F51 /* SessionAPIActor.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				C14207F1AA1FB255357B0E31 /* NSActors.m in Sources */,
 				C142087A75A1B7B4E322ADD1 /* ActorTest.swift in Sources */,
 				C142068DC24E91FBB91D49D7 /* Obbcj.swift in Sources */,
+				C14202590152848CEE242DBF /* SessionAPIActor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

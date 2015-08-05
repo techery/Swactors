@@ -23,7 +23,7 @@ class SessionActor : DActor {
     let mappingActor:DTActorRef
     
     override init!(actorSystem: DTActorSystem!) {
-        apiActor = actorSystem.actorOfClass(APIActor)
+        apiActor = actorSystem.actorOfClass(SessionAPIActor)
         mappingActor = actorSystem.actorOfClass(MappingActor)        
         super.init(actorSystem: actorSystem)
     }
@@ -32,7 +32,7 @@ class SessionActor : DActor {
         let returningClass = Login.self
         
         on { (msg: Login) -> RXPromise in
-            let f = self.apiActor.ask(APIActor.Post(path: "http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com/api/sessions", parameters:["username": msg.email, "password" : msg.password]))
+            let f = self.apiActor.ask(SessionAPIActor.Session(login: msg.email, password: msg.password))
             return f.then({ result in
                 if let payload = result as? String {
                     return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
