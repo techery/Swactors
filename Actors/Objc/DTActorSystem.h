@@ -4,6 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DTServiceLocator.h"
 
 @protocol DTActorProvider;
 @class DTActorRef;
@@ -11,6 +12,8 @@
 
 
 @protocol DTActorSystem
+
+@property(nonatomic, readonly) DTServiceLocator *serviceLocator;
 
 - (DTActorRef *)actorOfClass:(Class)class;
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider;
@@ -25,9 +28,14 @@
 + (instancetype)builderWithActorSystem:(id <DTActorSystem>)actorSystem;
 
 - (void)addActor:(Class)actorType;
+- (void)setServiceLocator:(DTServiceLocator *)serviceLocator;
 
 @end
 
 @interface DTMainActorSystem : NSObject <DTActorSystem>
-- (instancetype)initWithBuilderBlock:(void (^)(DTActorSystemBuilder *))builderBlock;
+
+@property(nonatomic, readonly) DTServiceLocator *serviceLocator;
+
+- (instancetype)initWithServiceLocator:(DTServiceLocator *)serviceLocator
+                          builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock;
 @end

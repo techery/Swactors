@@ -1,8 +1,11 @@
 import Foundation
 
 class Playground {
+    static let locator:DTServiceLocator = DTServiceLocator { locator in
+        locator.registerService(SessionStorage(), forClass: SessionStorage.self)
+    }
     
-    let system = DTMainActorSystem() { builder in
+    let system = DTMainActorSystem(serviceLocator: locator) { builder in
         builder.addActor(AuthActor)
         builder.addActor(SessionActor)
         builder.addActor(SessionAPIActor)
@@ -11,12 +14,10 @@ class Playground {
         builder.addActor(SettingsActor)
     }
     
-    let authActor:DTActorRef
-    
+    let authActor: DTActorRef
     init() {
         authActor = system.actorOfClass(AuthActor)
     }
-    
     func main() {
         let f = self.authActor.ask(AuthActor.Login(email: "888888", password: "travel1ns1de"))
         f.then({result in
@@ -24,7 +25,7 @@ class Playground {
             return nil
             }, { error in
             println(error)
-            return nil                
+                return nil
         })
     }
 }

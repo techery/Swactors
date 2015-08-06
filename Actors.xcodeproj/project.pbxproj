@@ -66,12 +66,14 @@
 		C14206FA002F227D0065E849 /* ActorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142095A97E0AF47476B07EA /* ActorSystem.swift */; };
 		C14207B3F2EDBED177C0FC42 /* DTMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */; };
 		C14207F1AA1FB255357B0E31 /* NSActors.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420A228DEDA129E0C06742 /* NSActors.m */; };
+		C1420867B1E3A06D660E107C /* DTServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C142040A5E2C706271F9DF4C /* DTServiceLocator.m */; };
 		C142087A75A1B7B4E322ADD1 /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420F18427E33045F3E62EC /* ActorTest.swift */; };
 		C14209B1171512D5129EF87A /* ActorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420407177572DF9EA4137C /* ActorProvider.swift */; };
 		C1420C436BDD8EB74D047D3C /* RXPromise+RXExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420D413359CCCF51407B80 /* RXPromise+RXExtension.mm */; };
 		C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
 		C1420CE3AC89F87D8AE57524 /* RXSettledResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */; };
 		C1420DEB18996727EBEB810F /* DTActor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420B37F6F988BA4CC6E86F /* DTActor.m */; };
+		C1420E40615BDC158C0FCBF2 /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420ECF1972B2040A55AAE0 /* SessionStorage.swift */; };
 		C1420E5ED06C585C26CDD697 /* MessageDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420D864F2A9DDE8C9F76E7 /* MessageDispatcher.swift */; };
 		C1420FD96390317645DEA696 /* RXPromise.mm in Sources */ = {isa = PBXBuildFile; fileRef = C14202E55191E5AA05C56A41 /* RXPromise.mm */; };
 /* End PBXBuildFile section */
@@ -176,12 +178,14 @@
 		C14200A186656387CE835001 /* DTActorOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorOperation.h; sourceTree = "<group>"; };
 		C14200C971BF22337F0E137D /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLog.h; sourceTree = "<group>"; };
 		C14200F89B098FB3E1994413 /* ActorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorOperation.swift; sourceTree = "<group>"; };
+		C1420119B83A81118644E00B /* DTServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTServiceLocator.h; sourceTree = "<group>"; };
 		C142012F826EC019175F2ADA /* DTMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMessageHandler.swift; sourceTree = "<group>"; };
 		C14201316C5C70002DB46856 /* DTActorSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorSystem.m; sourceTree = "<group>"; };
 		C14201AF4F221606B742207D /* RXPromise+RXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXPromise+RXExtension.h"; sourceTree = "<group>"; };
 		C142020C018979FD91F62E59 /* DTActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActor.h; sourceTree = "<group>"; };
 		C14202E55191E5AA05C56A41 /* RXPromise.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXPromise.mm; sourceTree = "<group>"; };
 		C1420407177572DF9EA4137C /* ActorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorProvider.swift; sourceTree = "<group>"; };
+		C142040A5E2C706271F9DF4C /* DTServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTServiceLocator.m; sourceTree = "<group>"; };
 		C142044EA2101545D27BA78E /* DTActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorProvider.h; sourceTree = "<group>"; };
 		C14204F1F4EACB2FD9F40F51 /* SessionAPIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPIActor.swift; sourceTree = "<group>"; };
 		C142052A49AA8A2D6B01816D /* DTActorSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorSystem.h; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		C1420D7A0953CEEB1302B7E7 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		C1420D864F2A9DDE8C9F76E7 /* MessageDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDispatcher.swift; sourceTree = "<group>"; };
 		C1420E17F5C4916FD6C1B709 /* DTActorExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorExecutor.h; sourceTree = "<group>"; };
+		C1420ECF1972B2040A55AAE0 /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		C1420F18427E33045F3E62EC /* ActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTest.swift; sourceTree = "<group>"; };
 		C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorExecutor.m; sourceTree = "<group>"; };
 		C1420FE900B8CE69F6561D81 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +262,7 @@
 			children = (
 				4D2CC6B81B721CBC007BBEA4 /* SessionActor.swift */,
 				C14204F1F4EACB2FD9F40F51 /* SessionAPIActor.swift */,
+				C1420ECF1972B2040A55AAE0 /* SessionStorage.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				C1420021FD6387119C8C784D /* DTActorProvider.m */,
 				C142044EA2101545D27BA78E /* DTActorProvider.h */,
 				4D32D6221B6FBA0100044180 /* DActor.swift */,
+				C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -496,6 +503,15 @@
 				C1420D413359CCCF51407B80 /* RXPromise+RXExtension.mm */,
 			);
 			path = RXPromise;
+			sourceTree = "<group>";
+		};
+		C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				C142040A5E2C706271F9DF4C /* DTServiceLocator.m */,
+				C1420119B83A81118644E00B /* DTServiceLocator.h */,
+			);
+			path = ServiceLocator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -662,6 +678,8 @@
 				C142087A75A1B7B4E322ADD1 /* ActorTest.swift in Sources */,
 				C142068DC24E91FBB91D49D7 /* Obbcj.swift in Sources */,
 				C14202590152848CEE242DBF /* SessionAPIActor.swift in Sources */,
+				C1420E40615BDC158C0FCBF2 /* SessionStorage.swift in Sources */,
+				C1420867B1E3A06D660E107C /* DTServiceLocator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

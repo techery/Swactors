@@ -6,17 +6,23 @@
 #import "DTActorSystem.h"
 #import "DTActor.h"
 #import "DTActorProvider.h"
+#import "DTServiceLocator.h"
 
 
-@implementation DTMainActorSystem {
-    NSMutableDictionary *_actorsProviders;
-}
+@interface DTMainActorSystem()
+@property (nonatomic, strong) NSMutableDictionary *actorsProviders;
+@property (nonatomic, strong) DTServiceLocator *serviceLocator;
+@end
 
-- (instancetype)initWithBuilderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
+@implementation DTMainActorSystem
+
+- (instancetype)initWithServiceLocator:(DTServiceLocator *)serviceLocator
+                          builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
     if (self = [super init]) {
         _actorsProviders = [NSMutableDictionary new];
-        DTActorSystemBuilder *bulder = [[DTActorSystemBuilder alloc] initWithActorSystem:self];
-        builderBlock(bulder);
+        _serviceLocator = serviceLocator;
+        DTActorSystemBuilder *builder = [[DTActorSystemBuilder alloc] initWithActorSystem:self];
+        builderBlock(builder);
     }
     
     return self;
@@ -62,6 +68,10 @@
 
 - (void)addActor:(Class)actorType {
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
+}
+
+- (void)setServiceLocator:(DTServiceLocator *)serviceLocator {
+
 }
 
 @end
