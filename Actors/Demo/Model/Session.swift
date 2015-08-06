@@ -10,7 +10,13 @@ import Foundation
 
 @objc
 class Session: NSObject {
-    var token:String = ""
+    class Permission: NSObject {
+        var name = ""
+    }
+    
+    var token = ""
+    var user = User()
+    var permissions: [Permission] = []
     
     override init() {}
 }
