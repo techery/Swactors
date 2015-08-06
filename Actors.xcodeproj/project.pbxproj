@@ -20,6 +20,7 @@
 		4D2CC6CA1B7388E3007BBEA4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6C91B7388E3007BBEA4 /* User.swift */; };
 		4D2CC6CE1B738F2B007BBEA4 /* User+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6CD1B738F2B007BBEA4 /* User+EasyMapping.swift */; };
 		4D2CC6D01B739135007BBEA4 /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6CF1B739135007BBEA4 /* SettingsStorage.swift */; };
+		4D2CC6D21B73924F007BBEA4 /* Settings+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6D11B73924F007BBEA4 /* Settings+NSCoding.swift */; };
 		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
 		4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */; };
 		4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */; };
@@ -120,6 +121,7 @@
 		4D2CC6C91B7388E3007BBEA4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D2CC6CD1B738F2B007BBEA4 /* User+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+EasyMapping.swift"; sourceTree = "<group>"; };
 		4D2CC6CF1B739135007BBEA4 /* SettingsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
+		4D2CC6D11B73924F007BBEA4 /* Settings+NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+NSCoding.swift"; sourceTree = "<group>"; };
 		4D32D6221B6FBA0100044180 /* DActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActor.swift; sourceTree = "<group>"; };
 		4D32D62E1B70B1AF00044180 /* EasyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyMapping.h; sourceTree = "<group>"; };
 		4D32D62F1B70B1AF00044180 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKCoreDataImporter.h; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 			children = (
 				4D2CC6BA1B724BCD007BBEA4 /* SettingsActor.swift */,
 				4D2CC6CF1B739135007BBEA4 /* SettingsStorage.swift */,
+				4D2CC6D11B73924F007BBEA4 /* Settings+NSCoding.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				C142087A75A1B7B4E322ADD1 /* ActorTest.swift in Sources */,
 				C142068DC24E91FBB91D49D7 /* Obbcj.swift in Sources */,
 				C14202590152848CEE242DBF /* SessionAPIActor.swift in Sources */,
+				4D2CC6D21B73924F007BBEA4 /* Settings+NSCoding.swift in Sources */,
 				C1420E40615BDC158C0FCBF2 /* SessionStorage.swift in Sources */,
 				C1420867B1E3A06D660E107C /* DTServiceLocator.m in Sources */,
 				4D2CC6C81B737F98007BBEA4 /* Settings+EasyMapping.swift in Sources */,

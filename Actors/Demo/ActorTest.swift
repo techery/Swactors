@@ -3,6 +3,7 @@ import Foundation
 class Playground {
     static let locator:DTServiceLocator = DTServiceLocator { locator in
         locator.registerService(SessionStorage(), forClass: SessionStorage.self)
+        locator.registerService(SettingsStorage(), forClass: SettingsStorage.self)
     }
     
     let system = DTMainActorSystem(serviceLocator: locator) { builder in
