@@ -19,12 +19,14 @@ class SessionActor : DActor {
         
     }
     
+    let sessionApiActor: DTActorRef
     let apiActor: DTActorRef
     let mappingActor: DTActorRef
     let sessionStorage: SessionStorage?
     
     override init!(actorSystem: DTActorSystem!) {
-        apiActor = actorSystem.actorOfClass(SessionAPIActor)
+        sessionApiActor = actorSystem.actorOfClass(SessionAPIActor)
+        apiActor = actorSystem.actorOfClass(APIActor)
         mappingActor = actorSystem.actorOfClass(MappingActor)
         sessionStorage = actorSystem.serviceLocator.serviceForClass(SessionStorage.self) as? SessionStorage
         super.init(actorSystem: actorSystem)
@@ -39,27 +41,36 @@ class SessionActor : DActor {
     }
     
     private func askSession(login: String, password: String) -> RXPromise {
-        let session = self.apiActor.ask(SessionAPIActor.Session(login: login, password: password))
-        let mappedSession = session.then({ result in
+        let session = self.sessionApiActor.ask(SessionAPIActor.Session(login: login, password: password))
+        let mapSession = session.then({ result in
             if let payload = result as? String {
-                let store = self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self)).then({result in
-                    self.storeSession(result)
-                    return result
-                }, nil)
-                return store
+                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
             } else {
                 return nil
             }
             }, nil)
         
-        return mappedSession
+        let storeSession = mapSession.then({result in
+            return self.tryStoreSession(result)
+        }, nil)
+        
+        return storeSession
     }
     
-    private func storeSession(session: AnyObject) {
+    private func tryStoreSession(session: AnyObject) -> RXPromise {
+        let promise = RXPromise()
         if let s = session as? Session {
             if let storage = sessionStorage {
                 storage.session = s
+                promise.resolveWithResult(s)
             }
         }
+        
+        promise.rejectWithReason("Failed to store session")
+        return promise
+    }
+    
+    private func setTokenToHeaders() {
+        
     }
 }

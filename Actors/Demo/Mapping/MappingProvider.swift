@@ -19,5 +19,6 @@ class MappingProvider {
     
     init() {
         add(Session.self)
+        add(Settings.self)
     }
 }
