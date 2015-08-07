@@ -6,18 +6,17 @@
 #import "DTActorSystem.h"
 #import "DTActor.h"
 #import "DTActorProvider.h"
-#import "DTServiceLocator.h"
 #import "Actors-Swift.h"
 
 
 @interface DTMainActorSystem()
 @property (nonatomic, strong) NSMutableDictionary *actorsProviders;
-@property (nonatomic, strong) DTServiceLocator *serviceLocator;
+@property (nonatomic, strong) ServiceLocator *serviceLocator;
 @end
 
 @implementation DTMainActorSystem
 
-- (instancetype)initWithConfigs:(id <Configs>)configs serviceLocator:(DTServiceLocator *)serviceLocator builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
+- (instancetype)initWithConfigs:(id <Configs>)configs serviceLocator:(ServiceLocator *)serviceLocator builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
     if (self = [super init]) {
         _actorsProviders = [NSMutableDictionary new];
         _serviceLocator = serviceLocator;
@@ -71,7 +70,7 @@
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
 }
 
-- (void)setServiceLocator:(DTServiceLocator *)serviceLocator {
+- (void)setServiceLocator:(ServiceLocator *)serviceLocator {
 
 }
 

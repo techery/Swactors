@@ -28,7 +28,7 @@ class SessionActor : DActor {
         sessionApiActor = actorSystem.actorOfClass(SessionAPIActor)
         apiActor = actorSystem.actorOfClass(APIActor)
         mappingActor = actorSystem.actorOfClass(MappingActor)
-        sessionStorage = actorSystem.serviceLocator.serviceForClass(SessionStorage.self) as? SessionStorage
+        sessionStorage = actorSystem.serviceLocator.service()
         super.init(actorSystem: actorSystem)
     }
     

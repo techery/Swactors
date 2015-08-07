@@ -1,9 +1,9 @@
 import Foundation
 
 class Playground {
-    static let locator:DTServiceLocator = DTServiceLocator { locator in
-        locator.registerService(SessionStorage(), forClass: SessionStorage.self)
-        locator.registerService(SettingsStorage(), forClass: SettingsStorage.self)
+    static let locator:ServiceLocator = ServiceLocator { locator in
+        locator.register(SessionStorage())
+        locator.register(SettingsStorage())
     }
     
     let system = DTMainActorSystem(configs: TripsConfigs(), serviceLocator: locator) { builder in
