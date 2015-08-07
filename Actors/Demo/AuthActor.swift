@@ -32,10 +32,8 @@ class AuthActor: DActor {
     override func setup() {
         on { (msg: Login) -> RXPromise in
             let session = self.sessionActor.ask(SessionActor.Login(email: msg.email, password: msg.password))
-            let settings = session.then({ result in
-                return self.settingsActor.ask(SettingsActor.GetSettings())
-                }, nil)
-            return settings
+            let settings = self.settingsActor.ask(SettingsActor.GetSettings())
+            return RXPromise.allSettled([session, settings])
         }
     }
 }
