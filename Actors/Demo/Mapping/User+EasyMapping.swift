@@ -26,6 +26,14 @@ extension User: EKMappingProtocol {
             "isSocialEnabled" : "social_enabled"
             ])
         
+        mapping.mapKeyPath("enroll_date", toProperty: "enrollDate", withDateFormatter: NSDateFormatter.ek_formatterForCurrentThread())
+        mapping.mapKeyPath("birth_date", toProperty: "birthDate", withDateFormatter: NSDateFormatter.ek_formatterForCurrentThread())
+        
+        mapping.mapKeyPath("avatar.original", toProperty: "avatarOriginalURL", withValueBlock: EKMappingBlocks.urlMappingBlock(), reverseBlock: EKMappingBlocks.urlReverseMappingBlock())
+        mapping.mapKeyPath("avatar.medium", toProperty: "avatarMediumURL", withValueBlock: EKMappingBlocks.urlMappingBlock(), reverseBlock: EKMappingBlocks.urlReverseMappingBlock())
+        mapping.mapKeyPath("avatar.thumb", toProperty: "avatarThumbURL", withValueBlock: EKMappingBlocks.urlMappingBlock(), reverseBlock: EKMappingBlocks.urlReverseMappingBlock())
+        mapping.mapKeyPath("background_photo_url", toProperty: "coverPhotoURL", withValueBlock: EKMappingBlocks.urlMappingBlock(), reverseBlock: EKMappingBlocks.urlReverseMappingBlock())
+        
         return mapping
     }
 }
