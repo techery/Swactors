@@ -25,11 +25,15 @@
 
 #pragma mark - DTActor
 
-@protocol DTActorSystem;
+@protocol DTActorSystem, Configs;
+@class DTServiceLocator;
 
 @interface DTActor : NSObject<DTActorHandler, DTSystemActor>
 
 @property (nonatomic, readonly, weak) id<DTActorSystem> actorSystem;
+
+@property (nonatomic, readonly) DTServiceLocator *serviceLocator;
+@property (nonatomic, readonly) id<Configs> configs;
 
 - (instancetype)initWithActorSystem:(id <DTActorSystem>)actorSystem;
 + (instancetype)actorWithActorSystem:(id <DTActorSystem>)actorSystem;

@@ -8,7 +8,7 @@ import Foundation
 class SessionAPIActor: DActor {
     
     let apiActor:DTActorRef
-    let baseURL: NSURL = NSURL(string: "http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com")!
+    private(set) var baseURL: NSURL = NSURL()
     
     // MARK: - Messages
     
@@ -35,6 +35,8 @@ class SessionAPIActor: DActor {
     override init!(actorSystem: DTActorSystem!) {
         apiActor = actorSystem.actorOfClass(APIActor)
         super.init(actorSystem: actorSystem)
+        let urlString: String = configs[TripsConfigs.Keys.baseURL] as! String
+        baseURL = NSURL(string: urlString)!
     }
     
     override func setup() {

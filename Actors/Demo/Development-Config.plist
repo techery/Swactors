@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>environment</key>
+	<string>Development</string>
+	<key>report_crashes</key>
+	<false/>
+	<key>hockey_key</key>
+	<string>04d8c2a0263fec83892810b79f5bb334</string>
+	<key>instabug_key</key>
+	<string>94298e38c07f1a4ed8e4935a3cb694ec</string>
+	<key>ponydbugger_url</key>
+	<string>ws://localhost:9000/device</string>
+	<key>base_api_url</key>
+	<string>http://ec2-54-200-42-102.us-west-2.compute.amazonaws.com</string>
+	<key>configuration_json_url</key>
+	<string>http://dtapp.s3.amazonaws.com/config/settings_v4.json</string>
+</dict>
+</plist>

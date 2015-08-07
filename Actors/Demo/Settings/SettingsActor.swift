@@ -22,7 +22,8 @@ class SettingsActor: DActor {
     
     override func setup() {
         on { (msg: GetSettings) -> RXPromise in
-            let settings = self.apiActor.ask(APIActor.Get(path: "http://dtapp.s3.amazonaws.com/config/settings_v4.json"))
+            let settingsURL = self.configs[TripsConfigs.Keys.settingsURL] as! String
+            let settings = self.apiActor.ask(APIActor.Get(path: settingsURL))
             let mapSettings = settings.then({result in
                 if let payload = result as? String {
                     return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Settings.self))

@@ -6,7 +6,7 @@ class Playground {
         locator.registerService(SettingsStorage(), forClass: SettingsStorage.self)
     }
     
-    let system = DTMainActorSystem(serviceLocator: locator) { builder in
+    let system = DTMainActorSystem(configs: TripsConfigs(), serviceLocator: locator) { builder in
         builder.addActor(AuthActor)
         builder.addActor(SessionActor)
         builder.addActor(SessionAPIActor)

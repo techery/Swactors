@@ -21,6 +21,8 @@
     if (self) {
         _actorSystem = actorSystem;
         _dispatcher = [DTMessageDispatcher new];
+        _serviceLocator = actorSystem.serviceLocator;
+        _configs = actorSystem.configs;
         [self setup];
     }
 

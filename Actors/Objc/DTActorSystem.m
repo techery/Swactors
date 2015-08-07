@@ -7,6 +7,7 @@
 #import "DTActor.h"
 #import "DTActorProvider.h"
 #import "DTServiceLocator.h"
+#import "Actors-Swift.h"
 
 
 @interface DTMainActorSystem()
@@ -16,11 +17,11 @@
 
 @implementation DTMainActorSystem
 
-- (instancetype)initWithServiceLocator:(DTServiceLocator *)serviceLocator
-                          builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
+- (instancetype)initWithConfigs:(id <Configs>)configs serviceLocator:(DTServiceLocator *)serviceLocator builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock {
     if (self = [super init]) {
         _actorsProviders = [NSMutableDictionary new];
         _serviceLocator = serviceLocator;
+        _configs = configs;
         DTActorSystemBuilder *builder = [[DTActorSystemBuilder alloc] initWithActorSystem:self];
         builderBlock(builder);
     }
