@@ -2,19 +2,18 @@
 
 import Foundation
 
-@objc
-class MappingRequest : NSObject {
-    let payload:String
-    let resultType:AnyClass
-
-    init(payload: String, resultType: AnyClass) {
-        self.payload = payload
-        self.resultType = resultType
-    }
-}
-
 class MappingActor: DActor {
     private let mappingProvider: MappingProvider = MappingProvider()
+
+    class MappingRequest : NSObject {
+        let payload:String
+        let resultType:AnyClass
+        
+        init(payload: String, resultType: AnyClass) {
+            self.payload = payload
+            self.resultType = resultType
+        }
+    }
     
     override func setup() {
         on { (msg: MappingRequest) -> RXPromise in

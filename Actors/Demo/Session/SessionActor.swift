@@ -44,7 +44,7 @@ class SessionActor : DActor {
         let session = self.sessionApiActor.ask(SessionAPIActor.Session(login: login, password: password))
         let mapSession = session.then({ result in
             if let payload = result as? String {
-                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
+                return self.mappingActor.ask(MappingActor.MappingRequest(payload: payload, resultType: Session.self))
             } else {
                 return nil
             }
