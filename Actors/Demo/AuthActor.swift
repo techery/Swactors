@@ -24,8 +24,8 @@ class AuthActor: DActor {
     let settingsActor: DTActorRef
     
     override init!(actorSystem: DTActorSystem!) {
-        sessionActor = actorSystem.actorOfClass(SessionActor)
-        settingsActor = actorSystem.actorOfClass(SettingsActor)
+        sessionActor = actorSystem.actorOfClass(SessionActor)!
+        settingsActor = actorSystem.actorOfClass(SettingsActor)!
         super.init(actorSystem: actorSystem)
     }
     

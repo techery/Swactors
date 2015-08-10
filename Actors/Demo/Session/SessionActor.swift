@@ -25,9 +25,9 @@ class SessionActor : DActor {
     let sessionStorage: SessionStorage?
     
     override init!(actorSystem: DTActorSystem!) {
-        sessionApiActor = actorSystem.actorOfClass(SessionAPIActor)
-        apiActor = actorSystem.actorOfClass(APIActor)
-        mappingActor = actorSystem.actorOfClass(MappingActor)
+        sessionApiActor = actorSystem.actorOfClass(SessionAPIActor)!
+        apiActor = actorSystem.actorOfClass(APIActor)!
+        mappingActor = actorSystem.actorOfClass(MappingActor)!
         sessionStorage = actorSystem.serviceLocator.service()
         super.init(actorSystem: actorSystem)
     }

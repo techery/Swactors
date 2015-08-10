@@ -17,7 +17,7 @@ class Playground {
     
     let authActor: DTActorRef
     init() {
-        authActor = system.actorOfClass(AuthActor)
+        authActor = system.actorOfClass(AuthActor)!
     }
     func main() {
         let f = self.authActor.ask(AuthActor.Login(email: "888888", password: "travel1ns1de"))

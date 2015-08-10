@@ -14,8 +14,8 @@ class SettingsActor: DActor {
     let settingsStorage: SettingsStorage?
     
     override init!(actorSystem: DTActorSystem!) {
-        apiActor = actorSystem.actorOfClass(APIActor)
-        mappingActor = actorSystem.actorOfClass(MappingActor)
+        apiActor = actorSystem.actorOfClass(APIActor)!
+        mappingActor = actorSystem.actorOfClass(MappingActor)!
         settingsStorage = actorSystem.serviceLocator.service()
         super.init(actorSystem: actorSystem)
     }
