@@ -6,10 +6,13 @@
 //  Copyright (c) 2015 Techery. All rights reserved.
 //
 
-class ServiceLocator {
+import Foundation
+
+class ServiceLocator: NSObject {
     private var registry: [String : AnyObject] = [:]
     
     init(builderBlock: ServiceLocator -> Void) {
+        super.init()
         builderBlock(self)
     }
     
