@@ -36,7 +36,14 @@
 		4D32D6571B70B1AF00044180 /* EKSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6471B70B1AF00044180 /* EKSerializer.m */; };
 		4D32D6581B70B1AF00044180 /* NSArray+FlattenArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */; };
 		4D32D6591B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */; };
-		4DD9BD921B74F5DB00C0DA5C /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BD911B74F5DB00C0DA5C /* SampleSpec.m */; };
+		4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
+		4D88048A1B789C39001F80CD /* DTActor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420B37F6F988BA4CC6E86F /* DTActor.m */; };
+		4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */; };
+		4D88048C1B789C39001F80CD /* DTMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420BB46A7686E42FB53BA7 /* DTMessageDispatcher.m */; };
+		4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
+		4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
+		4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
+		4DD9BD921B74F5DB00C0DA5C /* ActorSystemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */; };
 		4DFBC7431B74A40A0091F27C /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBC7421B74A40A0091F27C /* Development-Config.plist */; };
 		4DFBC7451B74B60B0091F27C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */; };
 		52F2628229A1EA2A6B531C75 /* libPods-Actors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 726069866A3CD3359E8AB6DA /* libPods-Actors.a */; };
@@ -162,7 +169,7 @@
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		4DD9BD911B74F5DB00C0DA5C /* SampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSpec.m; sourceTree = "<group>"; };
+		4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorSystemTest.m; sourceTree = "<group>"; };
 		4DFBC7421B74A40A0091F27C /* Development-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Development-Config.plist"; sourceTree = "<group>"; };
 		4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		726069866A3CD3359E8AB6DA /* libPods-Actors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Actors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,7 +392,7 @@
 				AD5903961B6021D600D41DA0 /* ActorsTests.swift */,
 				AD5903981B6021D600D41DA0 /* Info.plist */,
 				4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */,
-				4DD9BD911B74F5DB00C0DA5C /* SampleSpec.m */,
+				4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */,
 			);
 			path = ActorsTests;
 			sourceTree = "<group>";
@@ -785,8 +792,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD9BD921B74F5DB00C0DA5C /* SampleSpec.m in Sources */,
+				4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */,
+				4D88048A1B789C39001F80CD /* DTActor.m in Sources */,
+				4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */,
+				4DD9BD921B74F5DB00C0DA5C /* ActorSystemTest.m in Sources */,
+				4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */,
 				AD5903971B6021D600D41DA0 /* ActorsTests.swift in Sources */,
+				4D88048C1B789C39001F80CD /* DTMessageDispatcher.m in Sources */,
+				4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */,
+				4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +911,7 @@
 			baseConfigurationReference = 83E3E5F21221340EF5EB1D6A /* Pods-Actors.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Actors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.Actors;
@@ -909,6 +924,7 @@
 			baseConfigurationReference = 03864B5298255F86F82C0343 /* Pods-Actors.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Actors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.Actors;
@@ -922,6 +938,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Actors.app/Actors";
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Kiwi\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
+				);
 				INFOPLIST_FILE = ActorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.ActorsTests;
@@ -938,6 +960,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Actors.app/Actors";
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Kiwi\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
+				);
 				INFOPLIST_FILE = ActorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.ActorsTests;
