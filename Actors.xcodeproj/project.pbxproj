@@ -36,8 +36,10 @@
 		4D32D6571B70B1AF00044180 /* EKSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6471B70B1AF00044180 /* EKSerializer.m */; };
 		4D32D6581B70B1AF00044180 /* NSArray+FlattenArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */; };
 		4D32D6591B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */; };
+		4DD9BD921B74F5DB00C0DA5C /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BD911B74F5DB00C0DA5C /* SampleSpec.m */; };
 		4DFBC7431B74A40A0091F27C /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBC7421B74A40A0091F27C /* Development-Config.plist */; };
 		4DFBC7451B74B60B0091F27C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */; };
+		52F2628229A1EA2A6B531C75 /* libPods-Actors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 726069866A3CD3359E8AB6DA /* libPods-Actors.a */; };
 		AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903831B6021D600D41DA0 /* ViewController.swift */; };
 		AD5903891B6021D600D41DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5903881B6021D600D41DA0 /* Assets.xcassets */; };
 		AD5903971B6021D600D41DA0 /* ActorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903961B6021D600D41DA0 /* ActorsTests.swift */; };
@@ -111,6 +113,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03864B5298255F86F82C0343 /* Pods-Actors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actors.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actors/Pods-Actors.release.xcconfig"; sourceTree = "<group>"; };
 		4D2CC6AB1B721C9D007BBEA4 /* APIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		4D2CC6AE1B721CA6007BBEA4 /* MappingActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActor.swift; sourceTree = "<group>"; };
 		4D2CC6AF1B721CA6007BBEA4 /* MappingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingProvider.swift; sourceTree = "<group>"; };
@@ -158,8 +161,12 @@
 		4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
+		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4DD9BD911B74F5DB00C0DA5C /* SampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSpec.m; sourceTree = "<group>"; };
 		4DFBC7421B74A40A0091F27C /* Development-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Development-Config.plist"; sourceTree = "<group>"; };
 		4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		726069866A3CD3359E8AB6DA /* libPods-Actors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Actors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E3E5F21221340EF5EB1D6A /* Pods-Actors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actors.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Actors/Pods-Actors.debug.xcconfig"; sourceTree = "<group>"; };
 		AD59037E1B6021D600D41DA0 /* Actors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5903831B6021D600D41DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD5903881B6021D600D41DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -235,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F2628229A1EA2A6B531C75 /* libPods-Actors.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +351,8 @@
 				AD5903951B6021D600D41DA0 /* ActorsTests */,
 				AD59037F1B6021D600D41DA0 /* Products */,
 				C1420B27BE278C3A9D43906A /* RXPromise */,
+				FDFE9E9045A65D9A303B07EE /* Pods */,
+				C4A71E7AF86063F16164D462 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -374,6 +384,8 @@
 			children = (
 				AD5903961B6021D600D41DA0 /* ActorsTests.swift */,
 				AD5903981B6021D600D41DA0 /* Info.plist */,
+				4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */,
+				4DD9BD911B74F5DB00C0DA5C /* SampleSpec.m */,
 			);
 			path = ActorsTests;
 			sourceTree = "<group>";
@@ -539,6 +551,23 @@
 			path = ServiceLocator;
 			sourceTree = "<group>";
 		};
+		C4A71E7AF86063F16164D462 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				726069866A3CD3359E8AB6DA /* libPods-Actors.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDFE9E9045A65D9A303B07EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83E3E5F21221340EF5EB1D6A /* Pods-Actors.debug.xcconfig */,
+				03864B5298255F86F82C0343 /* Pods-Actors.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -546,10 +575,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD5903A61B6021D600D41DA0 /* Build configuration list for PBXNativeTarget "Actors" */;
 			buildPhases = (
+				6E2C699B34629FE4006F65B8 /* Check Pods Manifest.lock */,
 				AD59037A1B6021D500D41DA0 /* Sources */,
 				AD59037B1B6021D500D41DA0 /* Frameworks */,
 				AD59037C1B6021D500D41DA0 /* Resources */,
 				4D5C54E61B69CBA9000DD26B /* Copy Frameworks */,
+				99B0BAFB395048A14F4E4A45 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,6 +665,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E2C699B34629FE4006F65B8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99B0BAFB395048A14F4E4A45 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Actors/Pods-Actors-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD59037A1B6021D500D41DA0 /* Sources */ = {
@@ -721,6 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD9BD921B74F5DB00C0DA5C /* SampleSpec.m in Sources */,
 				AD5903971B6021D600D41DA0 /* ActorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -829,6 +894,7 @@
 		};
 		AD5903A71B6021D600D41DA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E3E5F21221340EF5EB1D6A /* Pods-Actors.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Actors/Info.plist;
@@ -840,6 +906,7 @@
 		};
 		AD5903A81B6021D600D41DA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03864B5298255F86F82C0343 /* Pods-Actors.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Actors/Info.plist;
@@ -851,25 +918,32 @@
 		};
 		AD5903AA1B6021D600D41DA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E3E5F21221340EF5EB1D6A /* Pods-Actors.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Actors.app/Actors";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ActorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.ActorsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Actors.app/Actors";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActorsTests/ActorsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
 		};
 		AD5903AB1B6021D600D41DA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03864B5298255F86F82C0343 /* Pods-Actors.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Actors.app/Actors";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ActorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.ActorsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Actors.app/Actors";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActorsTests/ActorsTests-Bridging-Header.h";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
