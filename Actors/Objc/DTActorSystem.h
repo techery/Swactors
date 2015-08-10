@@ -8,34 +8,37 @@
 @protocol DTActorProvider, Configs;
 @class DTActorRef, DTActor, ServiceLocator;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol DTActorSystem
 
-@property(nonatomic, readonly, nonnull) ServiceLocator *serviceLocator;
-@property (nonatomic, readonly, nonnull) id<Configs> configs;
+@property(nonatomic, readonly) ServiceLocator *serviceLocator;
+@property (nonatomic, readonly) id<Configs> configs;
 
-- (nullable DTActorRef *)actorOfClass:(nonnull Class)class;
-- (void)addActorProvider:(nonnull id<DTActorProvider>)actorProvider;
+- (nullable DTActorRef *)actorOfClass:(Class)class;
+- (void)addActorProvider:(id<DTActorProvider>)actorProvider;
 
 @end
 
 @interface DTActorSystemBuilder: NSObject
 
-@property (nonatomic, readonly, nonnull) id<DTActorSystem> actorSystem;
+@property (nonatomic, readonly) id<DTActorSystem> actorSystem;
 
-- (nonnull instancetype)initWithActorSystem:(nonnull id <DTActorSystem>)actorSystem;
-+ (nonnull instancetype)builderWithActorSystem:(nonnull id <DTActorSystem>)actorSystem;
+- (instancetype)initWithActorSystem:(id <DTActorSystem>)actorSystem;
++ (instancetype)builderWithActorSystem:(id <DTActorSystem>)actorSystem;
 
-- (void)addActor:(nonnull Class)actorType;
+- (void)addActor:(Class)actorType;
 
 @end
 
 @interface DTMainActorSystem : NSObject <DTActorSystem>
 
-@property(nonatomic, readonly, nonnull) ServiceLocator *serviceLocator;
-@property (nonatomic, readonly, nonnull) id<Configs> configs;
+@property(nonatomic, readonly) ServiceLocator *serviceLocator;
+@property (nonatomic, readonly) id<Configs> configs;
 
-- (nonnull instancetype)initWithConfigs:(nonnull id<Configs>)configs
-                 serviceLocator:(nonnull ServiceLocator *)serviceLocator
-                   builderBlock:(nonnull void (^)(DTActorSystemBuilder * __nonnull))builderBlock;
+- (instancetype)initWithConfigs:(id<Configs>)configs
+                 serviceLocator:(ServiceLocator *)serviceLocator
+                   builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock;
 @end
+
+NS_ASSUME_NONNULL_END
