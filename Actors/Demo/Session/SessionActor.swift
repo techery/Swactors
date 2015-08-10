@@ -25,9 +25,9 @@ class SessionActor : DActor {
     let sessionStorage: SessionStorage?
     
     override init!(actorSystem: DTActorSystem!) {
-        sessionApiActor = actorSystem.actorOfClass(SessionAPIActor)
-        apiActor = actorSystem.actorOfClass(APIActor)
-        mappingActor = actorSystem.actorOfClass(MappingActor)
+        sessionApiActor = actorSystem.actorOfClass(SessionAPIActor)!
+        apiActor = actorSystem.actorOfClass(APIActor)!
+        mappingActor = actorSystem.actorOfClass(MappingActor)!
         sessionStorage = actorSystem.serviceLocator.service()
         super.init(actorSystem: actorSystem)
     }
@@ -44,7 +44,7 @@ class SessionActor : DActor {
         let session = self.sessionApiActor.ask(SessionAPIActor.Session(login: login, password: password))
         let mapSession = session.then({ result in
             if let payload = result as? String {
-                return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Session.self))
+                return self.mappingActor.ask(MappingActor.MappingRequest(payload: payload, resultType: Session.self))
             } else {
                 return nil
             }

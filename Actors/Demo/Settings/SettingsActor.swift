@@ -14,8 +14,8 @@ class SettingsActor: DActor {
     let settingsStorage: SettingsStorage?
     
     override init!(actorSystem: DTActorSystem!) {
-        apiActor = actorSystem.actorOfClass(APIActor)
-        mappingActor = actorSystem.actorOfClass(MappingActor)
+        apiActor = actorSystem.actorOfClass(APIActor)!
+        mappingActor = actorSystem.actorOfClass(MappingActor)!
         settingsStorage = actorSystem.serviceLocator.service()
         super.init(actorSystem: actorSystem)
     }
@@ -26,7 +26,7 @@ class SettingsActor: DActor {
             let settings = self.apiActor.ask(APIActor.Get(path: settingsURL))
             let mapSettings = settings.then({result in
                 if let payload = result as? String {
-                    return self.mappingActor.ask(MappingRequest(payload: payload, resultType: Settings.self))
+                    return self.mappingActor.ask(MappingActor.MappingRequest(payload: payload, resultType: Settings.self))
                 } else {
                     return nil
                 }

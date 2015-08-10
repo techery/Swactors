@@ -17,15 +17,15 @@
 {
     self = [super init];
     if (self) {
-        DTActor *a;
-        
-        ObjcX *objc = [[ObjcX alloc] init];
-        
-        int len = [objc get:@"qwdqd"];
-        
-        Payload *p = [objc payload:@"qwdqd"];
-        
-        Payload *p2 = [[Payload alloc] init:@"qwd"];
+//        DTActor *a;
+//        
+//        ObjcX *objc = [[ObjcX alloc] init];
+//        
+//        int len = [objc get:@"qwdqd"];
+//        
+//        Payload *p = [objc payload:@"qwdqd"];
+//        
+//        Payload *p2 = [[Payload alloc] init:@"qwd"];
     }
     return self;
 }

@@ -33,7 +33,7 @@ class SessionAPIActor: DActor {
     // MARK: - DTActor
     
     override init!(actorSystem: DTActorSystem!) {
-        apiActor = actorSystem.actorOfClass(APIActor)
+        apiActor = actorSystem.actorOfClass(APIActor)!
         super.init(actorSystem: actorSystem)
         let urlString: String = configs[TripsConfigs.Keys.baseURL] as! String
         baseURL = NSURL(string: urlString)!
