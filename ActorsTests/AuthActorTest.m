@@ -9,7 +9,6 @@
 #import "Kiwi.h"
 #import "Actors-Swift.h"
 #import "DTActorSystem.h"
-#import "DTAuthActor.h"
 
 SPEC_BEGIN(AuthActorTest)
 
@@ -28,7 +27,7 @@ describe(@"AuthActor", ^{
         [actorSystem stub:@selector(actorOfClass:) andReturn:sessionActor withArguments:[SessionActor class]];
         [actorSystem stub:@selector(actorOfClass:) andReturn:settingsActor withArguments:[SettingsActor class]];
         
-        authActor = [[DTActorRef alloc] initWithActor:[[DTAuthActor alloc] initWithActorSystem:actorSystem]];
+        authActor = [[DTActorRef alloc] initWithActor:[[AuthActor alloc] initWithActorSystem:actorSystem]];
     });
     
     it(@"Should not be nil", ^{

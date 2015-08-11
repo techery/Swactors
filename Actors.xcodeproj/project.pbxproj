@@ -44,7 +44,6 @@
 		4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
 		4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
 		4D8804911B78A62E001F80CD /* AuthActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8804901B78A62E001F80CD /* AuthActorTest.m */; };
-		4D8804961B78ECF8001F80CD /* DTAuthActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8804951B78ECF8001F80CD /* DTAuthActor.m */; };
 		4DD9BD921B74F5DB00C0DA5C /* ActorSystemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */; };
 		4DFBC7431B74A40A0091F27C /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBC7421B74A40A0091F27C /* Development-Config.plist */; };
 		4DFBC7451B74B60B0091F27C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */; };
@@ -169,8 +168,6 @@
 		4D32D64A1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+EasyMappingAdditions.h"; sourceTree = "<group>"; };
 		4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
 		4D8804901B78A62E001F80CD /* AuthActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthActorTest.m; sourceTree = "<group>"; };
-		4D8804941B78ECF8001F80CD /* DTAuthActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAuthActor.h; sourceTree = "<group>"; };
-		4D8804951B78ECF8001F80CD /* DTAuthActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAuthActor.m; sourceTree = "<group>"; };
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -311,8 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				4D2CC6BD1B724E1A007BBEA4 /* AuthActor.swift */,
-				4D8804941B78ECF8001F80CD /* DTAuthActor.h */,
-				4D8804951B78ECF8001F80CD /* DTAuthActor.m */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -787,7 +782,6 @@
 				4D2CC6AC1B721C9D007BBEA4 /* APIActor.swift in Sources */,
 				C14206985D533AC14CC3ED09 /* DTMessageHandler.swift in Sources */,
 				4D2CC6CE1B738F2B007BBEA4 /* User+EasyMapping.swift in Sources */,
-				4D8804961B78ECF8001F80CD /* DTAuthActor.m in Sources */,
 				C14200613D2A54EAE6904A6D /* ActorExecutor.swift in Sources */,
 				4D32D6561B70B1AF00044180 /* EKRelationshipMapping.m in Sources */,
 				C14201F562E4EBCF5A81D203 /* AppDelegate.swift in Sources */,
