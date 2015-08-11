@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Techery. All rights reserved.
 //
 
+class GetSettings:NSObject {}
+
 class SettingsActor: DActor {
-    class GetSettings{}
-    
     let apiActor: DTActorRef
     let mappingActor: DTActorRef
     let settingsStorage: SettingsStorage?

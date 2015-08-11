@@ -1,20 +1,7 @@
 import Foundation
 
 
-class SessionActor : DActor {
-
-    class Login : NSObject {
-        let email:String
-        let password:String
-        
-        typealias Result = Session
-        
-        init(email: String, password: String) {
-            self.email = email
-            self.password = password
-        }
-    }
-    
+class SessionActor : DActor {    
     class Logout {
         
     }
