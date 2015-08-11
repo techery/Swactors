@@ -16,7 +16,7 @@
 
 - (instancetype)initWithActorSystem:(id <DTActorSystem>)actorSystem {
     if (self = [super initWithActorSystem:actorSystem]) {
-        _sessoinActor = [actorSystem actorOfClass:[SessionActor class]];
+        _sessionActor = [actorSystem actorOfClass:[SessionActor class]];
         _settingsActor = [actorSystem actorOfClass:[SettingsActor class]];
     }
 
@@ -25,7 +25,7 @@
 
 - (void)setup {
     [self on:[Login class] doFuture:^RXPromise *(Login *message) {
-        RXPromise *sessoin = [self.sessoinActor ask:message];
+        RXPromise *sessoin = [self.sessionActor ask:message];
         RXPromise *settings = [self.settingsActor ask:[GetSettings new]];
         return [RXPromise allSettled:@[sessoin, settings]];
     }];

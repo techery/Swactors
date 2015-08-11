@@ -20,15 +20,15 @@ describe(@"AuthActor", ^{
     __block DTMainActorSystem *actorSystem = nil;
     
     beforeAll(^{
-        actorSystem = [[DTMainActorSystem alloc] initWithConfigs:[KWMock mockForProtocol:@protocol(Configs)]
-                                                     serviceLocator:[ServiceLocator mock]
-                                                       builderBlock:^(DTActorSystemBuilder * builder) {
-            [builder addActor:[DTAuthActor class]];
-        }];
+        actorSystem = [DTMainActorSystem mock];
+        
+        [actorSystem stub:@selector(configs) andReturn:[KWMock mockForProtocol:@protocol(Configs)]];
+        [actorSystem stub:@selector(serviceLocator) andReturn:[ServiceLocator mock]];
         
         [actorSystem stub:@selector(actorOfClass:) andReturn:sessionActor withArguments:[SessionActor class]];
         [actorSystem stub:@selector(actorOfClass:) andReturn:settingsActor withArguments:[SettingsActor class]];
-        authActor = [actorSystem actorOfClass:[DTAuthActor class]];    
+        
+        authActor = [[DTActorRef alloc] initWithActor:[[DTAuthActor alloc] initWithActorSystem:actorSystem]];
     });
     
     it(@"Should not be nil", ^{
@@ -46,11 +46,11 @@ describe(@"AuthActor", ^{
         });
         
         it(@"Session should receive Login message", ^{
-            [[sessionActor shouldEventuallyBeforeTimingOutAfter(1)] receive:@selector(ask:) withArguments:login];
+            [[sessionActor shouldEventually] receive:@selector(ask:)];
         });
 
         it(@"Settings should receive GetSettings message", ^{
-            [[settingsActor shouldEventuallyBeforeTimingOutAfter(1)] receive:@selector(ask:) withArguments:[GetSettings new]];
+            [[settingsActor shouldEventually] receive:@selector(ask:)];
         });
         
         

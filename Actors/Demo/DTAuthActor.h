@@ -10,7 +10,7 @@
 
 @interface DTAuthActor : DTActor
 
-@property(readonly, nonatomic) DTActorRef *sessoinActor;
+@property(readonly, nonatomic) DTActorRef *sessionActor;
 @property(readonly, nonatomic) DTActorRef *settingsActor;
 
 @end
