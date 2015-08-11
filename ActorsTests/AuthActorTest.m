@@ -37,11 +37,17 @@ describe(@"AuthActor", ^{
     
     context(@"On Login message", ^{
         __block Login *login = nil;
-//        __block id result = nil;
+        __block RXPromise *successPromise = [RXPromise new];
+        __block RXPromise *failedPromise = [RXPromise new];
+        
+        beforeAll(^{
+            [successPromise resolveWithResult:nil];
+            [failedPromise rejectWithReason:@"reason"];
+        });
         
         beforeEach(^{
-            [sessionActor stub:@selector(ask:) andReturn:[RXPromise new]];
-            [settingsActor stub:@selector(ask:) andReturn:[RXPromise new]];
+            [sessionActor stub:@selector(ask:) andReturn:successPromise];
+            [settingsActor stub:@selector(ask:) andReturn:successPromise];
             login = [[Login alloc] initWithEmail:@"some" password:@""];
         });
         
@@ -55,15 +61,49 @@ describe(@"AuthActor", ^{
             [authActor ask:login];
         });
         
-//        context(@"If Session Actor fails", ^{
-//            it(@"Should receive failed result", ^{
-//                RXPromise *failedPromise = [RXPromise new];
-//                [failedPromise rejectWithReason:nil];
-//                [sessionActor stub:@selector(ask:) andReturn:failedPromise];
-//                
-//                [[result shouldNotEventually] receive:@selector(resolveWithResult:)];
-//            });
-//        });
+        context(@"If all actors succeeded", ^{
+            it(@"Should receive success result", ^{
+                RXPromise *result = [authActor ask:login];
+                [result wait];
+                [[theValue(result.isFulfilled) should] beTrue];
+            });
+            
+            it(@"Result should contain results from both actors", ^{
+                id sessionResult = [NSObject new];
+                id settingsResult = [NSObject new];
+                
+                RXPromise *session = [RXPromise new];
+                [session resolveWithResult:sessionResult];
+                RXPromise *settings = [RXPromise new];
+                [settings resolveWithResult:settingsResult];
+                
+                [sessionActor stub:@selector(ask:) andReturn:session];
+                [settingsActor stub:@selector(ask:) andReturn:settings];
+                
+                RXPromise *auth = [authActor ask:login];
+                NSArray *authResult = (NSArray *)[auth get];
+                [[[authResult firstObject] should] equal:sessionResult];
+                [[[authResult lastObject] should] equal:settingsResult];
+            });
+        });
+        
+        context(@"If Session actor fails", ^{
+            it(@"Should receive failed result", ^{
+                [sessionActor stub:@selector(ask:) andReturn:failedPromise];
+                RXPromise *result = [authActor ask:login];
+                [result wait];
+                [[theValue(result.isRejected) should] beTrue];
+            });
+        });
+        
+        context(@"If Settings actor fails", ^{
+            it(@"Should receive failed result", ^{
+                [settingsActor stub:@selector(ask:) andReturn:failedPromise];
+                RXPromise *result = [authActor ask:login];
+                [result wait];
+                [[theValue(result.isRejected) should] beTrue];
+            });
+        });
     });
 });
 
