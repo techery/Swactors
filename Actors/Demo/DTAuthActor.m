@@ -27,7 +27,7 @@
     [self on:[Login class] doFuture:^RXPromise *(Login *message) {
         RXPromise *sessoin = [self.sessionActor ask:message];
         RXPromise *settings = [self.settingsActor ask:[GetSettings new]];
-        return [RXPromise allSettled:@[sessoin, settings]];
+        return [RXPromise all:@[sessoin, settings]];
     }];
 }
 

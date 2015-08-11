@@ -33,7 +33,7 @@ class Login : NSObject {
         on { (msg: Login) -> RXPromise in
             let session = self.sessionActor.ask(msg)
             let settings = self.settingsActor.ask(GetSettings())
-            return RXPromise.allSettled([session, settings])
+            return RXPromise.all([session, settings])
         }
     }
 }
