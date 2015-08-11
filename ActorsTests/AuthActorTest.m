@@ -37,22 +37,23 @@ describe(@"AuthActor", ^{
     
     context(@"On Login message", ^{
         __block Login *login = nil;
+//        __block id result = nil;
         
         beforeEach(^{
             [sessionActor stub:@selector(ask:) andReturn:[RXPromise new]];
             [settingsActor stub:@selector(ask:) andReturn:[RXPromise new]];
             login = [[Login alloc] initWithEmail:@"some" password:@""];
-            [authActor ask:login];
         });
         
         it(@"Session should receive Login message", ^{
-            [[sessionActor shouldEventually] receive:@selector(ask:)];
+            [[sessionActor shouldEventually] receive:@selector(ask:) withArguments:login];
+            [authActor ask:login];
         });
 
         it(@"Settings should receive GetSettings message", ^{
             [[settingsActor shouldEventually] receive:@selector(ask:)];
+            [authActor ask:login];
         });
-        
         
 //        context(@"If Session Actor fails", ^{
 //            it(@"Should receive failed result", ^{
