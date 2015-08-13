@@ -11,8 +11,10 @@
 #import "DTActors.h"
 #import "Actors-Swift.h"
 #import "ActorSystemMock.h"
+#import "DTPromiseMatcher.h"
 
 SPEC_BEGIN(SessionActorTest)
+    registerMatchers(@"DT");
 
     describe(@"SessionActor", ^{
         __block DTActorRef *sessionActor = nil;
@@ -96,7 +98,7 @@ SPEC_BEGIN(SessionActorTest)
                         [mappingActor stub:@selector(ask:) andReturn:failedPromise];
                         RXPromise *result = [sessionActor ask:login];
                         [result wait];
-                        [[theValue(result.isRejected) should] beTrue];
+                        [[result should] beRejected];
                     });
 
                 });
@@ -107,7 +109,7 @@ SPEC_BEGIN(SessionActorTest)
                     [sessionApiActor stub:@selector(ask:) andReturn:failedPromise];
                     RXPromise *result = [sessionActor ask:login];
                     [result wait];
-                    [[theValue(result.isRejected) should] beTrue];
+                    [[result should] beRejected];
                 });
             });
         });

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C14207362C1AB9F5BFCAA661 /* DTPromiseMatcher.m */; };
 		4D2CC6AC1B721C9D007BBEA4 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6AB1B721C9D007BBEA4 /* APIActor.swift */; };
 		4D2CC6B11B721CA6007BBEA4 /* MappingActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6AE1B721CA6007BBEA4 /* MappingActor.swift */; };
 		4D2CC6B21B721CA6007BBEA4 /* MappingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6AF1B721CA6007BBEA4 /* MappingProvider.swift */; };
@@ -93,6 +94,7 @@
 		C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
 		C1420CE3AC89F87D8AE57524 /* RXSettledResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */; };
 		C1420CED94AD07CD8DA01AA7 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142071CB793ECE927623202 /* Configs.swift */; };
+		C1420D912F87FCFAC2E46B17 /* DTPromiseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C14207362C1AB9F5BFCAA661 /* DTPromiseMatcher.m */; };
 		C1420DEB18996727EBEB810F /* DTActor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420B37F6F988BA4CC6E86F /* DTActor.m */; };
 		C1420E40615BDC158C0FCBF2 /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420ECF1972B2040A55AAE0 /* SessionStorage.swift */; };
 		C1420E5ED06C585C26CDD697 /* MessageDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420D864F2A9DDE8C9F76E7 /* MessageDispatcher.swift */; };
@@ -232,6 +234,8 @@
 		C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageHandler.m; sourceTree = "<group>"; };
 		C142070893431D54D9B7472B /* DTMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMessageHandler.h; sourceTree = "<group>"; };
 		C142071CB793ECE927623202 /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		C14207362C1AB9F5BFCAA661 /* DTPromiseMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPromiseMatcher.m; sourceTree = "<group>"; };
+		C142073DB7316DA13C348789 /* DTPromiseMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPromiseMatcher.h; sourceTree = "<group>"; };
 		C1420833E90CA81B3BA86F28 /* DTServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTServiceLocator.m; sourceTree = "<group>"; };
 		C14208A80D2EA4701740EDB8 /* NSActors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSActors.h; sourceTree = "<group>"; };
 		C142095A97E0AF47476B07EA /* ActorSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorSystem.swift; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 				4D8804901B78A62E001F80CD /* AuthActorTest.m */,
 				4D8804971B7A322F001F80CD /* SessionActorTest.m */,
 				4D8804991B7A342D001F80CD /* ActorSystemMock.h */,
+				C1420BECCB95F75A72418634 /* Promise Matcher */,
 			);
 			path = ActorsTests;
 			sourceTree = "<group>";
@@ -560,6 +565,15 @@
 				C1420D413359CCCF51407B80 /* RXPromise+RXExtension.mm */,
 			);
 			path = RXPromise;
+			sourceTree = "<group>";
+		};
+		C1420BECCB95F75A72418634 /* Promise Matcher */ = {
+			isa = PBXGroup;
+			children = (
+				C14207362C1AB9F5BFCAA661 /* DTPromiseMatcher.m */,
+				C142073DB7316DA13C348789 /* DTPromiseMatcher.h */,
+			);
+			path = "Promise Matcher";
 			sourceTree = "<group>";
 		};
 		C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */ = {
@@ -818,6 +832,7 @@
 				C1420CED94AD07CD8DA01AA7 /* Configs.swift in Sources */,
 				C14207E346640AFEB215EAEC /* TripsConfigs.swift in Sources */,
 				C1420242C250E9AC45DB6DC8 /* DTServiceLocator.m in Sources */,
+				C1420D912F87FCFAC2E46B17 /* DTPromiseMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +840,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */,
 				4D8804981B7A322F001F80CD /* SessionActorTest.m in Sources */,
 				4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */,
 				4D88048A1B789C39001F80CD /* DTActor.m in Sources */,
@@ -982,7 +998,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.ActorsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActorsTests/ActorsTests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1005,7 +1021,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.techery.ActorsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActorsTests/ActorsTests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
