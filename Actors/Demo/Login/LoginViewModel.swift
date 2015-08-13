@@ -20,19 +20,29 @@ class LoginViewModel {
         self.actorSystem = actorSystem
     }
     
-    func login() {
+    func login() -> RXPromise {
         loginInProccess.value = true
+        error.value = ""
         
         let sessionActor = actorSystem.actorOfClass(SessionActor)!
         let result = sessionActor.ask(Login(email: email.value, password: password.value))
-        result.then({result in
+        result.thenOnMain({result in
             self.loginInProccess.value = false
             self.error.value = ""
             return result
             }, {error in
             self.loginInProccess.value = false
-            self.error.value = error.description
+            self.error.value = error.localizedDescription
                 return error
         })
+        
+        return result
+    }
+    
+    var userViewModel: UserViewModel {
+        get {
+            let sessionStorage: SessionStorage = actorSystem.serviceLocator.service()!
+            return UserViewModel(user: sessionStorage.session?.user)
+        }
     }
 }

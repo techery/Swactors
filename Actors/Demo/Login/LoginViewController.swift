@@ -13,19 +13,23 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
     
-    let loginViewModel: LoginViewModel
+    let viewModel: LoginViewModel
     
-    init(loginViewModel: LoginViewModel){
-        self.loginViewModel = loginViewModel
+    init(viewModel: LoginViewModel){
+        self.viewModel = viewModel
         super.init(nibName: "LoginViewController", bundle: nil)
-        self.bindViewModel()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.bindViewModel()        
     }
     
     private func bindViewModel() {
-        email.dynText ->> loginViewModel.email
-        password.dynText ->> loginViewModel.password
-        loginViewModel.error ->> error.dynText
-        loginViewModel.loginInProccess ->> loader.dynIsAnimating
+        email.dynText ->> viewModel.email
+        password.dynText ->> viewModel.password
+        viewModel.error ->> error.dynText
+        viewModel.loginInProccess ->> loader.dynIsAnimating
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -33,6 +37,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(sender: AnyObject) {
-        loginViewModel.login()
+        viewModel.login().thenOnMain({_ in
+            let userViewController = UserViewController(viewModel: self.viewModel.userViewModel)
+            self.presentViewController(userViewController, animated: true, completion: nil)
+            return nil
+        }, nil)
     }
 }

@@ -38,6 +38,8 @@
 		4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
 		4D88049C1B7A4BA6001F80CD /* DTActorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */; };
 		4DFBC7451B74B60B0091F27C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */; };
+		4DFCBB9C1B7CE23000FCAF57 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFCBB9B1B7CE23000FCAF57 /* UserViewController.xib */; };
+		4DFCBBA21B7CE2E200FCAF57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCBBA11B7CE2E200FCAF57 /* UserViewModel.swift */; };
 		523B0CE09C9BE9F15CEA49AC /* libPods-ActorsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CEE118BEBB1B75EC859FA3 /* libPods-ActorsTests.a */; };
 		AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5903831B6021D600D41DA0 /* ViewController.swift */; };
 		AD5903891B6021D600D41DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5903881B6021D600D41DA0 /* Assets.xcassets */; };
@@ -64,6 +66,7 @@
 		C142005901630145DB6826A8 /* DTMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420BB46A7686E42FB53BA7 /* DTMessageDispatcher.m */; };
 		C14200613D2A54EAE6904A6D /* ActorExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420040BAD30D5873F67D5F /* ActorExecutor.swift */; };
 		C142008BF01527574DF17B89 /* MappingActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420242C005F5682D8F2490 /* MappingActor.swift */; };
+		C14200AC1DF325BE97FC6DAE /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142068337B08BA06BF0D521 /* UserViewController.swift */; };
 		C142019014219B7B3A35A07E /* Session+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420410CDB298429DEC274B /* Session+EasyMapping.swift */; };
 		C14201DFC6BF5A8CD84EB936 /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C142057C4426374FAD7B9BF9 /* Development-Config.plist */; };
 		C14202288663AE1CD0C7F214 /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
@@ -227,6 +230,8 @@
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		4DFCBB9B1B7CE23000FCAF57 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		4DFCBBA11B7CE2E200FCAF57 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		5789D4122A0AB4B4F369209E /* libPods-Actors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Actors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD59037E1B6021D600D41DA0 /* Actors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Actors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5903831B6021D600D41DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +289,7 @@
 		C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXSettledResult.mm; sourceTree = "<group>"; };
 		C14205D66DCD8F4D5FE3B970 /* TripsConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsConfigs.swift; sourceTree = "<group>"; };
 		C142061CF26C7F7CD488B068 /* DTActorOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorOperation.m; sourceTree = "<group>"; };
+		C142068337B08BA06BF0D521 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageHandler.m; sourceTree = "<group>"; };
 		C142070893431D54D9B7472B /* DTMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMessageHandler.h; sourceTree = "<group>"; };
 		C142071CB793ECE927623202 /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
@@ -612,6 +618,7 @@
 				C1420F18427E33045F3E62EC /* ActorTest.swift */,
 				C142056806A822FD7C222B04 /* Actors */,
 				C1420D78513CB9EBB2AB0473 /* Login */,
+				C1420ECF532BAAF540DA509E /* User */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -678,6 +685,16 @@
 			name = Auth;
 			path = Actors/Demo;
 			sourceTree = SOURCE_ROOT;
+		};
+		C1420ECF532BAAF540DA509E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C142068337B08BA06BF0D521 /* UserViewController.swift */,
+				4DFCBB9B1B7CE23000FCAF57 /* UserViewController.xib */,
+				4DFCBBA11B7CE2E200FCAF57 /* UserViewModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
 		};
 		C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */ = {
 			isa = PBXGroup;
@@ -837,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1623441B7CC7F700D0803E /* LoginViewController.xib in Resources */,
+				4DFCBB9C1B7CE23000FCAF57 /* UserViewController.xib in Resources */,
 				AD9478451B67B55B00AFD645 /* Info.plist in Resources */,
 				AD5903891B6021D600D41DA0 /* Assets.xcassets in Resources */,
 				C14201DFC6BF5A8CD84EB936 /* Development-Config.plist in Resources */,
@@ -951,6 +969,7 @@
 				C14209EC5C211D2D64DC7BF7 /* SettingsActor.swift in Sources */,
 				C1420AAA7B033DBFB81861FE /* SettingsStorage.swift in Sources */,
 				C14202641FB3F2EF09208BAC /* Settings+NSCoding.swift in Sources */,
+				4DFCBBA21B7CE2E200FCAF57 /* UserViewModel.swift in Sources */,
 				C142008BF01527574DF17B89 /* MappingActor.swift in Sources */,
 				C142091971294CE695030AF8 /* MappingProvider.swift in Sources */,
 				C142019014219B7B3A35A07E /* Session+EasyMapping.swift in Sources */,
@@ -966,6 +985,7 @@
 				C1420F2D7AD2F4F95781A429 /* AppDelegate.swift in Sources */,
 				C1420D3414B343284C8EF01D /* LoginViewController.swift in Sources */,
 				C1420AB6738F29FF890F6EF0 /* LoginViewModel.swift in Sources */,
+				C14200AC1DF325BE97FC6DAE /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

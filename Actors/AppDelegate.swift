@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let loginViewModel = LoginViewModel(actorSystem: system)
-        window?.rootViewController = LoginViewController(loginViewModel: loginViewModel)
+        window?.rootViewController = LoginViewController(viewModel: loginViewModel)
         window?.makeKeyAndVisible()
 
         

@@ -10,6 +10,7 @@
                 <outlet property="error" destination="LxA-vD-faK" id="6kz-Io-WiG"/>
                 <outlet property="loader" destination="tZ2-Hm-22m" id="7h0-BX-RPn"/>
                 <outlet property="password" destination="Mol-fT-YTX" id="BSf-w2-Y85"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Ryv-Nj-Y4B"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
