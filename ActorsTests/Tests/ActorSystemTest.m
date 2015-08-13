@@ -12,7 +12,7 @@
 
 @class ServiceLocator;
 
-SPEC_BEGIN(ActorSystem)
+SPEC_BEGIN(ActorSystemTest)
 
 describe(@"DTActorSystem", ^{
     __block DTMainActorSystem *actorSystem = nil;

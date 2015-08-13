@@ -2,7 +2,7 @@ import Foundation
 
 class APIActor: DActor {
     
-    let operationQueue:NSOperationQueue = NSOperationQueue()
+    let operationQueue: NSOperationQueue = NSOperationQueue()
     
     class Request: NSObject {
         let path:String

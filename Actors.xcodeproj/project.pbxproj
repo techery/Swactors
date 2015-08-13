@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C14207362C1AB9F5BFCAA661 /* DTPromiseMatcher.m */; };
+		4D1623161B7C91A800D0803E /* APIActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1623151B7C91A800D0803E /* APIActorTest.m */; };
+		4D1623181B7C970B00D0803E /* SessionAPIActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1623171B7C970B00D0803E /* SessionAPIActorTest.m */; };
+		4D16231B1B7C9A6B00D0803E /* ActorSystemMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16231A1B7C9A6B00D0803E /* ActorSystemMock.m */; };
 		4D2CC6AC1B721C9D007BBEA4 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6AB1B721C9D007BBEA4 /* APIActor.swift */; };
 		4D2CC6B11B721CA6007BBEA4 /* MappingActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6AE1B721CA6007BBEA4 /* MappingActor.swift */; };
 		4D2CC6B21B721CA6007BBEA4 /* MappingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CC6AF1B721CA6007BBEA4 /* MappingProvider.swift */; };
@@ -44,10 +47,7 @@
 		4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
 		4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
 		4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
-		4D8804911B78A62E001F80CD /* AuthActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8804901B78A62E001F80CD /* AuthActorTest.m */; };
-		4D8804981B7A322F001F80CD /* SessionActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8804971B7A322F001F80CD /* SessionActorTest.m */; };
 		4D88049C1B7A4BA6001F80CD /* DTActorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */; };
-		4DD9BD921B74F5DB00C0DA5C /* ActorSystemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */; };
 		4DFBC7431B74A40A0091F27C /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFBC7421B74A40A0091F27C /* Development-Config.plist */; };
 		4DFBC7451B74B60B0091F27C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */; };
 		7695D773C3FD39D20233C7D8 /* libPods-Actors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5789D4122A0AB4B4F369209E /* libPods-Actors.a */; };
@@ -89,7 +89,10 @@
 		C14207E346640AFEB215EAEC /* TripsConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14202D1868FFCD7A6728BCD /* TripsConfigs.swift */; };
 		C14207F1AA1FB255357B0E31 /* NSActors.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420A228DEDA129E0C06742 /* NSActors.m */; };
 		C142087A75A1B7B4E322ADD1 /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420F18427E33045F3E62EC /* ActorTest.swift */; };
+		C14208B08D189035A4AC0966 /* AuthActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C14204820D20067851B29AB0 /* AuthActorTest.m */; };
+		C142090B4E279D310E5C9577 /* ActorSystemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C14209E008FE1877C823E82F /* ActorSystemTest.m */; };
 		C14209B1171512D5129EF87A /* ActorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420407177572DF9EA4137C /* ActorProvider.swift */; };
+		C1420B39FE84E4C2B26C78C6 /* SessionActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C14204D0B877845041CFBB67 /* SessionActorTest.m */; };
 		C1420C436BDD8EB74D047D3C /* RXPromise+RXExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420D413359CCCF51407B80 /* RXPromise+RXExtension.mm */; };
 		C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
 		C1420CE3AC89F87D8AE57524 /* RXSettledResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */; };
@@ -127,6 +130,9 @@
 /* Begin PBXFileReference section */
 		03864B5298255F86F82C0343 /* Pods-Actors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Actors.release.xcconfig"; path = "Pods/Target Support Files/Pods-Actors/Pods-Actors.release.xcconfig"; sourceTree = "<group>"; };
 		2C4E6E094395BE722E1779AF /* Pods_ActorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1623151B7C91A800D0803E /* APIActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIActorTest.m; sourceTree = "<group>"; };
+		4D1623171B7C970B00D0803E /* SessionAPIActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionAPIActorTest.m; sourceTree = "<group>"; };
+		4D16231A1B7C9A6B00D0803E /* ActorSystemMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorSystemMock.m; sourceTree = "<group>"; };
 		4D2CC6AB1B721C9D007BBEA4 /* APIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		4D2CC6AE1B721CA6007BBEA4 /* MappingActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActor.swift; sourceTree = "<group>"; };
 		4D2CC6AF1B721CA6007BBEA4 /* MappingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingProvider.swift; sourceTree = "<group>"; };
@@ -172,15 +178,11 @@
 		4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FlattenArray.m"; sourceTree = "<group>"; };
 		4D32D64A1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+EasyMappingAdditions.h"; sourceTree = "<group>"; };
 		4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
-		4D8804901B78A62E001F80CD /* AuthActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthActorTest.m; sourceTree = "<group>"; };
-		4D8804971B7A322F001F80CD /* SessionActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionActorTest.m; sourceTree = "<group>"; };
-		4D8804991B7A342D001F80CD /* ActorSystemMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActorSystemMock.h; sourceTree = "<group>"; };
 		4D88049A1B7A4BA6001F80CD /* DTActorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorConstants.h; sourceTree = "<group>"; };
 		4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorConstants.m; sourceTree = "<group>"; };
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorSystemTest.m; sourceTree = "<group>"; };
 		4DFBC7421B74A40A0091F27C /* Development-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Development-Config.plist"; sourceTree = "<group>"; };
 		4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		5789D4122A0AB4B4F369209E /* libPods-Actors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Actors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +229,8 @@
 		C14202E55191E5AA05C56A41 /* RXPromise.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXPromise.mm; sourceTree = "<group>"; };
 		C1420407177572DF9EA4137C /* ActorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorProvider.swift; sourceTree = "<group>"; };
 		C142044EA2101545D27BA78E /* DTActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorProvider.h; sourceTree = "<group>"; };
+		C14204820D20067851B29AB0 /* AuthActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthActorTest.m; sourceTree = "<group>"; };
+		C14204D0B877845041CFBB67 /* SessionActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionActorTest.m; sourceTree = "<group>"; };
 		C14204F1F4EACB2FD9F40F51 /* SessionAPIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPIActor.swift; sourceTree = "<group>"; };
 		C142052A49AA8A2D6B01816D /* DTActorSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorSystem.h; sourceTree = "<group>"; };
 		C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXSettledResult.mm; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 		C142097DB489812D0E81FADF /* RXPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPromise.h; sourceTree = "<group>"; };
 		C14209962D8C9982B792CBB6 /* RXPromise+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXPromise+Private.h"; sourceTree = "<group>"; };
 		C14209A51B807716C0ABCDC7 /* Obbcj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obbcj.swift; sourceTree = "<group>"; };
+		C14209E008FE1877C823E82F /* ActorSystemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorSystemTest.m; sourceTree = "<group>"; };
 		C1420A228DEDA129E0C06742 /* NSActors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSActors.m; sourceTree = "<group>"; };
 		C1420AE88A4E420485BAE3A9 /* RXSettledResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSettledResult.h; sourceTree = "<group>"; };
 		C1420B37F6F988BA4CC6E86F /* DTActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActor.m; sourceTree = "<group>"; };
@@ -251,6 +256,7 @@
 		C1420D864F2A9DDE8C9F76E7 /* MessageDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDispatcher.swift; sourceTree = "<group>"; };
 		C1420E17F5C4916FD6C1B709 /* DTActorExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorExecutor.h; sourceTree = "<group>"; };
 		C1420E6E31B7E1DE7992583C /* DTServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTServiceLocator.h; sourceTree = "<group>"; };
+		C1420EA1A4345A143E02A63F /* ActorSystemMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorSystemMock.h; sourceTree = "<group>"; };
 		C1420ECF1972B2040A55AAE0 /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		C1420F18427E33045F3E62EC /* ActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTest.swift; sourceTree = "<group>"; };
 		C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorExecutor.m; sourceTree = "<group>"; };
@@ -404,11 +410,8 @@
 			children = (
 				AD5903981B6021D600D41DA0 /* Info.plist */,
 				4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */,
-				4DD9BD911B74F5DB00C0DA5C /* ActorSystemTest.m */,
-				4D8804901B78A62E001F80CD /* AuthActorTest.m */,
-				4D8804971B7A322F001F80CD /* SessionActorTest.m */,
-				4D8804991B7A342D001F80CD /* ActorSystemMock.h */,
 				C1420BECCB95F75A72418634 /* Promise Matcher */,
+				C142001E89BE3CE75B12CEE5 /* Tests */,
 			);
 			path = ActorsTests;
 			sourceTree = "<group>";
@@ -471,6 +474,20 @@
 				AD9478601B6815B500AFD645 /* HTTPUpload.swift */,
 			);
 			path = SwiftHTTP;
+			sourceTree = "<group>";
+		};
+		C142001E89BE3CE75B12CEE5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C14209E008FE1877C823E82F /* ActorSystemTest.m */,
+				C1420EA1A4345A143E02A63F /* ActorSystemMock.h */,
+				C14204D0B877845041CFBB67 /* SessionActorTest.m */,
+				C14204820D20067851B29AB0 /* AuthActorTest.m */,
+				4D1623151B7C91A800D0803E /* APIActorTest.m */,
+				4D1623171B7C970B00D0803E /* SessionAPIActorTest.m */,
+				4D16231A1B7C9A6B00D0803E /* ActorSystemMock.m */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		C142029C5B0663BAED93693B /* Settings */ = {
@@ -840,17 +857,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1623161B7C91A800D0803E /* APIActorTest.m in Sources */,
 				4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */,
-				4D8804981B7A322F001F80CD /* SessionActorTest.m in Sources */,
 				4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */,
 				4D88048A1B789C39001F80CD /* DTActor.m in Sources */,
 				4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */,
-				4DD9BD921B74F5DB00C0DA5C /* ActorSystemTest.m in Sources */,
 				4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */,
-				4D8804911B78A62E001F80CD /* AuthActorTest.m in Sources */,
 				4D88048C1B789C39001F80CD /* DTMessageDispatcher.m in Sources */,
+				4D1623181B7C970B00D0803E /* SessionAPIActorTest.m in Sources */,
 				4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */,
 				4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */,
+				C142090B4E279D310E5C9577 /* ActorSystemTest.m in Sources */,
+				4D16231B1B7C9A6B00D0803E /* ActorSystemMock.m in Sources */,
+				C1420B39FE84E4C2B26C78C6 /* SessionActorTest.m in Sources */,
+				C14208B08D189035A4AC0966 /* AuthActorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
