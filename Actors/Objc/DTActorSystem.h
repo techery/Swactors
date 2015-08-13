@@ -8,13 +8,14 @@
 @protocol DTActorProvider, Configs;
 @class DTActorRef, DTActor, ServiceLocator;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol DTActorSystem
 
 @property(nonatomic, readonly) ServiceLocator *serviceLocator;
 @property (nonatomic, readonly) id<Configs> configs;
 
-- (DTActorRef *)actorOfClass:(Class)class;
+- (nullable DTActorRef *)actorOfClass:(Class)class;
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider;
 
 @end
@@ -39,3 +40,5 @@
                  serviceLocator:(ServiceLocator *)serviceLocator
                    builderBlock:(void (^)(DTActorSystemBuilder *))builderBlock;
 @end
+
+NS_ASSUME_NONNULL_END

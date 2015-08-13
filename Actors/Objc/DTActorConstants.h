@@ -10,5 +10,5 @@ typedef void (^DTVoidMessageBlock)(id message);
 typedef RXPromise *(^DTFutureMessageBlock)(id message);
 typedef id (^DTResultMessageBlock)(id message);
 
-static NSString *DTActorsErrorDomain = @"drimtrip.actors.error";
-static NSString *DTActorsErrorMessageKey = @"DTActorsErrorMessageKey";
+extern NSString * const DTActorsErrorDomain;
+extern NSString * const DTActorsErrorMessageKey;

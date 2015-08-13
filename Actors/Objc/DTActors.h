@@ -10,3 +10,4 @@
 #import "DTActorSystem.h"
 #import "DTActorConstants.h"
 #import "RXPromise+RXExtension.h"
+#import "DTServiceLocator.h"
