@@ -1,10 +1,13 @@
 import Foundation
 
 
-class SessionActor : DActor {    
-    class Logout {
-        
+class Logout: NSObject{
+    override init() {
+        super.init()
     }
+}
+
+class SessionActor : DActor {
     
     let sessionApiActor: DTActorRef
     let mappingActor: DTActorRef
@@ -23,7 +26,13 @@ class SessionActor : DActor {
         on { (msg: Login) -> RXPromise in
             return self.askSession(msg.email, password: msg.password)
         }
+        
+        on { (msg: Logout) -> Void in
+            sessionStorage?.clear()
+        }
     }
+    
+    // MARK: - Private
     
     private func askSession(login: String, password: String) -> RXPromise {
         let session = self.sessionApiActor.ask(GetSession(login: login, password: password))

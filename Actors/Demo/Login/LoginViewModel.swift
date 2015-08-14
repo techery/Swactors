@@ -42,7 +42,7 @@ class LoginViewModel {
     var userViewModel: UserViewModel {
         get {
             let sessionStorage: SessionStorage = actorSystem.serviceLocator.service()!
-            return UserViewModel(user: sessionStorage.session?.user)
+            return UserViewModel(actorSystem: actorSystem, user: sessionStorage.session?.user)
         }
     }
 }

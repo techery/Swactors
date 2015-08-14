@@ -13,4 +13,8 @@ protocol SessionProvider {
 @objc
 class SessionStorage: NSObject, SessionProvider {
     var session: Session?
+    
+    func clear() {
+        session = nil
+    }
 }

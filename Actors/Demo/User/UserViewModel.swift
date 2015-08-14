@@ -10,16 +10,23 @@ import Bond
 
 class UserViewModel {
     let user: User?
+    let actorSystem: DTMainActorSystem
     
     private(set) var fullName = "Undefined"
     private(set) var email = "Undefined"
     
-    init(user: User?) {
+    init(actorSystem: DTMainActorSystem, user: User?) {
         self.user = user
+        self.actorSystem = actorSystem
         
         if let u = user {
             fullName = u.firstName + u.lastName
             email = u.email
         }
+    }
+    
+    func logout() {
+        let sessionActor = actorSystem.actorOfClass(SessionActor)
+        sessionActor?.ask(Logout())
     }
 }

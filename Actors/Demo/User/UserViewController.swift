@@ -28,4 +28,9 @@ class UserViewController: UIViewController {
         fullName.text = viewModel.fullName
         email.text = viewModel.email
     }
+    
+    @IBAction func logout(sender: AnyObject) {
+        viewModel.logout()
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
