@@ -26,7 +26,7 @@ class UserViewModel {
     }
     
     func logout() {
-        let sessionActor = actorSystem.actorOfClass(SessionActor)
-        sessionActor?.ask(Logout())
+        let sessionActor = actorSystem.actorOfClass(DTSessionActor)
+        sessionActor?.ask(DTLogout())
     }
 }

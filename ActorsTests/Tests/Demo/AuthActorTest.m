@@ -24,7 +24,7 @@ describe(@"AuthActor", ^{
         [actorSystem stub:@selector(configs) andReturn:[KWMock mockForProtocol:@protocol(Configs)]];
         [actorSystem stub:@selector(serviceLocator) andReturn:[ServiceLocator mock]];
         
-        [actorSystem stub:@selector(actorOfClass:) andReturn:sessionActor withArguments:[SessionActor class]];
+        [actorSystem stub:@selector(actorOfClass:) andReturn:sessionActor withArguments:[DTSessionActor class]];
         [actorSystem stub:@selector(actorOfClass:) andReturn:settingsActor withArguments:[SettingsActor class]];
         
         authActor = [[DTActorRef alloc] initWithActor:[[AuthActor alloc] initWithActorSystem:actorSystem]];

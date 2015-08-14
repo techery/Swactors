@@ -24,7 +24,7 @@ class LoginViewModel {
         loginInProccess.value = true
         error.value = ""
         
-        let sessionActor = actorSystem.actorOfClass(SessionActor)!
+        let sessionActor = actorSystem.actorOfClass(DTSessionActor)!
         let result = sessionActor.ask(Login(email: email.value, password: password.value))
         result.thenOnMain({result in
             self.loginInProccess.value = false
@@ -41,7 +41,7 @@ class LoginViewModel {
     
     var userViewModel: UserViewModel {
         get {
-            let sessionStorage: SessionStorage = actorSystem.serviceLocator.service()!
+            let sessionStorage: DTSessionStorage = actorSystem.serviceLocator.service()!
             return UserViewModel(actorSystem: actorSystem, user: sessionStorage.session?.user)
         }
     }

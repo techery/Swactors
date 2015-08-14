@@ -17,13 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         let locator:ServiceLocator = ServiceLocator { locator in
-            locator.register(SessionStorage())
+            locator.register(DTSessionStorage())
             locator.register(SettingsStorage())
         }
 
         let system = DTMainActorSystem(configs: TripsConfigs(), serviceLocator: locator) { builder in
             builder.addActor(AuthActor)
-            builder.addActor(SessionActor)
+            builder.addActor(DTSessionActor)
             builder.addActor(SessionAPIActor)
             builder.addActor(APIActor)
             builder.addActor(MappingActor)

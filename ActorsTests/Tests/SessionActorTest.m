@@ -13,14 +13,14 @@
 #import "ActorSystemMock.h"
 #import "DTPromiseMatcher.h"
 
-SPEC_BEGIN(SessionActorTest)
+SPEC_BEGIN(DTSessionActorTest)
     registerMatchers(@"DT");
 
-    describe(@"SessionActor", ^{
+    describe(@"DTSessionActor", ^{
         __block DTActorRef *sessionActor = nil;
         __block DTActorRef *sessionApiActor = [DTActorRef mock];
         __block DTActorRef *mappingActor = [DTActorRef mock];
-        __block SessionStorage *sessionStorage = [SessionStorage new];
+        __block DTSessionStorage *sessionStorage = [DTSessionStorage new];
         __block DTMainActorSystem *actorSystem = nil;
         
         beforeAll(^{
@@ -29,15 +29,15 @@ SPEC_BEGIN(SessionActorTest)
             [actorSystem stub:@selector(actorOfClass:) andReturn:mappingActor withArguments:[MappingActor class]];
             
             [actorSystem stub:@selector(serviceLocator) andReturn:[[ServiceLocator alloc] initWithBuilder:^(ServiceLocator *locator) {
-                [locator registerService:sessionStorage forClass:[SessionStorage class]];
+                [locator registerService:sessionStorage forClass:[DTSessionStorage class]];
             }]];
             
-            sessionActor = [[DTActorRef alloc] initWithActor:[[SessionActor alloc] initWithActorSystem:actorSystem]];
+            sessionActor = [[DTActorRef alloc] initWithActor:[[DTSessionActor alloc] initWithActorSystem:actorSystem]];
         });
         
         context(@"On Logout message", ^{
             it(@"Should clear session storage", ^{
-                Logout *logout = [Logout new];
+                DTLogout *logout = [DTLogout new];
                 [[sessionStorage shouldEventually] receive:@selector(clear)];
                 [sessionActor ask:logout];
             });
