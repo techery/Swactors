@@ -35,6 +35,14 @@ SPEC_BEGIN(SessionActorTest)
             sessionActor = [[DTActorRef alloc] initWithActor:[[SessionActor alloc] initWithActorSystem:actorSystem]];
         });
         
+        context(@"On Logout message", ^{
+            it(@"Should clear session storage", ^{
+                Logout *logout = [Logout new];
+                [[sessionStorage shouldEventually] receive:@selector(clear)];
+                [sessionActor ask:logout];
+            });
+        });
+        
         context(@"On Login message", ^{
             __block Login *login = [[Login alloc] initWithEmail:@"some" password:@""];
             __block RXPromise *failedPromise = [RXPromise new];
