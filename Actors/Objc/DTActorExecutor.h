@@ -9,7 +9,8 @@
 
 @interface DTActorExecutor : NSObject <DTActorHandler>
 
-@property(nonatomic, readonly) id <DTActorHandler> actorHandler;
+@property(nonatomic, readonly) id<DTActorHandler> actorHandler;
+@property(nonatomic, readonly) NSOperationQueue *operationQueue;
 
 - (instancetype)initWithActorHandler:(id <DTActorHandler>)actorHandler;
 + (instancetype)executorWithActorHandler:(id <DTActorHandler>)actorHandler;
