@@ -32,8 +32,12 @@
 
 - (DTActorRef *)actorOfClass:(Class)class {
     id<DTActorHandler> actor = [self getActor:class];
-    DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor];
-    return actorRef;
+    if (actor) {
+        DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor];
+        return actorRef;
+    } else {
+        return nil;
+    }
 }
 
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider {
