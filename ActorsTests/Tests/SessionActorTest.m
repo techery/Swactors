@@ -56,9 +56,11 @@ SPEC_BEGIN(DTSessionActorTest)
                 [mappingActor stub:@selector(ask:) andReturn:[RXPromise new]];
             });
             
-            it(@"Session API Actor should receive message", ^{
+            it(@"Session API Actor should receive GetSettings message", ^{
                 [[sessionApiActor shouldEventually] receive:@selector(ask:)];
                 [sessionActor ask:login];
+                KWCaptureSpy *spy = [sessionApiActor captureArgument:@selector(ask:) atIndex:0];                
+                [[expectFutureValue(spy.argument) shouldEventually] beKindOfClass:[GetSession class]];
             });
             
             context(@"Session API Actor succeeded", ^{
@@ -71,6 +73,8 @@ SPEC_BEGIN(DTSessionActorTest)
                 it(@"Mapping Actor should receive message", ^{
                     [[mappingActor shouldEventually] receive:@selector(ask:)];
                     [sessionActor ask:login];
+                    KWCaptureSpy *spy = [mappingActor captureArgument:@selector(ask:) atIndex:0];
+                    [[expectFutureValue(spy.argument) shouldEventually] beKindOfClass:[MappingRequest class]];
                 });
                 
                 context(@"Mapping Actor succeeded", ^{
