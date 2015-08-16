@@ -17,24 +17,16 @@ class Endpoint: NSObject {
     }
 }
 
-class GetSession: Endpoint, Equatable {
+class GetSession: Endpoint {
     init(login: String, password: String) {
         super.init(relativePath: "api/sessions", method: "POST", parameters: ["username": login, "password": password])
     }
 }
 
-func == (lhs: GetSession, rhs: GetSession) -> Bool {
-    return true
-}
-
-
 class SessionAPIActor: DActor {
 
     let apiActor: DTActorRef
     private(set) var baseURL: NSURL = NSURL()
-
-    // MARK: - Messages
-
 
     // MARK: - DTActor
 
@@ -57,9 +49,9 @@ class SessionAPIActor: DActor {
     private func askEndpoint(endpoint: Endpoint) -> RXPromise {
         switch endpoint.method {
         case "POST":
-            return self.apiActor.ask(APIActor.Post(path: self.urlForEndpoint(endpoint), parameters: endpoint.parameters))
+            return self.apiActor.ask(Post(path: self.urlForEndpoint(endpoint), parameters: endpoint.parameters))
         case "GET":
-            return self.apiActor.ask(APIActor.Get(path: self.urlForEndpoint(endpoint), parameters: endpoint.parameters))
+            return self.apiActor.ask(Get(path: self.urlForEndpoint(endpoint), parameters: endpoint.parameters))
         default:
             let promise = RXPromise()
             promise.rejectWithReason("No such method:\(endpoint.method)")

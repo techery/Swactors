@@ -1,26 +1,33 @@
 import Foundation
 
+class APIRequest: NSObject, Equatable {
+    let path:String
+    let parameters: [String: String]
+    
+    typealias Result = String
+    
+    init(path: String, parameters: [String: String] = [:]) {
+        self.path = path
+        self.parameters = parameters
+    }
+}
+
+func == (lhs: APIRequest, rhs: APIRequest) -> Bool {
+    return lhs.path == rhs.path && lhs.parameters == rhs.parameters
+}
+
+
+// MARK: - Messages
+
+class Post : APIRequest {}
+class Get : APIRequest {}
+
+// MARK: - APIActor
+
 class APIActor: DActor {
     
     let operationQueue: NSOperationQueue = NSOperationQueue()
     
-    class Request: NSObject {
-        let path:String
-        let parameters: [String: String]
-        
-        typealias Result = String
-        
-        init(path: String, parameters: [String: String] = [:]) {
-            self.path = path
-            self.parameters = parameters
-        }
-    }
-    
-    // MARK: - Messages
-    
-    class Post : Request {}
-    class Get : Request {}
-
     // MARK: - DTActor
     
     override func setup() {
@@ -37,7 +44,7 @@ class APIActor: DActor {
     
     // MARK: - Private
         
-    private func request(message:Request, method: HTTPMethod) -> RXPromise {
+    private func request(message: APIRequest, method: HTTPMethod) -> RXPromise {
         let promise = RXPromise()
         var request = HTTPTask()
         
