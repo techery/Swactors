@@ -11,6 +11,13 @@
 		4D1623361B7CC60E00D0803E /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D16232B1B7CC5EA00D0803E /* Bond.framework */; };
 		4D1623381B7CC62F00D0803E /* Bond.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D16232B1B7CC5EA00D0803E /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1623441B7CC7F700D0803E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1623431B7CC7F700D0803E /* LoginViewController.xib */; };
+		4D2CFA331B80A74D00019285 /* SessionAPIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */; };
+		4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785B1B6815B500AFD645 /* HTTPRequestSerializer.swift */; };
+		4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785C1B6815B500AFD645 /* HTTPResponseSerializer.swift */; };
+		4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785D1B6815B500AFD645 /* HTTPSecurity.swift */; };
+		4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785E1B6815B500AFD645 /* HTTPStatusCode.swift */; };
+		4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785F1B6815B500AFD645 /* HTTPTask.swift */; };
+		4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478601B6815B500AFD645 /* HTTPUpload.swift */; };
 		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
 		4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */; };
 		4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */; };
@@ -38,6 +45,8 @@
 		4DDBE71D1B7DFCAF004DEEA7 /* ActorExecutorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71C1B7DFCAF004DEEA7 /* ActorExecutorTest.m */; };
 		4DDBE7201B7E152F004DEEA7 /* DTSessionActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */; };
 		4DDBE7231B7E1FDA004DEEA7 /* DTSessionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7221B7E1FDA004DEEA7 /* DTSessionStorage.m */; };
+		4DDBE74F1B80A22A004DEEA7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDBE74A1B80A20B004DEEA7 /* Quick.framework */; };
+		4DDBE7511B80A238004DEEA7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDBE7331B80A1FC004DEEA7 /* Nimble.framework */; };
 		4DFBC7451B74B60B0091F27C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */; };
 		4DFCBB9C1B7CE23000FCAF57 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFCBB9B1B7CE23000FCAF57 /* UserViewController.xib */; };
 		4DFCBBA21B7CE2E200FCAF57 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCBBA11B7CE2E200FCAF57 /* UserViewModel.swift */; };
@@ -84,7 +93,6 @@
 		C14205A1DA45880FFD07D100 /* User+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420A8BA0B09F56E9A7FC71 /* User+EasyMapping.swift */; };
 		C14205ADAA9474B334F60434 /* Settings+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */; };
 		C14205D98AB7160FEA041C53 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14203B6633998D71B9FCC3C /* APIActor.swift */; };
-		C14206057B3AECC86BE477E6 /* SessionAPIActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420598D6D936B16896E379 /* SessionAPIActorTest.m */; };
 		C14206985D533AC14CC3ED09 /* DTMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142012F826EC019175F2ADA /* DTMessageHandler.swift */; };
 		C14206F9AA38B8B4DFA545A5 /* SessionAPIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14209D6592948A9D851DCDC /* SessionAPIActor.swift */; };
 		C14206FA002F227D0065E849 /* ActorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142095A97E0AF47476B07EA /* ActorSystem.swift */; };
@@ -153,6 +161,76 @@
 			remoteGlobalIDString = 69491BAD1A7C217100A13B6B;
 			remoteInfo = Bond;
 		};
+		4DDBE7321B80A1FC004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74291940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		4DDBE7341B80A1FC004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74341940169200FFFC47;
+			remoteInfo = "Nimble-iOSTests";
+		};
+		4DDBE7361B80A1FC004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EAD195C0D6300ED456B;
+			remoteInfo = "Nimble-OSX";
+		};
+		4DDBE7381B80A1FC004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
+			remoteInfo = "Nimble-OSXTests";
+		};
+		4DDBE7431B80A20B004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B8E1943873100289F44;
+			remoteInfo = "Quick-OSX";
+		};
+		4DDBE7451B80A20B004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B991943873100289F44;
+			remoteInfo = "Quick-OSXTests";
+		};
+		4DDBE7471B80A20B004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5663E81A4C8D8500193C88;
+			remoteInfo = "QuickFocused-OSXTests";
+		};
+		4DDBE7491B80A20B004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D117C19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
+		};
+		4DDBE74B1B80A20B004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D118619473F2100F6D13D;
+			remoteInfo = "Quick-iOSTests";
+		};
+		4DDBE74D1B80A20B004DEEA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA9876B21A4C70EB0004AA17;
+			remoteInfo = "QuickFocused-iOSTests";
+		};
 		AD5903931B6021D600D41DA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD5903761B6021D500D41DA0 /* Project object */;
@@ -191,6 +269,7 @@
 		4280921F20336938486D858A /* Pods-ActorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActorsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ActorsTests/Pods-ActorsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4D1623221B7CC5EA00D0803E /* Bond.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Bond.xcodeproj; path = Bond/Bond.xcodeproj; sourceTree = "<group>"; };
 		4D1623431B7CC7F700D0803E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPIActorTest.swift; sourceTree = "<group>"; };
 		4D32D6221B6FBA0100044180 /* DActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActor.swift; sourceTree = "<group>"; };
 		4D32D62E1B70B1AF00044180 /* EasyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyMapping.h; sourceTree = "<group>"; };
 		4D32D62F1B70B1AF00044180 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKCoreDataImporter.h; sourceTree = "<group>"; };
@@ -233,6 +312,8 @@
 		4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSessionActor.m; sourceTree = "<group>"; };
 		4DDBE7211B7E1FDA004DEEA7 /* DTSessionStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSessionStorage.h; sourceTree = "<group>"; };
 		4DDBE7221B7E1FDA004DEEA7 /* DTSessionStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSessionStorage.m; sourceTree = "<group>"; };
+		4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Vendor/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
+		4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Vendor/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		4DFBC7441B74B60B0091F27C /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		4DFCBB9B1B7CE23000FCAF57 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		4DFCBBA11B7CE2E200FCAF57 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -288,7 +369,6 @@
 		C142054DED00C41FDFF9DB2D /* Settings+NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+NSCoding.swift"; sourceTree = "<group>"; };
 		C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+EasyMapping.swift"; sourceTree = "<group>"; };
 		C142057C4426374FAD7B9BF9 /* Development-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "Development-Config.plist"; sourceTree = "<group>"; };
-		C1420598D6D936B16896E379 /* SessionAPIActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionAPIActorTest.m; sourceTree = "<group>"; };
 		C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXSettledResult.mm; sourceTree = "<group>"; };
 		C14205D66DCD8F4D5FE3B970 /* TripsConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsConfigs.swift; sourceTree = "<group>"; };
 		C142061CF26C7F7CD488B068 /* DTActorOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorOperation.m; sourceTree = "<group>"; };
@@ -341,6 +421,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDBE7511B80A238004DEEA7 /* Nimble.framework in Frameworks */,
+				4DDBE74F1B80A22A004DEEA7 /* Quick.framework in Frameworks */,
 				523B0CE09C9BE9F15CEA49AC /* libPods-ActorsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,9 +479,35 @@
 			path = EasyMapping;
 			sourceTree = "<group>";
 		};
+		4DDBE7281B80A1FC004DEEA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBE7331B80A1FC004DEEA7 /* Nimble.framework */,
+				4DDBE7351B80A1FC004DEEA7 /* NimbleTests.xctest */,
+				4DDBE7371B80A1FC004DEEA7 /* Nimble.framework */,
+				4DDBE7391B80A1FC004DEEA7 /* NimbleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DDBE73B1B80A20B004DEEA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBE7441B80A20B004DEEA7 /* Quick.framework */,
+				4DDBE7461B80A20B004DEEA7 /* Quick-OSXTests.xctest */,
+				4DDBE7481B80A20B004DEEA7 /* QuickFocused-OSXTests.xctest */,
+				4DDBE74A1B80A20B004DEEA7 /* Quick.framework */,
+				4DDBE74C1B80A20B004DEEA7 /* Quick-iOSTests.xctest */,
+				4DDBE74E1B80A20B004DEEA7 /* QuickFocused-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AD5903751B6021D500D41DA0 = {
 			isa = PBXGroup;
 			children = (
+				4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */,
+				4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */,
 				4D1623221B7CC5EA00D0803E /* Bond.xcodeproj */,
 				4D32D62D1B70B1AF00044180 /* EasyMapping */,
 				AD94785A1B6815B500AFD645 /* SwiftHTTP */,
@@ -525,7 +633,7 @@
 				C1420A77949C3508036F6EC2 /* ApiActorTest.m */,
 				C1420AED6EED8867FFD874C2 /* AuthActorTest.m */,
 				C1420EB58ADCA1C26603088F /* SessionActorTest.m */,
-				C1420598D6D936B16896E379 /* SessionAPIActorTest.m */,
+				4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -824,6 +932,14 @@
 					ProductGroup = 4D1623231B7CC5EA00D0803E /* Products */;
 					ProjectRef = 4D1623221B7CC5EA00D0803E /* Bond.xcodeproj */;
 				},
+				{
+					ProductGroup = 4DDBE7281B80A1FC004DEEA7 /* Products */;
+					ProjectRef = 4DDBE7271B80A1FC004DEEA7 /* Nimble.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DDBE73B1B80A20B004DEEA7 /* Products */;
+					ProjectRef = 4DDBE73A1B80A20B004DEEA7 /* Quick.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -867,6 +983,76 @@
 			fileType = wrapper.application;
 			path = iOSAppForTesting.app;
 			remoteRef = 4D1623321B7CC5EA00D0803E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7331B80A1FC004DEEA7 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 4DDBE7321B80A1FC004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7351B80A1FC004DEEA7 /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 4DDBE7341B80A1FC004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7371B80A1FC004DEEA7 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 4DDBE7361B80A1FC004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7391B80A1FC004DEEA7 /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 4DDBE7381B80A1FC004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7441B80A20B004DEEA7 /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 4DDBE7431B80A20B004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7461B80A20B004DEEA7 /* Quick-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-OSXTests.xctest";
+			remoteRef = 4DDBE7451B80A20B004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE7481B80A20B004DEEA7 /* QuickFocused-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-OSXTests.xctest";
+			remoteRef = 4DDBE7471B80A20B004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE74A1B80A20B004DEEA7 /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 4DDBE7491B80A20B004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE74C1B80A20B004DEEA7 /* Quick-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-iOSTests.xctest";
+			remoteRef = 4DDBE74B1B80A20B004DEEA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DDBE74E1B80A20B004DEEA7 /* QuickFocused-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-iOSTests.xctest";
+			remoteRef = 4DDBE74D1B80A20B004DEEA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1015,13 +1201,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */,
 				4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */,
 				4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */,
 				4D88048A1B789C39001F80CD /* DTActor.m in Sources */,
 				4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */,
+				4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */,
+				4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */,
 				4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */,
+				4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */,
 				4D88048C1B789C39001F80CD /* DTMessageDispatcher.m in Sources */,
+				4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */,
 				4DDBE71D1B7DFCAF004DEEA7 /* ActorExecutorTest.m in Sources */,
+				4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */,
 				4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */,
 				4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */,
 				4DDBE7171B7DF38D004DEEA7 /* ActorProviderTest.m in Sources */,
@@ -1030,7 +1222,7 @@
 				C14201FF0810292B2D10FF23 /* ApiActorTest.m in Sources */,
 				C1420BA105C7AADCE3457700 /* AuthActorTest.m in Sources */,
 				C142086D9011299217033B54 /* SessionActorTest.m in Sources */,
-				C14206057B3AECC86BE477E6 /* SessionAPIActorTest.m in Sources */,
+				4D2CFA331B80A74D00019285 /* SessionAPIActorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,7 +1262,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1092,7 +1284,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_MODULE_NAME = Actors;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1120,7 +1311,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1135,7 +1326,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
-				PRODUCT_MODULE_NAME = Actors;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";

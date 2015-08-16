@@ -5,7 +5,7 @@
 
 import Foundation
 
-class TripsConfigs: PlistConfigs {
+public class TripsConfigs: PlistConfigs {
     struct Keys {
         static let baseURL = "base_api_url"
         static let settingsURL = "configuration_json_url"

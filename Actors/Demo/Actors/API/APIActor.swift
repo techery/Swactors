@@ -1,36 +1,36 @@
 import Foundation
 
-class APIRequest: NSObject, Equatable {
+public class APIRequest: NSObject, Equatable {
     let path:String
     let parameters: [String: String]
     
     typealias Result = String
     
-    init(path: String, parameters: [String: String] = [:]) {
+    public init(path: String, parameters: [String: String] = [:]) {
         self.path = path
         self.parameters = parameters
     }
 }
 
-func == (lhs: APIRequest, rhs: APIRequest) -> Bool {
+public func == (lhs: APIRequest, rhs: APIRequest) -> Bool {
     return lhs.path == rhs.path && lhs.parameters == rhs.parameters
 }
 
 
 // MARK: - Messages
 
-class Post : APIRequest {}
-class Get : APIRequest {}
+public class Post : APIRequest {}
+public class Get : APIRequest {}
 
 // MARK: - APIActor
 
-class APIActor: DActor {
+public class APIActor: DActor {
     
     let operationQueue: NSOperationQueue = NSOperationQueue()
     
     // MARK: - DTActor
     
-    override func setup() {
+    override public func setup() {
         operationQueue.maxConcurrentOperationCount = 1
         
         on { (msg: Post) -> RXPromise in

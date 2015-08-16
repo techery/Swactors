@@ -9,12 +9,12 @@
 import Foundation
 
 @objc
-protocol Configs {
+public protocol Configs {
     subscript(key: String) -> AnyObject? { get set}
 }
 
 @objc
-class PlistConfigs: Configs {
+public class PlistConfigs: Configs {
     private var configs: [String : AnyObject]? = [:]
     
     init(fileName: String) {
@@ -23,7 +23,7 @@ class PlistConfigs: Configs {
         }
     }
     
-    subscript(key: String) -> AnyObject? {
+    public subscript(key: String) -> AnyObject? {
         get {
             return configs?[key]
         }
