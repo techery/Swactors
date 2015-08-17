@@ -6,19 +6,25 @@
 //  Copyright (c) 2015 Techery. All rights reserved.
 //
 
-class MappingProvider {
+public protocol MappingProvider {
+    func mapping(forClass: AnyClass) -> EKObjectMapping?
+}
+
+public class TripsMappingProvider: MappingProvider {
     private(set) var mappers:[String: EKObjectMapping] = [:]
     
     func add<I:EKMappingProtocol>(forClass: I.Type) {
         mappers[NSStringFromClass(forClass)] = forClass.objectMapping()
     }
     
-    func mapping(forClass: AnyClass) -> EKObjectMapping? {
-        return mappers[NSStringFromClass(forClass)]
-    }
-    
-    init() {
+    public init() {
         add(Session.self)
         add(Settings.self)
+    }
+    
+    // MARK: - MappingProvider
+    
+    public func mapping(forClass: AnyClass) -> EKObjectMapping? {
+        return mappers[NSStringFromClass(forClass)]
     }
 }

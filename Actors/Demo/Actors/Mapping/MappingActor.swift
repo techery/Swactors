@@ -2,26 +2,26 @@
 
 import Foundation
 
-class MappingRequest : NSObject {
-    let payload:String
-    let resultType:AnyClass
+public class MappingRequest : NSObject {
+    let payload: String
+    let resultType: AnyClass
     
-    init(payload: String, resultType: AnyClass) {
+    public init(payload: String, resultType: AnyClass) {
         self.payload = payload
         self.resultType = resultType
     }
 }
 
-class MappingActor: DActor {
-    private let mappingProvider: MappingProvider = MappingProvider()
-    
-    override func setup() {
+public class MappingActor: DActor {
+    public var mappingProvider: MappingProvider = TripsMappingProvider()
+        
+    override public func setup() {
         on { (msg: MappingRequest) -> RXPromise in
             return self.map(msg.payload, toType: msg.resultType)
         }
     }
     
-    func map(payload: String, toType: AnyClass) -> RXPromise {
+    private func map(payload: String, toType: AnyClass) -> RXPromise {
         let data = payload.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
         
         let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)

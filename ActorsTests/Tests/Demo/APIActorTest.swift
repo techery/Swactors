@@ -23,17 +23,18 @@ class APIActorTest: QuickSpec {
             
             it("Should be correctly initialized") {
                 expect(sut.operationQueue).notTo(beNil())
+
                 expect(sut.operationQueue.maxConcurrentOperationCount).to(equal(1))
             }
             
-            context("On POST message") {
-                it("Should add operation to queue") {
-                    let message = Post(path: "post", parameters: [:])
-                    let count = sut.operationQueue.operationCount
-                    apiActorRef.ask(message)
-                    expect(sut.operationQueue.operationCount).toEventually(equal(count + 1))
-                }
-            }
+//            context("On POST message") {
+//                it("Should add operation to queue") {
+//                    let message = Post(path: "post", parameters: [:])
+//                    let count = sut.operationQueue.operationCount
+//                    apiActorRef.ask(message)
+//                    expect(sut.operationQueue.operationCount).toEventually(equal(count + 1))
+//                }
+//            }
         }
     }
     
