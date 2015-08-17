@@ -7,7 +7,7 @@
 //
 
 extension Settings: EKMappingProtocol {
-    @objc static func objectMapping() -> EKObjectMapping! {
+    @objc public static func objectMapping() -> EKObjectMapping! {
         var mapping = EKObjectMapping(objectClass: self)
         
         mapping.mapPropertiesFromDictionary(

@@ -7,7 +7,7 @@
 //
 
 @objc
-class Settings: NSObject, NSCoding {
+public class Settings: NSObject, NSCoding {
     var serverStatus: ServerStatus = ServerStatus()
     var flagOptions: [AnyObject] = []
     var facebookGalleryEnabled: Bool = false
@@ -15,7 +15,7 @@ class Settings: NSObject, NSCoding {
     
     // MARK: - NSCoding
     
-    convenience required init(coder decoder: NSCoder) {
+    convenience required public init(coder decoder: NSCoder) {
         self.init()
         self.serverStatus = decoder.decodeObjectForKey("serverStatus") as! ServerStatus
         self.flagOptions = decoder.decodeObjectForKey("flagOptions") as! [AnyObject]
@@ -23,7 +23,7 @@ class Settings: NSObject, NSCoding {
         self.urls = decoder.decodeObjectForKey("urls") as! [String : String]
     }
     
-    func encodeWithCoder(coder: NSCoder) {
+    public func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(self.serverStatus, forKey: "serverStatus")
         coder.encodeObject(self.flagOptions, forKey: "flagOptions")
         coder.encodeObject(self.facebookGalleryEnabled, forKey: "facebookGalleryEnabled")

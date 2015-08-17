@@ -45,6 +45,7 @@
 		4DCA98C81B81909400F4943D /* MappingActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C71B81909400F4943D /* MappingActorTests.swift */; };
 		4DCA98CA1B81CE7C00F4943D /* ActorSystemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */; };
 		4DCA98CC1B81CF0500F4943D /* PromiseMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */; };
+		4DCA98CE1B81D15B00F4943D /* SettingsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */; };
 		4DDBE7171B7DF38D004DEEA7 /* ActorProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7161B7DF38D004DEEA7 /* ActorProviderTest.m */; };
 		4DDBE71D1B7DFCAF004DEEA7 /* ActorExecutorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71C1B7DFCAF004DEEA7 /* ActorExecutorTest.m */; };
 		4DDBE7201B7E152F004DEEA7 /* DTSessionActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */; };
@@ -312,6 +313,7 @@
 		4DCA98C71B81909400F4943D /* MappingActorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActorTests.swift; sourceTree = "<group>"; };
 		4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorSystemMock.swift; sourceTree = "<group>"; };
 		4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseMatcher.swift; sourceTree = "<group>"; };
+		4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsActorTest.swift; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DDBE7161B7DF38D004DEEA7 /* ActorProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorProviderTest.m; sourceTree = "<group>"; };
 		4DDBE71C1B7DFCAF004DEEA7 /* ActorExecutorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorExecutorTest.m; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 				4DCA98C71B81909400F4943D /* MappingActorTests.swift */,
 				4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */,
 				4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */,
+				4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1234,6 +1237,7 @@
 				C1420178957775D8CA5F2289 /* ActorSystemTest.m in Sources */,
 				C1420BA105C7AADCE3457700 /* AuthActorTest.m in Sources */,
 				C142086D9011299217033B54 /* SessionActorTest.m in Sources */,
+				4DCA98CE1B81D15B00F4943D /* SettingsActorTest.swift in Sources */,
 				4D2CFA331B80A74D00019285 /* SessionAPIActorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

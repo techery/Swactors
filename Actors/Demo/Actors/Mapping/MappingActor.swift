@@ -2,7 +2,7 @@
 
 import Foundation
 
-public class MappingRequest : NSObject {
+public class MappingRequest : NSObject, Equatable {
     let payload: String
     let resultType: AnyClass
     
@@ -10,6 +10,10 @@ public class MappingRequest : NSObject {
         self.payload = payload
         self.resultType = resultType
     }
+}
+
+public func == (lhs: MappingRequest, rhs: MappingRequest) -> Bool {
+    return lhs.payload == rhs.payload && lhs.resultType === rhs.resultType
 }
 
 public class MappingActor: DActor {

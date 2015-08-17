@@ -10,13 +10,13 @@
 import Foundation
 
 @objc
-protocol SettingsProvider {
+public protocol SettingsProvider {
     var settings: Settings? { get }
 }
 
 @objc
-class SettingsStorage: NSObject, SettingsProvider {
-    var settings: Settings? {
+public class SettingsStorage: NSObject, SettingsProvider {
+    public var settings: Settings? {
         didSet {
             if let s = settings {
                 archiveSettings(s)
@@ -24,7 +24,7 @@ class SettingsStorage: NSObject, SettingsProvider {
         }
     }
     
-    override init() {
+    override public init() {
         super.init()
         self.settings = unarchiveSettings()
     }
