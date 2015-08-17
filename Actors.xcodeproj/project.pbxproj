@@ -48,6 +48,7 @@
 		4DCA98CE1B81D15B00F4943D /* SettingsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */; };
 		4DCA98D01B81E22200F4943D /* DTMessageDispatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */; };
 		4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98D11B81EC8D00F4943D /* DTActorTest.m */; };
+		4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */; };
 		4DDBE7171B7DF38D004DEEA7 /* DTActorProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7161B7DF38D004DEEA7 /* DTActorProviderTest.m */; };
 		4DDBE71D1B7DFCAF004DEEA7 /* DTActorExecutorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71C1B7DFCAF004DEEA7 /* DTActorExecutorTest.m */; };
 		4DDBE7201B7E152F004DEEA7 /* DTSessionActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */; };
@@ -318,6 +319,7 @@
 		4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsActorTest.swift; sourceTree = "<group>"; };
 		4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageDispatcherTest.m; sourceTree = "<group>"; };
 		4DCA98D11B81EC8D00F4943D /* DTActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorTest.m; sourceTree = "<group>"; };
+		4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageHandlerTest.m; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DDBE7161B7DF38D004DEEA7 /* DTActorProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorProviderTest.m; sourceTree = "<group>"; };
 		4DDBE71C1B7DFCAF004DEEA7 /* DTActorExecutorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorExecutorTest.m; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 				4DDBE71C1B7DFCAF004DEEA7 /* DTActorExecutorTest.m */,
 				4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */,
 				4DCA98D11B81EC8D00F4943D /* DTActorTest.m */,
+				4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1219,6 +1222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */,
 				4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */,
 				4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */,
 				4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */,
