@@ -47,6 +47,7 @@
 		4DCA98CC1B81CF0500F4943D /* PromiseMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */; };
 		4DCA98CE1B81D15B00F4943D /* SettingsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */; };
 		4DCA98D01B81E22200F4943D /* MessageDispatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CF1B81E22200F4943D /* MessageDispatcherTest.m */; };
+		4DCA98D21B81EC8D00F4943D /* ActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98D11B81EC8D00F4943D /* ActorTest.m */; };
 		4DDBE7171B7DF38D004DEEA7 /* ActorProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7161B7DF38D004DEEA7 /* ActorProviderTest.m */; };
 		4DDBE71D1B7DFCAF004DEEA7 /* ActorExecutorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71C1B7DFCAF004DEEA7 /* ActorExecutorTest.m */; };
 		4DDBE7201B7E152F004DEEA7 /* DTSessionActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */; };
@@ -316,6 +317,7 @@
 		4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseMatcher.swift; sourceTree = "<group>"; };
 		4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsActorTest.swift; sourceTree = "<group>"; };
 		4DCA98CF1B81E22200F4943D /* MessageDispatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDispatcherTest.m; sourceTree = "<group>"; };
+		4DCA98D11B81EC8D00F4943D /* ActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorTest.m; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DDBE7161B7DF38D004DEEA7 /* ActorProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorProviderTest.m; sourceTree = "<group>"; };
 		4DDBE71C1B7DFCAF004DEEA7 /* ActorExecutorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorExecutorTest.m; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 				4DDBE7161B7DF38D004DEEA7 /* ActorProviderTest.m */,
 				4DDBE71C1B7DFCAF004DEEA7 /* ActorExecutorTest.m */,
 				4DCA98CF1B81E22200F4943D /* MessageDispatcherTest.m */,
+				4DCA98D11B81EC8D00F4943D /* ActorTest.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1231,6 +1234,7 @@
 				4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */,
 				4DCA98CC1B81CF0500F4943D /* PromiseMatcher.swift in Sources */,
 				4DDBE71D1B7DFCAF004DEEA7 /* ActorExecutorTest.m in Sources */,
+				4DCA98D21B81EC8D00F4943D /* ActorTest.m in Sources */,
 				4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */,
 				4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */,
 				4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */,
