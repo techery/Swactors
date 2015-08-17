@@ -10,6 +10,7 @@
 #import "DTActors.h"
 #import "Actors-Swift.h"
 #import "DTActorProvider.h"
+#import "ActorSystemMock.h"
 
 @class ServiceLocator;
 
@@ -53,3 +54,25 @@ describe(@"DTMainActorSystem", ^{
 });
 
 SPEC_END
+
+SPEC_BEGIN(DTActorSystemBuilderTest)
+
+describe(@"DTActorSystemBuilder", ^{
+    id<DTActorSystem> actorSystem = actorSystemMock();
+    DTActorSystemBuilder *sut = [[DTActorSystemBuilder alloc] initWithActorSystem:actorSystem];
+    
+    it(@"should be correctly initialized", ^{
+        [[(id)sut.actorSystem should] equal:actorSystem];
+        
+        DTActorSystemBuilder *s = [DTActorSystemBuilder builderWithActorSystem:actorSystem];
+        [[(id)s.actorSystem should] equal:actorSystem];
+    });
+    
+    it(@"should add actor provider", ^{
+        [[(id)actorSystem should] receive:@selector(addActorProvider:)];        
+        [sut addActor:[DTActor class]];
+    });
+});
+
+SPEC_END
+
