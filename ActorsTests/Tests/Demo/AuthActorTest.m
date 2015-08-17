@@ -9,8 +9,11 @@
 #import "Kiwi.h"
 #import "Actors-Swift.h"
 #import "DTActorSystem.h"
+#import "DTPromiseMatcher.h"
 
 SPEC_BEGIN(AuthActorTest)
+
+registerMatchers(@"DT");
 
 describe(@"AuthActor", ^{
     __block DTActorRef *authActor = nil;
@@ -64,7 +67,7 @@ describe(@"AuthActor", ^{
             it(@"Should receive success result", ^{
                 RXPromise *result = [authActor ask:login];
                 [result wait];
-                [[theValue(result.isFulfilled) should] beTrue];
+                [[result should] beFulfilled];
             });
             
             it(@"Result should contain results from both actors", ^{
@@ -91,7 +94,7 @@ describe(@"AuthActor", ^{
                 [sessionActor stub:@selector(ask:) andReturn:failedPromise];
                 RXPromise *result = [authActor ask:login];
                 [result wait];
-                [[theValue(result.isRejected) should] beTrue];
+                [[result should] beRejected];
             });
         });
         
@@ -100,7 +103,7 @@ describe(@"AuthActor", ^{
                 [settingsActor stub:@selector(ask:) andReturn:failedPromise];
                 RXPromise *result = [authActor ask:login];
                 [result wait];
-                [[theValue(result.isRejected) should] beTrue];
+                [[result should] beRejected];
             });
         });
     });
