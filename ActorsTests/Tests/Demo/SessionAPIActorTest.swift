@@ -44,7 +44,7 @@ class SessionAPIActorTest: QuickSpec {
                     
                     let result = sut.ask(message)
                     result.wait()
-                    expect(result.isFulfilled).to(beTrue())
+                    expect(result).to(beFulfilled())
                 }
             }
             
@@ -56,7 +56,7 @@ class SessionAPIActorTest: QuickSpec {
                     
                     let result = sut.ask(message)
                     result.wait()
-                    expect(result.isRejected).to(beTrue())
+                    expect(result).to(beRejected())
                 }
             }
         })

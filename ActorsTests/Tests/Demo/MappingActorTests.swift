@@ -10,18 +10,6 @@ import Quick
 import Nimble
 import Actors
 
-public func beRejected() -> NonNilMatcherFunc<RXPromise> {
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "be rejected"
-        let m = actualExpression.evaluate()
-        if let promise = m {
-            return promise.isRejected
-        } else {
-            return false
-        }
-    }
-}
-
 class MappingActorTests: QuickSpec {
     override func spec() {
         describe("MappingActor") {
