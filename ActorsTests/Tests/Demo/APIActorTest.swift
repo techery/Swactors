@@ -37,25 +37,4 @@ class APIActorTest: QuickSpec {
 //            }
         }
     }
-    
-    // MARK: - Mocks
-    
-    class ActorSystemMock: DTMainActorSystem {
-        override init() {
-            let serviceLocator = ServiceLocator(builder: {_ in})
-            super.init(configs: ConfigsMock(), serviceLocator: serviceLocator, builderBlock: {_ in})
-        }
-    }
-    
-    class ConfigsMock: Configs {
-        @objc subscript(key: String) -> AnyObject? {
-            get {
-                return "test_base_URL"
-            }
-            
-            set {
-                
-            }
-        }
-    }
 }

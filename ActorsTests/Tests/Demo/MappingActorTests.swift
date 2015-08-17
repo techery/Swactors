@@ -93,21 +93,7 @@ class MappingActorTests: QuickSpec {
             }
         }
     }
-    
-    class ActorSystemMock: DTMainActorSystem {
-        override init() {
-            let serviceLocator = ServiceLocator(builder: {_ in})
-            super.init(configs: ConfigsMock(), serviceLocator: serviceLocator, builderBlock: {_ in})
-        }
-    }
-    
-    class ConfigsMock: Configs {
-        @objc subscript(key: String) -> AnyObject? {
-            get {return nil}
-            set {}
-        }
-    }
-    
+        
     class TestModel: NSObject, EKMappingProtocol, Equatable {
         var name: String? = nil
         var url: NSURL? = nil
