@@ -77,6 +77,8 @@
 #pragma mark - NSOperation
 
 - (void)start {
+    if (self.executing) return;
+    
     [self.handler handle:self.message].then(^id(id result) {
         [self.promise resolveWithResult:result];
         [self finish];
@@ -86,6 +88,8 @@
         [self finish];
         return nil;
     });
+    
+    [super start];
 }
 
 @end
