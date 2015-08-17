@@ -34,13 +34,7 @@
 		4D32D6571B70B1AF00044180 /* EKSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6471B70B1AF00044180 /* EKSerializer.m */; };
 		4D32D6581B70B1AF00044180 /* NSArray+FlattenArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */; };
 		4D32D6591B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */; };
-		4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
-		4D88048A1B789C39001F80CD /* DTActor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420B37F6F988BA4CC6E86F /* DTActor.m */; };
-		4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */; };
-		4D88048C1B789C39001F80CD /* DTMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420BB46A7686E42FB53BA7 /* DTMessageDispatcher.m */; };
-		4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
-		4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
-		4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
+		4D73FED61B82158100B93978 /* DTActorRefTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FED51B82158100B93978 /* DTActorRefTest.m */; };
 		4D88049C1B7A4BA6001F80CD /* DTActorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */; };
 		4DCA98C81B81909400F4943D /* MappingActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C71B81909400F4943D /* MappingActorTests.swift */; };
 		4DCA98CA1B81CE7C00F4943D /* ActorSystemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */; };
@@ -309,6 +303,7 @@
 		4D32D6491B70B1AF00044180 /* NSArray+FlattenArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FlattenArray.m"; sourceTree = "<group>"; };
 		4D32D64A1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+EasyMappingAdditions.h"; sourceTree = "<group>"; };
 		4D32D64B1B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+EasyMappingAdditions.m"; sourceTree = "<group>"; };
+		4D73FED51B82158100B93978 /* DTActorRefTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorRefTest.m; sourceTree = "<group>"; };
 		4D88049A1B7A4BA6001F80CD /* DTActorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorConstants.h; sourceTree = "<group>"; };
 		4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorConstants.m; sourceTree = "<group>"; };
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -665,6 +660,7 @@
 				4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */,
 				4DCA98D11B81EC8D00F4943D /* DTActorTest.m */,
 				4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */,
+				4D73FED51B82158100B93978 /* DTActorRefTest.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -888,6 +884,7 @@
 				AD59037C1B6021D500D41DA0 /* Resources */,
 				4D5C54E61B69CBA9000DD26B /* Copy Frameworks */,
 				4D1623371B7CC62200D0803E /* CopyFiles */,
+				4D73FEC51B82036200B93978 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1101,6 +1098,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4D73FEC51B82036200B93978 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = XcodeCoverage/exportenv.sh;
+		};
 		D44FBA2112834403FB125E21 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1225,26 +1235,20 @@
 				4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */,
 				4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */,
 				4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */,
-				4D8804891B789C14001F80CD /* DTActorSystem.m in Sources */,
-				4D88048A1B789C39001F80CD /* DTActor.m in Sources */,
-				4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */,
 				4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */,
 				4D2CFA611B80D07900019285 /* APIActorTest.swift in Sources */,
 				4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */,
-				4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */,
 				4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */,
 				4DCA98D01B81E22200F4943D /* DTMessageDispatcherTest.m in Sources */,
-				4D88048C1B789C39001F80CD /* DTMessageDispatcher.m in Sources */,
 				4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */,
 				4DCA98CC1B81CF0500F4943D /* PromiseMatcher.swift in Sources */,
 				4DDBE71D1B7DFCAF004DEEA7 /* DTActorExecutorTest.m in Sources */,
 				4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */,
 				4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */,
-				4D88048F1B789C39001F80CD /* DTActorProvider.m in Sources */,
-				4D88048B1B789C39001F80CD /* DTMessageHandler.m in Sources */,
 				4DCA98CA1B81CE7C00F4943D /* ActorSystemMock.swift in Sources */,
 				4DCA98C81B81909400F4943D /* MappingActorTests.swift in Sources */,
 				4DDBE7171B7DF38D004DEEA7 /* DTActorProviderTest.m in Sources */,
+				4D73FED61B82158100B93978 /* DTActorRefTest.m in Sources */,
 				C1420480039A784409A1661D /* ActorSystemMock.m in Sources */,
 				C1420178957775D8CA5F2289 /* DTActorSystemTest.m in Sources */,
 				C1420BA105C7AADCE3457700 /* AuthActorTest.m in Sources */,
@@ -1296,6 +1300,8 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1311,7 +1317,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1344,6 +1349,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1353,7 +1360,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
