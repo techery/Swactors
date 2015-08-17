@@ -25,6 +25,7 @@ describe(@"DTActor", ^{
     
     it(@"Should be correctly initialized", ^{
         [[sut.serviceLocator shouldNot] beNil];
+        [[(NSObject *)sut.actorSystem shouldNot] beNil];
         [[(NSObject *)sut.configs shouldNot] beNil];
     });
     

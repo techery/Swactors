@@ -50,6 +50,8 @@
 
 @interface DTActorRef: NSObject
 
+@property (nonatomic, readonly) id<DTActorHandler> actor;
+
 - (instancetype)initWithActor:(id<DTActorHandler>)actor;
 
 - (void)tell:(id)message;
