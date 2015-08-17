@@ -74,8 +74,4 @@
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
 }
 
-- (void)setServiceLocator:(ServiceLocator *)serviceLocator {
-
-}
-
 @end
