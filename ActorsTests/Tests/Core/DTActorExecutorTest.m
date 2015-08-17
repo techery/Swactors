@@ -4,7 +4,7 @@
 
 #import "DTActors.h"
 
-SPEC_BEGIN(ActorExecutorTest)
+SPEC_BEGIN(DTActorExecutorTest)
 describe(@"DTActorExecutor", ^{
     __block DTActorExecutor *sut;
     

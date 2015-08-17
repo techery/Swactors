@@ -11,7 +11,7 @@
 @implementation ActorTestMessage
 @end
 
-SPEC_BEGIN(ActorTest)
+SPEC_BEGIN(DTActorTest)
 registerMatchers(@"DT");
 
 describe(@"DTActor", ^{

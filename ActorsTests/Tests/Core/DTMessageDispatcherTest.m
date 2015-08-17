@@ -11,7 +11,7 @@
 @implementation MessageDispatcherTestHandler
 @end
 
-SPEC_BEGIN(MessageDispatcherTest)
+SPEC_BEGIN(DTMessageDispatcherTest)
     registerMatchers(@"DT");
 
     describe(@"DTMessageDispatcher", ^{
