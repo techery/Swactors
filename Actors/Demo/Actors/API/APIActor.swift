@@ -26,7 +26,7 @@ public class Get : APIRequest {}
 
 public class APIActor: DActor {
     
-    let operationQueue: NSOperationQueue = NSOperationQueue()
+    public let operationQueue: NSOperationQueue = NSOperationQueue()
     
     // MARK: - DTActor
     

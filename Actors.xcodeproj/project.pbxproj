@@ -18,6 +18,7 @@
 		4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785E1B6815B500AFD645 /* HTTPStatusCode.swift */; };
 		4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785F1B6815B500AFD645 /* HTTPTask.swift */; };
 		4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478601B6815B500AFD645 /* HTTPUpload.swift */; };
+		4D2CFA611B80D07900019285 /* APIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CFA601B80D07900019285 /* APIActorTest.swift */; };
 		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
 		4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */; };
 		4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */; };
@@ -80,7 +81,6 @@
 		C1420178957775D8CA5F2289 /* ActorSystemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420C2A192E61FA6948780F /* ActorSystemTest.m */; };
 		C142019014219B7B3A35A07E /* Session+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420410CDB298429DEC274B /* Session+EasyMapping.swift */; };
 		C14201DFC6BF5A8CD84EB936 /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C142057C4426374FAD7B9BF9 /* Development-Config.plist */; };
-		C14201FF0810292B2D10FF23 /* ApiActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420A77949C3508036F6EC2 /* ApiActorTest.m */; };
 		C14202288663AE1CD0C7F214 /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
 		C1420242C250E9AC45DB6DC8 /* DTServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420833E90CA81B3BA86F28 /* DTServiceLocator.m */; };
 		C14202641FB3F2EF09208BAC /* Settings+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142054DED00C41FDFF9DB2D /* Settings+NSCoding.swift */; };
@@ -270,6 +270,7 @@
 		4D1623221B7CC5EA00D0803E /* Bond.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Bond.xcodeproj; path = Bond/Bond.xcodeproj; sourceTree = "<group>"; };
 		4D1623431B7CC7F700D0803E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPIActorTest.swift; sourceTree = "<group>"; };
+		4D2CFA601B80D07900019285 /* APIActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActorTest.swift; sourceTree = "<group>"; };
 		4D32D6221B6FBA0100044180 /* DActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DActor.swift; sourceTree = "<group>"; };
 		4D32D62E1B70B1AF00044180 /* EasyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyMapping.h; sourceTree = "<group>"; };
 		4D32D62F1B70B1AF00044180 /* EKCoreDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKCoreDataImporter.h; sourceTree = "<group>"; };
@@ -386,7 +387,6 @@
 		C14209962D8C9982B792CBB6 /* RXPromise+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXPromise+Private.h"; sourceTree = "<group>"; };
 		C14209D6592948A9D851DCDC /* SessionAPIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAPIActor.swift; sourceTree = "<group>"; };
 		C1420A29C932D6F97E657F4B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1420A77949C3508036F6EC2 /* ApiActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiActorTest.m; sourceTree = "<group>"; };
 		C1420A8BA0B09F56E9A7FC71 /* User+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+EasyMapping.swift"; sourceTree = "<group>"; };
 		C1420AE1764924793EBC555B /* ActorSystemMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorSystemMock.m; sourceTree = "<group>"; };
 		C1420AE88A4E420485BAE3A9 /* RXSettledResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSettledResult.h; sourceTree = "<group>"; };
@@ -630,10 +630,10 @@
 			children = (
 				C1420AFEE254F5A1062C94A3 /* ActorSystemMock.h */,
 				C1420AE1764924793EBC555B /* ActorSystemMock.m */,
-				C1420A77949C3508036F6EC2 /* ApiActorTest.m */,
 				C1420AED6EED8867FFD874C2 /* AuthActorTest.m */,
 				C1420EB58ADCA1C26603088F /* SessionActorTest.m */,
 				4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */,
+				4D2CFA601B80D07900019285 /* APIActorTest.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1207,6 +1207,7 @@
 				4D88048A1B789C39001F80CD /* DTActor.m in Sources */,
 				4D88048D1B789C39001F80CD /* DTActorOperation.m in Sources */,
 				4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */,
+				4D2CFA611B80D07900019285 /* APIActorTest.swift in Sources */,
 				4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */,
 				4D88048E1B789C39001F80CD /* DTActorExecutor.m in Sources */,
 				4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */,
@@ -1219,7 +1220,6 @@
 				4DDBE7171B7DF38D004DEEA7 /* ActorProviderTest.m in Sources */,
 				C1420480039A784409A1661D /* ActorSystemMock.m in Sources */,
 				C1420178957775D8CA5F2289 /* ActorSystemTest.m in Sources */,
-				C14201FF0810292B2D10FF23 /* ApiActorTest.m in Sources */,
 				C1420BA105C7AADCE3457700 /* AuthActorTest.m in Sources */,
 				C142086D9011299217033B54 /* SessionActorTest.m in Sources */,
 				4D2CFA331B80A74D00019285 /* SessionAPIActorTest.swift in Sources */,
