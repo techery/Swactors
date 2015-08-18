@@ -5,13 +5,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DTActorConstants.h"
+#import "DTInvocation.h"
 
 #pragma mark - Protocol - DTActorHandler
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol DTActorHandler
-- (RXPromise *)handle:(id)message;
+- (RXPromise *)handle:(DTInvocation *)invocation;
 @end
 
 @protocol DTActorSystem;
@@ -36,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) ServiceLocator *serviceLocator;
 @property (nonatomic, readonly) id<Configs> configs;
+
+@property (nonatomic, readonly, nullable) DTInvocation *currentInvocation;
 
 - (instancetype)initWithActorSystem:(id <DTActorSystem>)actorSystem;
 + (instancetype)actorWithActorSystem:(id <DTActorSystem>)actorSystem;

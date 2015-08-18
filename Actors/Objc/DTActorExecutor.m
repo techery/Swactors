@@ -5,6 +5,7 @@
 
 #import "DTActorExecutor.h"
 #import "DTActorOperation.h"
+#import "DTInvocation.h"
 
 
 @interface DTActorExecutor ()
@@ -32,8 +33,8 @@
 
 #pragma mark - DTActorHandler
 
-- (RXPromise *)handle:(id)message {
-    DTActorOperation *operation = [[DTActorOperation alloc] initWithMessage:message handler:self.actorHandler];
+- (RXPromise *)handle:(DTInvocation *)invocation {
+    DTActorOperation *operation = [[DTActorOperation alloc] initWithInvocation:invocation handler:self.actorHandler];
     [self.operationQueue addOperation:operation];
     return [operation promise];
 }

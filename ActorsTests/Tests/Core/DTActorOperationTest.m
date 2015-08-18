@@ -14,7 +14,7 @@ describe(@"DTActorOperation", ^{
     __block DTActorOperation *sut;
     
     beforeEach(^{
-        sut = [[DTActorOperation alloc] initWithMessage:message handler:handler];
+        sut = [[DTActorOperation alloc] initWithInvocation:message handler:handler];
     });
     
     it(@"should be correctly initialized", ^{
@@ -26,7 +26,7 @@ describe(@"DTActorOperation", ^{
             RXPromise *failedPromise = [RXPromise new];
             [failedPromise rejectWithReason:nil];
             [failedPromise wait];
-            
+
             [[handler should] receive:@selector(handle:) andReturn:failedPromise withArguments:message];
             [sut start];
         });

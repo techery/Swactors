@@ -37,6 +37,7 @@
 		4D73FED61B82158100B93978 /* DTActorRefTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FED51B82158100B93978 /* DTActorRefTest.m */; };
 		4D73FED81B821AFB00B93978 /* DTActorOperationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FED71B821AFB00B93978 /* DTActorOperationTest.m */; };
 		4D73FEDA1B82311D00B93978 /* DTServiceLocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FED91B82311D00B93978 /* DTServiceLocatorTests.m */; };
+		4D73FEF41B83503000B93978 /* DTInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FEF31B83503000B93978 /* DTInvocation.m */; };
 		4D88049C1B7A4BA6001F80CD /* DTActorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */; };
 		4DCA98C81B81909400F4943D /* MappingActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C71B81909400F4943D /* MappingActorTests.swift */; };
 		4DCA98CA1B81CE7C00F4943D /* ActorSystemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */; };
@@ -308,6 +309,8 @@
 		4D73FED51B82158100B93978 /* DTActorRefTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorRefTest.m; sourceTree = "<group>"; };
 		4D73FED71B821AFB00B93978 /* DTActorOperationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorOperationTest.m; sourceTree = "<group>"; };
 		4D73FED91B82311D00B93978 /* DTServiceLocatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTServiceLocatorTests.m; sourceTree = "<group>"; };
+		4D73FEF21B83503000B93978 /* DTInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInvocation.h; sourceTree = "<group>"; };
+		4D73FEF31B83503000B93978 /* DTInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInvocation.m; sourceTree = "<group>"; };
 		4D88049A1B7A4BA6001F80CD /* DTActorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorConstants.h; sourceTree = "<group>"; };
 		4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorConstants.m; sourceTree = "<group>"; };
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -749,10 +752,12 @@
 				C1420021FD6387119C8C784D /* DTActorProvider.m */,
 				C142044EA2101545D27BA78E /* DTActorProvider.h */,
 				4D32D6221B6FBA0100044180 /* DActor.swift */,
-				C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */,
 				C142071CB793ECE927623202 /* Configs.swift */,
 				4D88049A1B7A4BA6001F80CD /* DTActorConstants.h */,
 				4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */,
+				4D73FEF21B83503000B93978 /* DTInvocation.h */,
+				4D73FEF31B83503000B93978 /* DTInvocation.m */,
+				C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -1167,6 +1172,7 @@
 				AD9478431B67B55B00AFD645 /* FutureBatch.swift in Sources */,
 				4D32D6591B70B1AF00044180 /* NSDateFormatter+EasyMappingAdditions.m in Sources */,
 				4D32D6521B70B1AF00044180 /* EKObjectMapping.m in Sources */,
+				4D73FEF41B83503000B93978 /* DTInvocation.m in Sources */,
 				4D32D6581B70B1AF00044180 /* NSArray+FlattenArray.m in Sources */,
 				AD5903841B6021D600D41DA0 /* ViewController.swift in Sources */,
 				4D32D6571B70B1AF00044180 /* EKSerializer.m in Sources */,
@@ -1315,6 +1321,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG_LOG=0",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1325,6 +1332,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1368,6 +1376,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Actors/Actors-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";

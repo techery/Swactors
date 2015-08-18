@@ -14,13 +14,13 @@ describe(@"DTActorRef", ^{
     
     it(@"on ask: should redirect message to actor", ^{
         id message = any();
-        [[(id)actor should] receive:@selector(handle:) withArguments:message];
+        [[(id) actor should] receive:@selector(handle:) withArguments:message];
         [sut ask:message];
     });
     
     it(@"on tell: should redirect message to actor", ^{
         id message = any();
-        [[(id)actor should] receive:@selector(handle:) withArguments:message];
+        [[(id) actor should] receive:@selector(handle:) withArguments:message];
         [sut tell:message];
     });
 });

@@ -7,9 +7,9 @@
 #import "DTMessageDispatcher.h"
 #import "DTActorSystem.h"
 
-
 @interface DTActor ()
 @property(nonatomic, strong) DTMessageDispatcher *dispatcher;
+@property (nonatomic, strong) DTInvocation *currentInvocation;
 @end
 
 @implementation DTActor
@@ -53,8 +53,17 @@
 
 #pragma mark - DTActorHandler
 
-- (RXPromise *)handle:(id)message {
-    return [self.dispatcher handle:message];
+- (RXPromise *)handle:(DTInvocation *)invocation {
+    self.currentInvocation = invocation;
+    RXPromise *promise = [self.dispatcher handle:invocation.message];
+    promise.then(^id(id result){
+        self.currentInvocation = nil;
+        return result;
+    }, ^(NSError *error) {
+        self.currentInvocation = nil;
+        return error;
+    });
+    return promise;
 }
 
 @end
@@ -82,11 +91,16 @@
 
 
 - (RXPromise *)ask:(id)message {
-    return [self.actor handle:message];
+    return [self handle:message];
 }
 
 - (void)tell:(id)message {
-    [self.actor handle:message];
+    [self handle:message];
+}
+
+- (RXPromise *)handle:(id)message {
+    DTInvocation *invocation = [DTInvocation invocationWithMessage:message caller:self.caller];
+    return [self.actor handle:invocation];
 }
 
 @end

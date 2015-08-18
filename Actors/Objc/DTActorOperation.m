@@ -58,15 +58,15 @@
 
 @interface DTActorOperation ()
 @property(nonatomic, strong) id<DTActorHandler> handler;
-@property(nonatomic, strong) id message;
+@property(nonatomic, strong) DTInvocation *invocation;
 @property(nonatomic, readwrite) RXPromise *promise;
 @end
 
 @implementation DTActorOperation
 
-- (instancetype)initWithMessage:(id)message handler:(id<DTActorHandler>)handler {
+- (instancetype)initWithInvocation:(DTInvocation *)invocation handler:(id<DTActorHandler>)handler {
     if (self = [super init]) {
-        _message = message;
+        _invocation = invocation;
         _handler = handler;
         _promise = [RXPromise new];
     }
@@ -78,8 +78,10 @@
 
 - (void)start {
     if (self.executing) return;
-    
-    [self.handler handle:self.message].then(^id(id result) {
+
+    [self.invocation start];
+
+    [self.handler handle:self.invocation].then(^id(id result) {
         [self.promise resolveWithResult:result];
         [self finish];
         return nil;
@@ -90,6 +92,11 @@
     });
     
     [super start];
+}
+
+- (void)finish {
+    [self.invocation finish];
+    [super finish];
 }
 
 @end
