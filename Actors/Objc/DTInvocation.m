@@ -10,6 +10,14 @@
 #import "DTActorSystem.h"
 #import "DTActor.h"
 
+@interface DTInvocation()
+
+@property (nonatomic, strong) NSDate *started;
+@property (nonatomic, strong) NSDate *finished;
+@property (nonatomic, strong) NSError *error;
+
+@end
+
 @implementation DTInvocation
 
 - (instancetype)initWithMessage:(id)message caller:(nullable id)caller {
@@ -31,14 +39,42 @@
 }
 
 - (void)start {
-    NSLog(@"\nInvocation started\nmessage: %@\ncaller: %@\nparrent: %@", self.message, self.caller, self.parent.message);
     self.started = [NSDate new];
+    [self logStart];
 }
 
 - (void)finish {
+    [self finishWithError:nil];
+}
+
+- (void)finishWithError:(NSError *)error {
     self.finished = [NSDate new];
+    self.error = error;
+    [self logFinished];
+}
+
+#pragma mark - Private
+
+- (void)logStart {
+    int spaces = [self parentLevel] * 10;
+    NSLog(@">Invocation started\n%*smessage: %@\n%*scaller: %@\n%*sparrent: %@", spaces, " ",self.message,  spaces, " ",self.caller,  spaces, " ",self.parent.message);
+}
+
+- (void)logFinished {
     double time = [self.finished timeIntervalSinceDate:self.started];
-    NSLog(@"\nInvocation finished\nmessage: %@\ncaller: %@\nparrent: %@\ntime:%.3fs", self.message, self.caller, self.parent.message, time);
+    int spaces = [self parentLevel] * 10;
+    NSLog(@">Invocation finished\n%*smessage: %@\n%*stime:%.3fs\n%*serror: %@", spaces, " ",self.message, spaces, " ", time, spaces, " ", self.error.localizedDescription);
+}
+
+- (int)parentLevel {
+    __block int(^level)(DTInvocation *) = ^int(DTInvocation *p) {
+        if (!p) {
+            return 0;
+        }
+        return level(p.parent) + 1;
+    };
+    
+    return level(self.parent);
 }
 
 @end

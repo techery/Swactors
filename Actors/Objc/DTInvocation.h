@@ -16,14 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) id caller;
 @property (nonatomic, readonly) DTInvocation *parent;
 
-@property (nonatomic, strong) NSDate *started;
-@property (nonatomic, strong) NSDate *finished;
-
 - (instancetype)initWithMessage:(id)message caller:(nullable id)caller;
 + (instancetype)invocationWithMessage:(id)message caller:(nullable id)caller;
 
 - (void)start;
 - (void)finish;
+- (void)finishWithError:(nullable NSError *)error;
 
 @end
 

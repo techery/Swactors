@@ -83,20 +83,17 @@
 
     [self.handler handle:self.invocation].then(^id(id result) {
         [self.promise resolveWithResult:result];
+        [self.invocation finish];
         [self finish];
         return nil;
     }, ^id(NSError* error){
         [self.promise rejectWithReason:error];
+        [self.invocation finishWithError:error];
         [self finish];
         return nil;
     });
     
     [super start];
-}
-
-- (void)finish {
-    [self.invocation finish];
-    [super finish];
 }
 
 @end
