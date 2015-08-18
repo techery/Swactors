@@ -93,7 +93,7 @@ class SessionAPIActorTest: QuickSpec {
         var receivedPostMessage: Post? = nil
         var shouldSucceed = true
         
-        override func ask(message: AnyObject!) -> RXPromise! {
+        override func ask(message: AnyObject) -> RXPromise {
             receivedPostMessage = message as? Post
             let promise = RXPromise()            
             shouldSucceed ? promise.resolveWithResult(nil) : promise.rejectWithReason(nil)

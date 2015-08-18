@@ -30,7 +30,7 @@ public class SessionAPIActor: DActor {
 
     // MARK: - DTActor
 
-    override public init!(actorSystem: DTActorSystem!) {
+    override public init(actorSystem: DTActorSystem) {
         apiActor = actorSystem.actorOfClass(APIActor)!
         super.init(actorSystem: actorSystem)
         let urlString: String = configs[TripsConfigs.Keys.baseURL] as! String

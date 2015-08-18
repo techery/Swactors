@@ -61,7 +61,7 @@ class MappingActorTests: QuickSpec {
     // MARK: - Mocks
     
     class MappingActorMock: MappingActor {
-        override init!(actorSystem: DTActorSystem!) {
+        override init(actorSystem: DTActorSystem) {
             super.init(actorSystem: actorSystem)
             
             self.mappingProvider = MappingProviderMock()

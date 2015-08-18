@@ -140,7 +140,7 @@ class SettingsActorTest: QuickSpec {
         
         let result = "{\"i_am\":\"json\"}"
         
-        override func ask(message: AnyObject!) -> RXPromise! {
+        override func ask(message: AnyObject) -> RXPromise {
             receivedGetMessage = message as? Get
             let promise = RXPromise()
             shouldSucceed ? promise.resolveWithResult(result) : promise.rejectWithReason(nil)
@@ -154,7 +154,7 @@ class SettingsActorTest: QuickSpec {
         
         let result = Settings()
         
-        override func ask(message: AnyObject!) -> RXPromise! {
+        override func ask(message: AnyObject) -> RXPromise {
             receivedMessage = message as? MappingRequest
             let promise = RXPromise()
             shouldSucceed ? promise.resolveWithResult(result) : promise.rejectWithReason(nil)

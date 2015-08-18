@@ -8,6 +8,8 @@
 
 #pragma mark - Protocol - DTActorHandler
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DTActorHandler
 - (RXPromise *)handle:(id)message;
 @end
@@ -58,3 +60,5 @@
 - (RXPromise *)ask:(id)message;
 
 @end
+
+NS_ASSUME_NONNULL_END

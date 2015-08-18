@@ -23,7 +23,7 @@ class Login : NSObject {
     let sessionActor: DTActorRef
     let settingsActor: DTActorRef
     
-    override init!(actorSystem: DTActorSystem!) {
+    override init(actorSystem: DTActorSystem) {
         sessionActor = actorSystem.actorOfClass(DTSessionActor.self)!
         settingsActor = actorSystem.actorOfClass(SettingsActor.self)!
         super.init(actorSystem: actorSystem)
