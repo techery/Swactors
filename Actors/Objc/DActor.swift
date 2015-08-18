@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Techery. All rights reserved.
 //
 
-class DActor: DTActor {
+public class DActor: DTActor {
     
     func on<I: AnyObject>(handler:(msg:I) -> Void) {
         on(I.self, _do: { object in

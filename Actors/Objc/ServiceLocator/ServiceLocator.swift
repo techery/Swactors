@@ -8,8 +8,8 @@
 
 import Foundation
 
-class ServiceLocator: DTServiceLocator {
-    init(builder: ServiceLocator -> Void) {
+public class ServiceLocator: DTServiceLocator {
+    public init(builder: ServiceLocator -> Void) {
         super.init(builderBlock: { locator in
             builder(locator as! ServiceLocator)
         })

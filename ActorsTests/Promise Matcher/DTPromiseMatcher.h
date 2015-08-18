@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Kiwi/KWMatcher.h>
+#import "KWMatcher.h"
 
 
 @interface DTPromiseMatcher : KWMatcher

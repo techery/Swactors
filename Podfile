@@ -3,10 +3,9 @@
 
 
 target 'Actors' do
-	pod 'Kiwi'
 end
 
-target 'ActorsTests' do
-
+target :ActorsTests, :exclusive => true  do
+	pod 'Kiwi'
 end
 
