@@ -30,14 +30,10 @@
 
 #pragma mark -  DTActorSystem
 
-- (DTActorRef *)actorOfClass:(Class)class {
-    return [self actorOfClass:class caller:nil];
-}
-
-- (nullable DTActorRef *)actorOfClass:(Class)class caller:(nullable id)caller {
+- (nullable DTActorRef *)actorOfClass:(Class)class caller:(id)caller {
     id<DTActorHandler> actor = [self getActor:class];
     if (actor) {
-        DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor];
+        DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor caller:caller];
         return actorRef;
     } else {
         return nil;

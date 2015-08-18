@@ -15,8 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) ServiceLocator *serviceLocator;
 @property (nonatomic, readonly) id<Configs> configs;
 
-- (nullable DTActorRef *)actorOfClass:(Class)class;
-- (nullable DTActorRef *)actorOfClass:(Class)class caller:(nullable id)caller;
+- (nullable DTActorRef *)actorOfClass:(Class)class caller:(id)caller;
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider;
 
 @end

@@ -9,15 +9,15 @@
 public class GetSettings:NSObject {}
 
 public class SettingsActor: DActor {
-    let apiActor: DTActorRef
-    let mappingActor: DTActorRef
+    private(set) var apiActor: DTActorRef!
+    private(set) var mappingActor: DTActorRef!
     let settingsStorage: SettingsStorage?
     
     override public init(actorSystem: DTActorSystem) {
-        apiActor = actorSystem.actorOfClass(APIActor)!
-        mappingActor = actorSystem.actorOfClass(MappingActor)!
         settingsStorage = actorSystem.serviceLocator.service()
         super.init(actorSystem: actorSystem)
+        apiActor = actorSystem.actorOfClass(APIActor.self, caller: self)
+        mappingActor = actorSystem.actorOfClass(MappingActor.self, caller: self)
     }
     
     override public func setup() {

@@ -19,7 +19,7 @@ class SessionAPIActorTest: QuickSpec {
         beforeSuite {
             actorSystem = ActorSystemMock()
             sessionApiActor = SessionAPIActor(actorSystem: actorSystem)
-            sut = DTActorRef(actor: sessionApiActor)
+            sut = DTActorRef(actor: sessionApiActor, caller: self)
         }
         
         context("On GetSession message", {
@@ -28,7 +28,7 @@ class SessionAPIActorTest: QuickSpec {
             it("Api Actor should receive valid Post message") {
                 sut.ask(message)
                 
-                let apiActor = actorSystem.actorOfClass(APIActor) as! APIActorMock
+                let apiActor = actorSystem.actorOfClass(APIActor.self, caller: self) as! APIActorMock
                 
                 let path = sessionApiActor.baseURL.URLByAppendingPathComponent(message.relativePath).absoluteString!
                 let post = Post(path: path, parameters: message.parameters)
@@ -38,7 +38,7 @@ class SessionAPIActorTest: QuickSpec {
             
             context("If ApiActor succeeded") {
                 it("Should return succeeded result") {
-                    let apiActor = actorSystem.actorOfClass(APIActor) as! APIActorMock
+                    let apiActor = actorSystem.actorOfClass(APIActor.self, caller: self) as! APIActorMock
                     
                     apiActor.shouldSucceed = true
                     
@@ -50,7 +50,7 @@ class SessionAPIActorTest: QuickSpec {
             
             context("If ApiActor failed") {
                 it("Should return failed result") {
-                    let apiActor = actorSystem.actorOfClass(APIActor) as! APIActorMock
+                    let apiActor = actorSystem.actorOfClass(APIActor.self, caller: self) as! APIActorMock
                     
                     apiActor.shouldSucceed = false
                     
@@ -84,7 +84,7 @@ class SessionAPIActorTest: QuickSpec {
             super.init(configs: ConfigsMock(), serviceLocator: serviceLocator, builderBlock: {_ in})
         }
         
-        override func actorOfClass(`class`: AnyClass) -> DTActorRef? {
+        override func actorOfClass(`class`: AnyClass, caller: AnyObject?) -> DTActorRef? {
             return apiActor
         }
     }

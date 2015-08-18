@@ -31,14 +31,14 @@
 }
 
 - (void)start {
-    NSLog(@"\nInvocation started\nmessage: %@\ncaller: %@\nparrent: %@", self.message, self.caller, self.parent);
+    NSLog(@"\nInvocation started\nmessage: %@\ncaller: %@\nparrent: %@", self.message, self.caller, self.parent.message);
     self.started = [NSDate new];
 }
 
 - (void)finish {
     self.finished = [NSDate new];
     double time = [self.finished timeIntervalSinceDate:self.started];
-    NSLog(@"\nInvocation finished\nmessage: %@\ncaller: %@\nparrent: %@\ntime:%.3fs", self.message, self.caller, self.parent, time);
+    NSLog(@"\nInvocation finished\nmessage: %@\ncaller: %@\nparrent: %@\ntime:%.3fs", self.message, self.caller, self.parent.message, time);
 }
 
 @end

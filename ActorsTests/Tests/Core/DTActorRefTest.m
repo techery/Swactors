@@ -6,7 +6,7 @@
 SPEC_BEGIN(DTActorRefTest)
 describe(@"DTActorRef", ^{
     id<DTActorHandler> actor = [KWMock mockForProtocol:@protocol(DTActorHandler)];
-    DTActorRef *sut = [[DTActorRef alloc] initWithActor:actor];
+    DTActorRef *sut = [[DTActorRef alloc] initWithActor:actor caller:self];
 
     it(@"should be correctly initialized", ^{
         [(id)sut.actor shouldNotBeNil];

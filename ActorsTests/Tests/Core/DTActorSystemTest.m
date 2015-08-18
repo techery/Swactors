@@ -36,7 +36,7 @@ describe(@"DTMainActorSystem", ^{
     });
     
     it(@"Should return nil if provider wasn't added", ^{
-        id actor = [actorSystem actorOfClass:[NSObject class]];
+        id actor = [actorSystem actorOfClass:[NSObject class] caller:self];
         [[actor should] beNil];
     });    
     
@@ -48,7 +48,7 @@ describe(@"DTMainActorSystem", ^{
         
         [actorSystem addActorProvider:actorProvider];
         
-        id actor = [actorSystem actorOfClass:actorClass];
+        id actor = [actorSystem actorOfClass:actorClass caller:self];
         [[actor shouldNot] beNil];
     });
 });

@@ -18,7 +18,7 @@ class APIActorTest: QuickSpec {
             
             beforeSuite {
                 sut = APIActor(actorSystem: ActorSystemMock())
-                apiActorRef = DTActorRef(actor: sut)
+                apiActorRef = DTActorRef(actor: sut, caller: self)
             }
             
             it("Should be correctly initialized") {

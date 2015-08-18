@@ -32,7 +32,7 @@ SPEC_BEGIN(DTSessionActorTest)
                 [locator registerService:sessionStorage forClass:[DTSessionStorage class]];
             }]];
             
-            sessionActor = [[DTActorRef alloc] initWithActor:[[DTSessionActor alloc] initWithActorSystem:actorSystem]];
+            sessionActor = [[DTActorRef alloc] initWithActor:[[DTSessionActor alloc] initWithActorSystem:actorSystem] caller:self];
         });
         
         context(@"On Logout message", ^{

@@ -20,7 +20,7 @@ describe(@"DTActor", ^{
     
     beforeEach(^{
         sut = [[DTActor alloc] initWithActorSystem:actorSystemMock()];
-        sutRef = [[DTActorRef alloc] initWithActor:sut];
+        sutRef = [[DTActorRef alloc] initWithActor:sut caller:self];
     });
     
     it(@"Should be correctly initialized", ^{

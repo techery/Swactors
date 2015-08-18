@@ -30,7 +30,7 @@ describe(@"AuthActor", ^{
         [actorSystem stub:@selector(actorOfClass:) andReturn:sessionActor withArguments:[DTSessionActor class]];
         [actorSystem stub:@selector(actorOfClass:) andReturn:settingsActor withArguments:[SettingsActor class]];
         
-        authActor = [[DTActorRef alloc] initWithActor:[[AuthActor alloc] initWithActorSystem:actorSystem]];
+        authActor = [[DTActorRef alloc] initWithActor:[[AuthActor alloc] initWithActorSystem:actorSystem] caller:self];
     });
     
     it(@"Should not be nil", ^{

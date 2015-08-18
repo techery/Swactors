@@ -15,8 +15,8 @@
 - (instancetype)initWithActorSystem:(id<DTActorSystem>)actorSystem {
     self = [super initWithActorSystem:actorSystem];
     if (self) {
-        _sessionApiActor = [actorSystem actorOfClass:[SessionAPIActor class]];
-        _mappingActor = [actorSystem actorOfClass:[MappingActor class]];
+        _sessionApiActor = [actorSystem actorOfClass:[SessionAPIActor class] caller:self];
+        _mappingActor = [actorSystem actorOfClass:[MappingActor class] caller:self];
         _sessionStorage = [actorSystem.serviceLocator serviceForClass:[DTSessionStorage class]];
     }
 

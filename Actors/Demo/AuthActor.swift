@@ -20,13 +20,13 @@ class Login : NSObject {
 
 @objc class AuthActor: DActor {
     
-    let sessionActor: DTActorRef
-    let settingsActor: DTActorRef
+    private(set) var sessionActor: DTActorRef!
+    private(set) var settingsActor: DTActorRef!
     
     override init(actorSystem: DTActorSystem) {
-        sessionActor = actorSystem.actorOfClass(DTSessionActor.self)!
-        settingsActor = actorSystem.actorOfClass(SettingsActor.self)!
-        super.init(actorSystem: actorSystem)
+        super.init(actorSystem: actorSystem)        
+        sessionActor = actorSystem.actorOfClass(DTSessionActor.self, caller: self)
+        settingsActor = actorSystem.actorOfClass(SettingsActor.self, caller: self)
     }
     
     override func setup() {

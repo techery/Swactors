@@ -18,7 +18,7 @@ class MappingActorTests: QuickSpec {
             
             beforeSuite {
                 sut = MappingActorMock(actorSystem: ActorSystemMock())
-                mappingActorRef = DTActorRef(actor: sut)
+                mappingActorRef = DTActorRef(actor: sut, caller: self)
             }
             
             context("on MappingRequest message") {
