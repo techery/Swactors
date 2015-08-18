@@ -62,17 +62,24 @@
 
 @interface DTActorRef()
 @property (nonatomic, strong) id<DTActorHandler> actor;
+@property (nonatomic, weak, nullable) id caller;
 @end
 
 @implementation DTActorRef
 
-- (instancetype)initWithActor:(id<DTActorHandler>)actor {
+- (instancetype)initWithActor:(id<DTActorHandler>)actor caller:(nullable id)caller {
     if (self = [super init]) {
         _actor = actor;
+        _caller = caller;
     }
 
     return self;
 }
+
+- (instancetype)initWithActor:(id<DTActorHandler>)actor {
+    return [self initWithActor:actor caller:nil];
+}
+
 
 - (RXPromise *)ask:(id)message {
     return [self.actor handle:message];

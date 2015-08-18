@@ -55,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) id<DTActorHandler> actor;
 
 - (instancetype)initWithActor:(id<DTActorHandler>)actor;
+- (instancetype)initWithActor:(id<DTActorHandler>)actor caller:(nullable id)caller;
 
 - (void)tell:(id)message;
 - (RXPromise *)ask:(id)message;

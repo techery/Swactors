@@ -31,6 +31,10 @@
 #pragma mark -  DTActorSystem
 
 - (DTActorRef *)actorOfClass:(Class)class {
+    return [self actorOfClass:class caller:nil];
+}
+
+- (nullable DTActorRef *)actorOfClass:(Class)class caller:(nullable id)caller {
     id<DTActorHandler> actor = [self getActor:class];
     if (actor) {
         DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor];
@@ -38,7 +42,7 @@
     } else {
         return nil;
     }
-}
+};
 
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider {
     NSString *key = NSStringFromClass(actorProvider.actorType);
