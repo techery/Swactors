@@ -4,36 +4,39 @@
 
 #import "DTActor.h"
 #import "DTPromiseMatcher.h"
+#import "ActorSystemMock.h"
 
 SPEC_BEGIN(DTActorOperationTest)
 registerMatchers(@"DT");
 
 describe(@"DTActorOperation", ^{
-    id handler = [KWMock mockForProtocol:@protocol(DTActorHandler)];
-    id message = any();
+    __block id handler;
+    __block DTInvocation *invocation;
     __block DTActorOperation *sut;
     
     beforeEach(^{
-        sut = [[DTActorOperation alloc] initWithInvocation:message handler:handler];
+        invocation = [DTInvocation invocationWithMessage:[NSObject new] caller:self];
+        handler = [KWMock mockForProtocol:@protocol(DTActorHandler)];
+        RXPromise *failedPromise = [RXPromise new];
+        [failedPromise rejectWithReason:nil];
+        [failedPromise wait];
+        [handler stub:@selector(handle:) andReturn:failedPromise withArguments:invocation];
+        sut = [[DTActorOperation alloc] initWithInvocation:invocation handler:handler];
     });
     
     it(@"should be correctly initialized", ^{
-        [sut.promise shouldNotBeNil];
+        [[sut.promise shouldNot] beNil];
     });
     
-    context(@"start", ^{
+    context(@"on start", ^{
         it(@"should send message to handler", ^{
-            RXPromise *failedPromise = [RXPromise new];
-            [failedPromise rejectWithReason:nil];
-            [failedPromise wait];
-
-            [[handler should] receive:@selector(handle:) andReturn:failedPromise withArguments:message];
+            [[handler should] receive:@selector(handle:) withArguments:invocation];
             [sut start];
         });
         
         it(@"shouldn't send message to handler if already started", ^{
             [sut start];
-            [[handler shouldNot] receive:@selector(handle:) withArguments:message];
+            [[handler shouldNot] receive:@selector(handle:) withArguments:invocation];
             [sut start];
         });        
         
@@ -43,11 +46,9 @@ describe(@"DTActorOperation", ^{
                 [[sut.promise shouldEventually] beRejected];
             });
             
-            
-            // TODO: this test sometimes fails. need to figure out why
             it(@"should finish", ^{
                 [sut start];
-                [[theValue(sut.finished) shouldEventually] beTrue];
+                [[sut shouldEventually] receive:@selector(finish)];
             });
         });
         
@@ -57,7 +58,7 @@ describe(@"DTActorOperation", ^{
             
             beforeAll(^{
                 [successPromise resolveWithResult:result];
-                [handler stub:@selector(handle:) andReturn:successPromise withArguments:message];
+                [handler stub:@selector(handle:) andReturn:successPromise withArguments:invocation];
             });
             
             it(@"should return success result", ^{
@@ -68,7 +69,7 @@ describe(@"DTActorOperation", ^{
             
             it(@"should finish", ^{
                 [sut start];
-                [[theValue(sut.finished) shouldEventually] beTrue];
+                [[sut shouldEventually] receive:@selector(finish)];
             });
             
         });
