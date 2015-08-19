@@ -7,6 +7,7 @@
 #import "DTActor.h"
 #import "Actors-Swift.h"
 #import "DTSingletonActorProvider.h"
+#import "DTInstanceActorProvider.h"
 
 
 @interface DTMainActorSystem()
@@ -41,6 +42,7 @@
 };
 
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider {
+    // TODO: log warning if provider with same actorType has beed already added that it would be replaced
     NSString *key = NSStringFromClass(actorProvider.actorType);
     _actorsProviders[key] = actorProvider;
 }
@@ -72,6 +74,11 @@
 
 - (void)addSingleton:(Class)actorType {
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
+}
+
+- (void)addActor:(DTActor * (^)(id<DTActorSystem>))addBlock {
+    DTActor *instance = addBlock(self.actorSystem);
+    [self.actorSystem addActorProvider:[DTInstanceActorProvider providerWithInstance:instance]];
 }
 
 @end

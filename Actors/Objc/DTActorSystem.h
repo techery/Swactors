@@ -7,6 +7,7 @@
 
 @protocol DTActorProvider, Configs;
 @class DTActorRef, DTActor, ServiceLocator;
+@class DTMainActorSystem;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)builderWithActorSystem:(id <DTActorSystem>)actorSystem;
 
 - (void)addSingleton:(Class)actorType;
+- (void)addActor:(DTActor * (^)(id<DTActorSystem>))addBlock;
 
 @end
 
