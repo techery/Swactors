@@ -69,7 +69,6 @@ describe(@"DTMainActorSystem", ^{
     it(@"should return actor instance if provider was added", ^{
         DTActorRef *actorRef = [actorSystem actorOfClass:[instance class] caller:self];
         [[actorRef shouldNot] beNil];
-        [[(id)actorRef.actor should] equal:instance];
     });
 });
 
