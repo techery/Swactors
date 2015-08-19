@@ -69,8 +69,8 @@ describe(@"DTActorSystemBuilder", ^{
     });
     
     it(@"should add actor provider", ^{
-        [[(id)actorSystem should] receive:@selector(addActorProvider:)];        
-        [sut addActor:[DTActor class]];
+        [[(id)actorSystem should] receive:@selector(addActorProvider:)];
+        [sut addSingleton:[DTActor class]];
     });
 });
 

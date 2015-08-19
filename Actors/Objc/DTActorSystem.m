@@ -70,7 +70,7 @@
     return [[self alloc] initWithActorSystem:actorSystem];
 }
 
-- (void)addActor:(Class)actorType {
+- (void)addSingleton:(Class)actorType {
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
 }
 

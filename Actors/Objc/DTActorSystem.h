@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithActorSystem:(id <DTActorSystem>)actorSystem;
 + (instancetype)builderWithActorSystem:(id <DTActorSystem>)actorSystem;
 
-- (void)addActor:(Class)actorType;
+- (void)addSingleton:(Class)actorType;
 
 @end
 
