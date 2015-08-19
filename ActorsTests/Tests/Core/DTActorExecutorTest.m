@@ -23,7 +23,7 @@ describe(@"DTActorExecutor", ^{
     context(@"On handle", ^{
         it(@"Should add operation to operation queue", ^{
             [[theValue(sut.operationQueue.operationCount) should] beZero];
-            [sut handle:[NSObject new]];
+            [sut handle:[KWMock partialMockForObject:[DTInvocation invocationWithMessage:[NSObject new] caller:self]]];
             [[theValue(sut.operationQueue.operationCount) should] equal:theValue(1)];
         });        
     });
