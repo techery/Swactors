@@ -11,14 +11,12 @@
 		4D1623361B7CC60E00D0803E /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D16232B1B7CC5EA00D0803E /* Bond.framework */; };
 		4D1623381B7CC62F00D0803E /* Bond.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D16232B1B7CC5EA00D0803E /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1623441B7CC7F700D0803E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1623431B7CC7F700D0803E /* LoginViewController.xib */; };
-		4D2CFA331B80A74D00019285 /* SessionAPIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */; };
 		4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785B1B6815B500AFD645 /* HTTPRequestSerializer.swift */; };
 		4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785C1B6815B500AFD645 /* HTTPResponseSerializer.swift */; };
 		4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785D1B6815B500AFD645 /* HTTPSecurity.swift */; };
 		4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785E1B6815B500AFD645 /* HTTPStatusCode.swift */; };
 		4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94785F1B6815B500AFD645 /* HTTPTask.swift */; };
 		4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9478601B6815B500AFD645 /* HTTPUpload.swift */; };
-		4D2CFA611B80D07900019285 /* APIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CFA601B80D07900019285 /* APIActorTest.swift */; };
 		4D32D6231B6FBA0100044180 /* DActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6221B6FBA0100044180 /* DActor.swift */; };
 		4D32D64C1B70B1AF00044180 /* EKCoreDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6301B70B1AF00044180 /* EKCoreDataImporter.m */; };
 		4D32D64D1B70B1AF00044180 /* EKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D32D6321B70B1AF00044180 /* EKManagedObjectMapper.m */; };
@@ -38,11 +36,16 @@
 		4D73FED81B821AFB00B93978 /* DTActorOperationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FED71B821AFB00B93978 /* DTActorOperationTest.m */; };
 		4D73FEDA1B82311D00B93978 /* DTServiceLocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FED91B82311D00B93978 /* DTServiceLocatorTests.m */; };
 		4D73FEF41B83503000B93978 /* DTInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D73FEF31B83503000B93978 /* DTInvocation.m */; };
+		4D73FEF51B84679B00B93978 /* ActorSystemMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420AE1764924793EBC555B /* ActorSystemMock.m */; };
 		4D88049C1B7A4BA6001F80CD /* DTActorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88049B1B7A4BA6001F80CD /* DTActorConstants.m */; };
-		4DCA98C81B81909400F4943D /* MappingActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C71B81909400F4943D /* MappingActorTests.swift */; };
-		4DCA98CA1B81CE7C00F4943D /* ActorSystemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */; };
-		4DCA98CC1B81CF0500F4943D /* PromiseMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */; };
-		4DCA98CE1B81D15B00F4943D /* SettingsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */; };
+		4DCA71231B846D53006EAEB7 /* AuthActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420AED6EED8867FFD874C2 /* AuthActorTest.m */; };
+		4DCA71321B846D56006EAEB7 /* SessionActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420EB58ADCA1C26603088F /* SessionActorTest.m */; };
+		4DCA71331B846D58006EAEB7 /* SessionAPIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CFA321B80A74D00019285 /* SessionAPIActorTest.swift */; };
+		4DCA71341B846D5B006EAEB7 /* APIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CFA601B80D07900019285 /* APIActorTest.swift */; };
+		4DCA71351B846D5B006EAEB7 /* MappingActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C71B81909400F4943D /* MappingActorTests.swift */; };
+		4DCA71361B846D5B006EAEB7 /* ActorSystemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */; };
+		4DCA71371B846D5B006EAEB7 /* PromiseMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */; };
+		4DCA71381B846D5B006EAEB7 /* SettingsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */; };
 		4DCA98D01B81E22200F4943D /* DTMessageDispatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */; };
 		4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98D11B81EC8D00F4943D /* DTActorTest.m */; };
 		4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */; };
@@ -92,7 +95,6 @@
 		C14203B101601C48A4BAF4D9 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142074AA6EF117576566D94 /* Session.swift */; };
 		C14203EE09FC97DC091FA899 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420D7A0953CEEB1302B7E7 /* Actor.swift */; };
 		C14204083805FEAF429EE7F2 /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
-		C1420480039A784409A1661D /* ActorSystemMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420AE1764924793EBC555B /* ActorSystemMock.m */; };
 		C1420486D021D02C4AD0D5CF /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
 		C14205A1DA45880FFD07D100 /* User+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420A8BA0B09F56E9A7FC71 /* User+EasyMapping.swift */; };
 		C14205ADAA9474B334F60434 /* Settings+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */; };
@@ -101,14 +103,12 @@
 		C14206F9AA38B8B4DFA545A5 /* SessionAPIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14209D6592948A9D851DCDC /* SessionAPIActor.swift */; };
 		C14206FA002F227D0065E849 /* ActorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142095A97E0AF47476B07EA /* ActorSystem.swift */; };
 		C14207B3F2EDBED177C0FC42 /* DTMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */; };
-		C142086D9011299217033B54 /* SessionActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420EB58ADCA1C26603088F /* SessionActorTest.m */; };
 		C14208A7572C92E34DF7D998 /* AuthActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420744BB1C3A43DA63BB54 /* AuthActor.swift */; };
 		C142091971294CE695030AF8 /* MappingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420E9627E372CEF2DB903E /* MappingProvider.swift */; };
 		C14209B1171512D5129EF87A /* ActorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420407177572DF9EA4137C /* ActorProvider.swift */; };
 		C14209EC5C211D2D64DC7BF7 /* SettingsActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420FBC4D3857134382F628 /* SettingsActor.swift */; };
 		C1420AAA7B033DBFB81861FE /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142040225C8C1F8E868436A /* SettingsStorage.swift */; };
 		C1420AB6738F29FF890F6EF0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14200CA54447CEEFA4C4A26 /* LoginViewModel.swift */; };
-		C1420BA105C7AADCE3457700 /* AuthActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420AED6EED8867FFD874C2 /* AuthActorTest.m */; };
 		C1420C36FF785120BF8A05D6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420BEB8B07067CE53CEC4A /* Settings.swift */; };
 		C1420C436BDD8EB74D047D3C /* RXPromise+RXExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420D413359CCCF51407B80 /* RXPromise+RXExtension.mm */; };
 		C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
@@ -1246,29 +1246,29 @@
 			files = (
 				4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */,
 				4D2CFA4C1B80AE4A00019285 /* HTTPTask.swift in Sources */,
+				4DCA71341B846D5B006EAEB7 /* APIActorTest.swift in Sources */,
+				4DCA71361B846D5B006EAEB7 /* ActorSystemMock.swift in Sources */,
 				4D73FEDA1B82311D00B93978 /* DTServiceLocatorTests.m in Sources */,
+				4D73FEF51B84679B00B93978 /* ActorSystemMock.m in Sources */,
 				4D1623141B7C8C4200D0803E /* DTPromiseMatcher.m in Sources */,
 				4D73FED81B821AFB00B93978 /* DTActorOperationTest.m in Sources */,
+				4DCA71381B846D5B006EAEB7 /* SettingsActorTest.swift in Sources */,
 				4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */,
-				4D2CFA611B80D07900019285 /* APIActorTest.swift in Sources */,
 				4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */,
+				4DCA71371B846D5B006EAEB7 /* PromiseMatcher.swift in Sources */,
 				4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */,
 				4DCA98D01B81E22200F4943D /* DTMessageDispatcherTest.m in Sources */,
 				4D2CFA4D1B80AE4A00019285 /* HTTPUpload.swift in Sources */,
-				4DCA98CC1B81CF0500F4943D /* PromiseMatcher.swift in Sources */,
+				4DCA71331B846D58006EAEB7 /* SessionAPIActorTest.swift in Sources */,
+				4DCA71231B846D53006EAEB7 /* AuthActorTest.m in Sources */,
+				4DCA71351B846D5B006EAEB7 /* MappingActorTests.swift in Sources */,
+				4DCA71321B846D56006EAEB7 /* SessionActorTest.m in Sources */,
 				4DDBE71D1B7DFCAF004DEEA7 /* DTActorExecutorTest.m in Sources */,
 				4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */,
 				4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */,
-				4DCA98CA1B81CE7C00F4943D /* ActorSystemMock.swift in Sources */,
-				4DCA98C81B81909400F4943D /* MappingActorTests.swift in Sources */,
 				4DDBE7171B7DF38D004DEEA7 /* DTActorProviderTest.m in Sources */,
 				4D73FED61B82158100B93978 /* DTActorRefTest.m in Sources */,
-				C1420480039A784409A1661D /* ActorSystemMock.m in Sources */,
 				C1420178957775D8CA5F2289 /* DTActorSystemTest.m in Sources */,
-				C1420BA105C7AADCE3457700 /* AuthActorTest.m in Sources */,
-				C142086D9011299217033B54 /* SessionActorTest.m in Sources */,
-				4DCA98CE1B81D15B00F4943D /* SettingsActorTest.swift in Sources */,
-				4D2CFA331B80A74D00019285 /* SessionAPIActorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
