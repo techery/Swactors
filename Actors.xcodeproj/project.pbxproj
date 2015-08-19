@@ -49,7 +49,7 @@
 		4DCA98D01B81E22200F4943D /* DTMessageDispatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */; };
 		4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98D11B81EC8D00F4943D /* DTActorTest.m */; };
 		4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */; };
-		4DDBE7171B7DF38D004DEEA7 /* DTActorProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7161B7DF38D004DEEA7 /* DTActorProviderTest.m */; };
+		4DDBE7171B7DF38D004DEEA7 /* DTSingletonActorProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7161B7DF38D004DEEA7 /* DTSingletonActorProviderTest.m */; };
 		4DDBE71D1B7DFCAF004DEEA7 /* DTActorExecutorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71C1B7DFCAF004DEEA7 /* DTActorExecutorTest.m */; };
 		4DDBE7201B7E152F004DEEA7 /* DTSessionActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */; };
 		4DDBE7231B7E1FDA004DEEA7 /* DTSessionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBE7221B7E1FDA004DEEA7 /* DTSessionStorage.m */; };
@@ -94,7 +94,6 @@
 		C1420280CC0E397B2D01AEA2 /* TripsConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14205D66DCD8F4D5FE3B970 /* TripsConfigs.swift */; };
 		C14203B101601C48A4BAF4D9 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142074AA6EF117576566D94 /* Session.swift */; };
 		C14203EE09FC97DC091FA899 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420D7A0953CEEB1302B7E7 /* Actor.swift */; };
-		C14204083805FEAF429EE7F2 /* DTActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420021FD6387119C8C784D /* DTActorProvider.m */; };
 		C1420486D021D02C4AD0D5CF /* DTActorExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */; };
 		C14205A1DA45880FFD07D100 /* User+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420A8BA0B09F56E9A7FC71 /* User+EasyMapping.swift */; };
 		C14205ADAA9474B334F60434 /* Settings+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */; };
@@ -109,6 +108,7 @@
 		C14209EC5C211D2D64DC7BF7 /* SettingsActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420FBC4D3857134382F628 /* SettingsActor.swift */; };
 		C1420AAA7B033DBFB81861FE /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142040225C8C1F8E868436A /* SettingsStorage.swift */; };
 		C1420AB6738F29FF890F6EF0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14200CA54447CEEFA4C4A26 /* LoginViewModel.swift */; };
+		C1420BC409D3A9604C7E30A9 /* DTSingletonActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C142028B6DECACF2C69931DB /* DTSingletonActorProvider.m */; };
 		C1420C36FF785120BF8A05D6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420BEB8B07067CE53CEC4A /* Settings.swift */; };
 		C1420C436BDD8EB74D047D3C /* RXPromise+RXExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1420D413359CCCF51407B80 /* RXPromise+RXExtension.mm */; };
 		C1420CB107BBAE62EF05F290 /* DTActorSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C14201316C5C70002DB46856 /* DTActorSystem.m */; };
@@ -323,7 +323,7 @@
 		4DCA98D11B81EC8D00F4943D /* DTActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorTest.m; sourceTree = "<group>"; };
 		4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageHandlerTest.m; sourceTree = "<group>"; };
 		4DD9BD8E1B74F5C000C0DA5C /* ActorsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActorsTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		4DDBE7161B7DF38D004DEEA7 /* DTActorProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorProviderTest.m; sourceTree = "<group>"; };
+		4DDBE7161B7DF38D004DEEA7 /* DTSingletonActorProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSingletonActorProviderTest.m; sourceTree = "<group>"; };
 		4DDBE71C1B7DFCAF004DEEA7 /* DTActorExecutorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorExecutorTest.m; sourceTree = "<group>"; };
 		4DDBE71E1B7E152F004DEEA7 /* DTSessionActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSessionActor.h; sourceTree = "<group>"; };
 		4DDBE71F1B7E152F004DEEA7 /* DTSessionActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSessionActor.m; sourceTree = "<group>"; };
@@ -364,7 +364,6 @@
 		AD94785F1B6815B500AFD645 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		AD9478601B6815B500AFD645 /* HTTPUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUpload.swift; sourceTree = "<group>"; };
 		C1420006AC78BB1786E71E79 /* DTMessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMessageDispatcher.h; sourceTree = "<group>"; };
-		C1420021FD6387119C8C784D /* DTActorProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorProvider.m; sourceTree = "<group>"; };
 		C1420040BAD30D5873F67D5F /* ActorExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorExecutor.swift; sourceTree = "<group>"; };
 		C14200A186656387CE835001 /* DTActorOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorOperation.h; sourceTree = "<group>"; };
 		C14200C971BF22337F0E137D /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLog.h; sourceTree = "<group>"; };
@@ -373,15 +372,16 @@
 		C142012F826EC019175F2ADA /* DTMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMessageHandler.swift; sourceTree = "<group>"; };
 		C14201316C5C70002DB46856 /* DTActorSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorSystem.m; sourceTree = "<group>"; };
 		C14201AF4F221606B742207D /* RXPromise+RXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXPromise+RXExtension.h"; sourceTree = "<group>"; };
+		C14201E4577DBC9245C55E03 /* DTSingletonActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSingletonActorProvider.h; sourceTree = "<group>"; };
 		C142020C018979FD91F62E59 /* DTActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActor.h; sourceTree = "<group>"; };
 		C1420242C005F5682D8F2490 /* MappingActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActor.swift; sourceTree = "<group>"; };
+		C142028B6DECACF2C69931DB /* DTSingletonActorProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSingletonActorProvider.m; sourceTree = "<group>"; };
 		C14202E55191E5AA05C56A41 /* RXPromise.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXPromise.mm; sourceTree = "<group>"; };
 		C14203B6633998D71B9FCC3C /* APIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		C142040225C8C1F8E868436A /* SettingsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 		C1420407177572DF9EA4137C /* ActorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorProvider.swift; sourceTree = "<group>"; };
 		C1420410CDB298429DEC274B /* Session+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+EasyMapping.swift"; sourceTree = "<group>"; };
 		C142044841D4C4F89FCA9280 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C142044EA2101545D27BA78E /* DTActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorProvider.h; sourceTree = "<group>"; };
 		C142052A49AA8A2D6B01816D /* DTActorSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorSystem.h; sourceTree = "<group>"; };
 		C142054DED00C41FDFF9DB2D /* Settings+NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+NSCoding.swift"; sourceTree = "<group>"; };
 		C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+EasyMapping.swift"; sourceTree = "<group>"; };
@@ -390,6 +390,7 @@
 		C14205D66DCD8F4D5FE3B970 /* TripsConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsConfigs.swift; sourceTree = "<group>"; };
 		C142061CF26C7F7CD488B068 /* DTActorOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorOperation.m; sourceTree = "<group>"; };
 		C142068337B08BA06BF0D521 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		C14206ADAB7001F53ACFC2CC /* DTActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorProvider.h; sourceTree = "<group>"; };
 		C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageHandler.m; sourceTree = "<group>"; };
 		C142070893431D54D9B7472B /* DTMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMessageHandler.h; sourceTree = "<group>"; };
 		C142071CB793ECE927623202 /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
@@ -662,7 +663,7 @@
 			isa = PBXGroup;
 			children = (
 				C1420C2A192E61FA6948780F /* DTActorSystemTest.m */,
-				4DDBE7161B7DF38D004DEEA7 /* DTActorProviderTest.m */,
+				4DDBE7161B7DF38D004DEEA7 /* DTSingletonActorProviderTest.m */,
 				4DDBE71C1B7DFCAF004DEEA7 /* DTActorExecutorTest.m */,
 				4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */,
 				4DCA98D11B81EC8D00F4943D /* DTActorTest.m */,
@@ -749,8 +750,6 @@
 				C14200A186656387CE835001 /* DTActorOperation.h */,
 				C1420FA0FD3362A3B8163351 /* DTActorExecutor.m */,
 				C1420E17F5C4916FD6C1B709 /* DTActorExecutor.h */,
-				C1420021FD6387119C8C784D /* DTActorProvider.m */,
-				C142044EA2101545D27BA78E /* DTActorProvider.h */,
 				4D32D6221B6FBA0100044180 /* DActor.swift */,
 				C142071CB793ECE927623202 /* Configs.swift */,
 				4D88049A1B7A4BA6001F80CD /* DTActorConstants.h */,
@@ -758,6 +757,7 @@
 				4D73FEF21B83503000B93978 /* DTInvocation.h */,
 				4D73FEF31B83503000B93978 /* DTInvocation.m */,
 				C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */,
+				C1420DBBC147D73CC5B86471 /* ActorProvider */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -826,6 +826,16 @@
 				4D1623431B7CC7F700D0803E /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C1420DBBC147D73CC5B86471 /* ActorProvider */ = {
+			isa = PBXGroup;
+			children = (
+				C14206ADAB7001F53ACFC2CC /* DTActorProvider.h */,
+				C142028B6DECACF2C69931DB /* DTSingletonActorProvider.m */,
+				C14201E4577DBC9245C55E03 /* DTSingletonActorProvider.h */,
+			);
+			path = ActorProvider;
 			sourceTree = "<group>";
 		};
 		C1420EA9E6D82D9CE5A08858 /* API */ = {
@@ -1203,7 +1213,6 @@
 				C1420CE3AC89F87D8AE57524 /* RXSettledResult.mm in Sources */,
 				C1420C436BDD8EB74D047D3C /* RXPromise+RXExtension.mm in Sources */,
 				C1420486D021D02C4AD0D5CF /* DTActorExecutor.m in Sources */,
-				C14204083805FEAF429EE7F2 /* DTActorProvider.m in Sources */,
 				C14206985D533AC14CC3ED09 /* DTMessageHandler.swift in Sources */,
 				C14200613D2A54EAE6904A6D /* ActorExecutor.swift in Sources */,
 				4D32D6561B70B1AF00044180 /* EKRelationshipMapping.m in Sources */,
@@ -1237,6 +1246,7 @@
 				C1420D3414B343284C8EF01D /* LoginViewController.swift in Sources */,
 				C1420AB6738F29FF890F6EF0 /* LoginViewModel.swift in Sources */,
 				C14200AC1DF325BE97FC6DAE /* UserViewController.swift in Sources */,
+				C1420BC409D3A9604C7E30A9 /* DTSingletonActorProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1266,7 +1276,7 @@
 				4DDBE71D1B7DFCAF004DEEA7 /* DTActorExecutorTest.m in Sources */,
 				4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */,
 				4D2CFA481B80AE4A00019285 /* HTTPRequestSerializer.swift in Sources */,
-				4DDBE7171B7DF38D004DEEA7 /* DTActorProviderTest.m in Sources */,
+				4DDBE7171B7DF38D004DEEA7 /* DTSingletonActorProviderTest.m in Sources */,
 				4D73FED61B82158100B93978 /* DTActorRefTest.m in Sources */,
 				C1420178957775D8CA5F2289 /* DTActorSystemTest.m in Sources */,
 			);

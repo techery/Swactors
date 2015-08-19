@@ -1,6 +1,6 @@
 #import <Kiwi/Kiwi.h>
 // Class under test
-#import "DTActorProvider.h"
+#import "DTSingletonActorProvider.h"
 
 #import "DTActors.h"
 #import "Actors-Swift.h"

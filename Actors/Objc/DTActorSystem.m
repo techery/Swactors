@@ -5,8 +5,8 @@
 
 #import "DTActorSystem.h"
 #import "DTActor.h"
-#import "DTActorProvider.h"
 #import "Actors-Swift.h"
+#import "DTSingletonActorProvider.h"
 
 
 @interface DTMainActorSystem()
