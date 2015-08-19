@@ -9,6 +9,8 @@
 @protocol DTSystemActor;
 @protocol DTActorHandler;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DTActorProvider
 
 @property (nonatomic, readonly) Class<DTSystemActor> actorType;
@@ -16,3 +18,5 @@
 - (id<DTActorHandler>)create:(id<DTActorSystem>)actorSystem;
 
 @end
+
+NS_ASSUME_NONNULL_END
