@@ -13,6 +13,7 @@
 #import "ActorSystemMock.h"
 #import "DTSingletonActorProvider.h"
 #import "DTInstanceActorProvider.h"
+#import "DTPullActorProvider.h"
 
 @class ServiceLocator;
 
@@ -101,6 +102,14 @@ describe(@"DTActorSystemBuilder", ^{
             return [DTActor actorWithActorSystem:system];
         }];
         [[spy.argument should] beKindOfClass:[DTInstanceActorProvider class]];
+    });
+
+    it(@"should add pull provider", ^{
+        [[(id)actorSystem should] receive:@selector(addActorProvider:)];
+        KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
+        [sut addActorsPull:[DTActor class] count:3];
+        [[spy.argument should] beKindOfClass:[DTPullActorProvider class]];
+        [[theValue([spy.argument count]) should] equal:theValue(3)];
     });
 });
 

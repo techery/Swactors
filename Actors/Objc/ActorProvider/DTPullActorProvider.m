@@ -11,10 +11,9 @@
 
 @interface DTPullActorProvider ()
 
-@property(nonatomic, strong, readwrite) Class <DTSystemActor> actorType;
-@property(nonatomic) NSInteger count;
 @property (nonatomic, strong) NSMutableArray *handlers;
-
+@property(nonatomic, strong, readwrite) Class <DTSystemActor> actorType;
+@property(nonatomic, readwrite) NSInteger count;
 @end
 
 @implementation DTPullActorProvider

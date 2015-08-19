@@ -8,6 +8,7 @@
 #import "Actors-Swift.h"
 #import "DTSingletonActorProvider.h"
 #import "DTInstanceActorProvider.h"
+#import "DTPullActorProvider.h"
 
 
 @interface DTMainActorSystem()
@@ -72,13 +73,17 @@
     return [[self alloc] initWithActorSystem:actorSystem];
 }
 
-- (void)addSingleton:(Class)actorType {
+- (void)addSingleton:(Class<DTSystemActor>)actorType {
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
 }
 
 - (void)addActor:(DTActor * (^)(id<DTActorSystem>))addBlock {
     DTActor *instance = addBlock(self.actorSystem);
     [self.actorSystem addActorProvider:[DTInstanceActorProvider providerWithInstance:instance]];
+}
+
+- (void)addActorsPull:(Class<DTSystemActor>)actorType count:(int)count {
+    [self.actorSystem addActorProvider:[DTPullActorProvider providerWithActorType:actorType count:count]];
 }
 
 @end
