@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DTInstanceActorProvider : NSObject <DTActorProvider>
 
+@property (nonatomic, readonly) id<DTActorHandler> actorHandler;
+
 - (instancetype)initWithInstance:(DTActor *)instance;
 + (instancetype)providerWithInstance:(DTActor *)instance;
 

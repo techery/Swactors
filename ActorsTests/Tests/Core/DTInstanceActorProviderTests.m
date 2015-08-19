@@ -9,13 +9,15 @@ describe(@"DTInstanceActorProvider", ^{
     DTActor *instance = [DTActor mock];
     DTInstanceActorProvider *sut = [DTInstanceActorProvider providerWithInstance:instance];
     
-    it(@"should correctly create handler", ^{
-        id actor = [sut create:any()];
-        [[actor should] equal:instance];
-    });
+    it(@"Should be correctly initialized", ^{
+        [[(NSObject *)sut.actorHandler shouldNot] beNil];
+        [[(NSObject *)sut.actorType shouldNot] beNil];
+    });    
     
-    it(@"should return correct actor type", ^{
-        [[(id)[sut actorType] should] equal:[instance class]];
-    });
+    it(@"should correctly create handler", ^{
+        id handler = [sut create:any()];
+        [[handler shouldNot] beNil];
+        [[handler should] equal:sut.actorHandler];
+    });    
 });
 SPEC_END

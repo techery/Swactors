@@ -5,10 +5,12 @@
 
 #import "DTInstanceActorProvider.h"
 #import "DTActor.h"
+#import "DTActorExecutor.h"
 
 
 @interface DTInstanceActorProvider ()
-@property(nonatomic, strong) DTActor *instance;
+@property(nonatomic, strong) id<DTActorHandler> actorHandler;
+@property(nonatomic) Class<DTSystemActor> actorType;
 @end
 
 @implementation DTInstanceActorProvider
@@ -16,7 +18,8 @@
 - (instancetype)initWithInstance:(DTActor *)instance {
     self = [super init];
     if (self) {
-        self.instance = instance;
+        _actorHandler = [DTActorExecutor executorWithActorHandler:instance];
+        _actorType = [instance class];
     }
 
     return self;
@@ -29,11 +32,11 @@
 #pragma mark - DTActorProvider
 
 - (Class <DTSystemActor>)actorType {
-    return [self.instance class];
+    return _actorType;
 }
 
 - (id <DTActorHandler>)create:(id <DTActorSystem>)actorSystem {
-    return self.instance;
+    return self.actorHandler;
 }
 
 @end
