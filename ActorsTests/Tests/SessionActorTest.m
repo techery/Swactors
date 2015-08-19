@@ -25,8 +25,8 @@ SPEC_BEGIN(DTSessionActorTest)
         
         beforeAll(^{
             actorSystem = actorSystemMock();
-            [actorSystem stub:@selector(actorOfClass:) andReturn:sessionApiActor withArguments:[SessionAPIActor class]];
-            [actorSystem stub:@selector(actorOfClass:) andReturn:mappingActor withArguments:[MappingActor class]];
+            [actorSystem stub:@selector(actorOfClass:caller:) andReturn:sessionApiActor withArguments:[SessionAPIActor class], any()];
+            [actorSystem stub:@selector(actorOfClass:caller:) andReturn:mappingActor withArguments:[MappingActor class], any()];
             
             [actorSystem stub:@selector(serviceLocator) andReturn:[[ServiceLocator alloc] initWithBuilder:^(ServiceLocator *locator) {
                 [locator registerService:sessionStorage forClass:[DTSessionStorage class]];
