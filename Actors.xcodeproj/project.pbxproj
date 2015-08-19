@@ -47,6 +47,7 @@
 		4DCA71371B846D5B006EAEB7 /* PromiseMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */; };
 		4DCA71381B846D5B006EAEB7 /* SettingsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CD1B81D15B00F4943D /* SettingsActorTest.swift */; };
 		4DCA714C1B8491A8006EAEB7 /* DTInstanceActorProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA714B1B8491A8006EAEB7 /* DTInstanceActorProviderTests.m */; };
+		4DCA71721B84BD34006EAEB7 /* DTPullActorProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA71711B84BD34006EAEB7 /* DTPullActorProviderTests.m */; };
 		4DCA98D01B81E22200F4943D /* DTMessageDispatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98CF1B81E22200F4943D /* DTMessageDispatcherTest.m */; };
 		4DCA98D21B81EC8D00F4943D /* DTActorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98D11B81EC8D00F4943D /* DTActorTest.m */; };
 		4DCA98E31B81F69A00F4943D /* DTMessageHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCA98E21B81F69A00F4943D /* DTMessageHandlerTest.m */; };
@@ -100,7 +101,9 @@
 		C14205A1DA45880FFD07D100 /* User+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420A8BA0B09F56E9A7FC71 /* User+EasyMapping.swift */; };
 		C14205ADAA9474B334F60434 /* Settings+EasyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */; };
 		C14205D98AB7160FEA041C53 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14203B6633998D71B9FCC3C /* APIActor.swift */; };
+		C1420610C545E62D60FCD7D3 /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = C142095231D14F7B167A83F5 /* NSArray+Functional.m */; };
 		C14206985D533AC14CC3ED09 /* DTMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142012F826EC019175F2ADA /* DTMessageHandler.swift */; };
+		C14206F6930A7ED7CCD43D1E /* DTPullActorProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420B5DB84C84A80806F895 /* DTPullActorProvider.m */; };
 		C14206F9AA38B8B4DFA545A5 /* SessionAPIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14209D6592948A9D851DCDC /* SessionAPIActor.swift */; };
 		C14206FA002F227D0065E849 /* ActorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142095A97E0AF47476B07EA /* ActorSystem.swift */; };
 		C14207B3F2EDBED177C0FC42 /* DTMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420704343AD4DD639ABDA9 /* DTMessageHandler.m */; };
@@ -318,6 +321,7 @@
 		4DBCB48D1B6F4C4300E42FA7 /* Actors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Actors-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBCB4971B6F4D8000E42FA7 /* DTActors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTActors.h; sourceTree = "<group>"; };
 		4DCA714B1B8491A8006EAEB7 /* DTInstanceActorProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInstanceActorProviderTests.m; sourceTree = "<group>"; };
+		4DCA71711B84BD34006EAEB7 /* DTPullActorProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPullActorProviderTests.m; sourceTree = "<group>"; };
 		4DCA98C71B81909400F4943D /* MappingActorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActorTests.swift; sourceTree = "<group>"; };
 		4DCA98C91B81CE7C00F4943D /* ActorSystemMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorSystemMock.swift; sourceTree = "<group>"; };
 		4DCA98CB1B81CF0500F4943D /* PromiseMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseMatcher.swift; sourceTree = "<group>"; };
@@ -374,11 +378,13 @@
 		C14200F89B098FB3E1994413 /* ActorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorOperation.swift; sourceTree = "<group>"; };
 		C142012F826EC019175F2ADA /* DTMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMessageHandler.swift; sourceTree = "<group>"; };
 		C14201316C5C70002DB46856 /* DTActorSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorSystem.m; sourceTree = "<group>"; };
+		C1420191A70A8C7BEB115C38 /* DTPullActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPullActorProvider.h; sourceTree = "<group>"; };
 		C14201AF4F221606B742207D /* RXPromise+RXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXPromise+RXExtension.h"; sourceTree = "<group>"; };
 		C14201E4577DBC9245C55E03 /* DTSingletonActorProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSingletonActorProvider.h; sourceTree = "<group>"; };
 		C142020C018979FD91F62E59 /* DTActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActor.h; sourceTree = "<group>"; };
 		C1420242C005F5682D8F2490 /* MappingActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingActor.swift; sourceTree = "<group>"; };
 		C142028B6DECACF2C69931DB /* DTSingletonActorProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSingletonActorProvider.m; sourceTree = "<group>"; };
+		C14202C3D66F2F37EEDA7182 /* NSArray+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
 		C14202E55191E5AA05C56A41 /* RXPromise.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXPromise.mm; sourceTree = "<group>"; };
 		C14203B6633998D71B9FCC3C /* APIActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
 		C142040225C8C1F8E868436A /* SettingsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 		C142074AA6EF117576566D94 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C14207C620B0DD00B47B7EE8 /* DTInstanceActorProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInstanceActorProvider.m; sourceTree = "<group>"; };
 		C1420833E90CA81B3BA86F28 /* DTServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTServiceLocator.m; sourceTree = "<group>"; };
+		C142095231D14F7B167A83F5 /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
 		C142095A97E0AF47476B07EA /* ActorSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorSystem.swift; sourceTree = "<group>"; };
 		C142097DB489812D0E81FADF /* RXPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPromise.h; sourceTree = "<group>"; };
 		C14209962D8C9982B792CBB6 /* RXPromise+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXPromise+Private.h"; sourceTree = "<group>"; };
@@ -415,6 +422,7 @@
 		C1420AED6EED8867FFD874C2 /* AuthActorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthActorTest.m; sourceTree = "<group>"; };
 		C1420AFEE254F5A1062C94A3 /* ActorSystemMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorSystemMock.h; sourceTree = "<group>"; };
 		C1420B37F6F988BA4CC6E86F /* DTActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActor.m; sourceTree = "<group>"; };
+		C1420B5DB84C84A80806F895 /* DTPullActorProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPullActorProvider.m; sourceTree = "<group>"; };
 		C1420BB46A7686E42FB53BA7 /* DTMessageDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMessageDispatcher.m; sourceTree = "<group>"; };
 		C1420BEB8B07067CE53CEC4A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C1420C2A192E61FA6948780F /* DTActorSystemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTActorSystemTest.m; sourceTree = "<group>"; };
@@ -677,8 +685,18 @@
 				4D73FED71B821AFB00B93978 /* DTActorOperationTest.m */,
 				4D73FED91B82311D00B93978 /* DTServiceLocatorTests.m */,
 				4DCA714B1B8491A8006EAEB7 /* DTInstanceActorProviderTests.m */,
+				4DCA71711B84BD34006EAEB7 /* DTPullActorProviderTests.m */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C14203D5115D85D89BB0B1EA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C142095231D14F7B167A83F5 /* NSArray+Functional.m */,
+				C14202C3D66F2F37EEDA7182 /* NSArray+Functional.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C142043ECB1BF1487F02DAB6 /* Session */ = {
@@ -764,6 +782,7 @@
 				4D73FEF31B83503000B93978 /* DTInvocation.m */,
 				C1420FB2FEA6910CA9D74FB8 /* ServiceLocator */,
 				C1420DBBC147D73CC5B86471 /* ActorProvider */,
+				C14203D5115D85D89BB0B1EA /* Utils */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -842,6 +861,8 @@
 				C14201E4577DBC9245C55E03 /* DTSingletonActorProvider.h */,
 				C14207C620B0DD00B47B7EE8 /* DTInstanceActorProvider.m */,
 				C1420A56A79A187302F431B6 /* DTInstanceActorProvider.h */,
+				C1420B5DB84C84A80806F895 /* DTPullActorProvider.m */,
+				C1420191A70A8C7BEB115C38 /* DTPullActorProvider.h */,
 			);
 			path = ActorProvider;
 			sourceTree = "<group>";
@@ -1256,6 +1277,8 @@
 				C14200AC1DF325BE97FC6DAE /* UserViewController.swift in Sources */,
 				C1420BC409D3A9604C7E30A9 /* DTSingletonActorProvider.m in Sources */,
 				C14204A5FFF2CFC6E5D3086F /* DTInstanceActorProvider.m in Sources */,
+				C14206F6930A7ED7CCD43D1E /* DTPullActorProvider.m in Sources */,
+				C1420610C545E62D60FCD7D3 /* NSArray+Functional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1273,6 +1296,7 @@
 				4D73FED81B821AFB00B93978 /* DTActorOperationTest.m in Sources */,
 				4DCA71381B846D5B006EAEB7 /* SettingsActorTest.swift in Sources */,
 				4D2CFA491B80AE4A00019285 /* HTTPResponseSerializer.swift in Sources */,
+				4DCA71721B84BD34006EAEB7 /* DTPullActorProviderTests.m in Sources */,
 				4D2CFA4B1B80AE4A00019285 /* HTTPStatusCode.swift in Sources */,
 				4DCA71371B846D5B006EAEB7 /* PromiseMatcher.swift in Sources */,
 				4D2CFA4A1B80AE4A00019285 /* HTTPSecurity.swift in Sources */,
