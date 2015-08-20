@@ -15,7 +15,7 @@ describe(@"DTServiceLocator", ^{
         classService = any();
         protocolService = any();
         sut = [[DTServiceLocator alloc] initWithBuilderBlock:^(DTServiceLocator *locator) {
-            [locator registerService:classService forClass:[classService class]];
+            [locator registerService:classService];
             [locator registerService:protocolService forProtocol:@protocol(DTServiceLocatorTestProtocol)];
         }];
     });

@@ -29,7 +29,7 @@ SPEC_BEGIN(DTSessionActorTest)
             [actorSystem stub:@selector(actorOfClass:caller:) andReturn:mappingActor withArguments:[MappingActor class], any()];
             
             [actorSystem stub:@selector(serviceLocator) andReturn:[[ServiceLocator alloc] initWithBuilder:^(ServiceLocator *locator) {
-                [locator registerService:sessionStorage forClass:[DTSessionStorage class]];
+                [locator registerService:sessionStorage];
             }]];
             
             sessionActor = [[DTActorRef alloc] initWithActor:[[DTSessionActor alloc] initWithActorSystem:actorSystem] caller:self];

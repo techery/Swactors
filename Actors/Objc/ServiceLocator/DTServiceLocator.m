@@ -53,8 +53,8 @@
     return [self instanceForKey:[self protocolToKey:protocol]];
 }
 
-- (void)registerService:(id)service forClass:(Class)class {
-    [self registerInstance:service forKey:[self classToKey:class]];
+- (void)registerService:(id)service {
+    [self registerInstance:service forKey:[self classToKey:[service class]]];
 }
 
 - (id)serviceForClass:(Class)class {

@@ -14,11 +14,6 @@ public class ServiceLocator: DTServiceLocator {
             builder(locator as! ServiceLocator)
         })
     }
-
-    
-    func register<T: AnyObject>(service: T) {
-        super.registerService(service, forClass: T.self)
-    }
     
     func service<T: AnyObject>() -> T? {
         return super.serviceForClass(T.self) as? T
