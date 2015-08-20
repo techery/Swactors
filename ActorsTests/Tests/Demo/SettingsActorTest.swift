@@ -18,13 +18,13 @@ class SettingsActorTest: QuickSpec {
         
         beforeSuite {
             sut = SettingsActor(actorSystem: actorSystem)
-            settingsActorRef = DTActorRef(actor: sut)
+            settingsActorRef = DTActorRef(actor: sut, caller: self)
         }
         
         describe("SettingsActor") {
             context("on GetSettings message") {
                 let message = GetSettings()
-                let apiActor = actorSystem.actorOfClass(APIActor) as! APIActorMock
+                let apiActor = actorSystem.actorOfClass(APIActor.self, caller: self) as! APIActorMock
                 
                 it("APIActor should receive valid GET message") {
                     settingsActorRef.ask(message)                    
@@ -36,7 +36,7 @@ class SettingsActorTest: QuickSpec {
                 }
                 
                 context("APIActor succeeded") {
-                    let mappingActor = actorSystem.actorOfClass(MappingActor) as! MappingActorMock
+                    let mappingActor = actorSystem.actorOfClass(MappingActor.self, caller: self) as! MappingActorMock
                     
                     it("MappingActor should receive MessageRequest") {
                         apiActor.shouldSucceed = true
@@ -103,7 +103,7 @@ class SettingsActorTest: QuickSpec {
         let apiActor = APIActorMock()
         let mappingActor = MappingActorMock()
         
-        override func actorOfClass(aClass: AnyClass) -> DTActorRef? {
+        override func actorOfClass(aClass: AnyClass, caller: AnyObject?) -> DTActorRef? {
             if aClass === APIActor.self {
                 return apiActor
             }
@@ -140,7 +140,7 @@ class SettingsActorTest: QuickSpec {
         
         let result = "{\"i_am\":\"json\"}"
         
-        override func ask(message: AnyObject!) -> RXPromise! {
+        override func ask(message: AnyObject) -> RXPromise {
             receivedGetMessage = message as? Get
             let promise = RXPromise()
             shouldSucceed ? promise.resolveWithResult(result) : promise.rejectWithReason(nil)
@@ -154,7 +154,7 @@ class SettingsActorTest: QuickSpec {
         
         let result = Settings()
         
-        override func ask(message: AnyObject!) -> RXPromise! {
+        override func ask(message: AnyObject) -> RXPromise {
             receivedMessage = message as? MappingRequest
             let promise = RXPromise()
             shouldSucceed ? promise.resolveWithResult(result) : promise.rejectWithReason(nil)

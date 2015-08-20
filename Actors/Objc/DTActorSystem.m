@@ -5,8 +5,10 @@
 
 #import "DTActorSystem.h"
 #import "DTActor.h"
-#import "DTActorProvider.h"
 #import "Actors-Swift.h"
+#import "DTSingletonActorProvider.h"
+#import "DTInstanceActorProvider.h"
+#import "DTPullActorProvider.h"
 
 
 @interface DTMainActorSystem()
@@ -30,17 +32,18 @@
 
 #pragma mark -  DTActorSystem
 
-- (DTActorRef *)actorOfClass:(Class)class {
+- (nullable DTActorRef *)actorOfClass:(Class)class caller:(id)caller {
     id<DTActorHandler> actor = [self getActor:class];
     if (actor) {
-        DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor];
+        DTActorRef *actorRef = [[DTActorRef alloc] initWithActor:actor caller:caller];
         return actorRef;
     } else {
         return nil;
     }
-}
+};
 
 - (void)addActorProvider:(id<DTActorProvider>)actorProvider {
+    // TODO: log warning if provider with same actorType has beed already added that it would be replaced
     NSString *key = NSStringFromClass(actorProvider.actorType);
     _actorsProviders[key] = actorProvider;
 }
@@ -70,8 +73,17 @@
     return [[self alloc] initWithActorSystem:actorSystem];
 }
 
-- (void)addActor:(Class)actorType {
+- (void)addSingleton:(Class<DTSystemActor>)actorType {
     [self.actorSystem addActorProvider:[DTSingletonActorProvider providerWithActorType:actorType]];
+}
+
+- (void)addActor:(DTActor * (^)(id<DTActorSystem>))addBlock {
+    DTActor *instance = addBlock(self.actorSystem);
+    [self.actorSystem addActorProvider:[DTInstanceActorProvider providerWithInstance:instance]];
+}
+
+- (void)addActorsPull:(Class<DTSystemActor>)actorType count:(int)count {
+    [self.actorSystem addActorProvider:[DTPullActorProvider providerWithActorType:actorType count:count]];
 }
 
 @end

@@ -27,10 +27,10 @@ describe(@"AuthActor", ^{
         [actorSystem stub:@selector(configs) andReturn:[KWMock mockForProtocol:@protocol(Configs)]];
         [actorSystem stub:@selector(serviceLocator) andReturn:[ServiceLocator mock]];
         
-        [actorSystem stub:@selector(actorOfClass:) andReturn:sessionActor withArguments:[DTSessionActor class]];
-        [actorSystem stub:@selector(actorOfClass:) andReturn:settingsActor withArguments:[SettingsActor class]];
+        [actorSystem stub:@selector(actorOfClass:caller:) andReturn:sessionActor withArguments:[DTSessionActor class], any()];
+        [actorSystem stub:@selector(actorOfClass:caller:) andReturn:settingsActor withArguments:[SettingsActor class], any()];
         
-        authActor = [[DTActorRef alloc] initWithActor:[[AuthActor alloc] initWithActorSystem:actorSystem]];
+        authActor = [[DTActorRef alloc] initWithActor:[[AuthActor alloc] initWithActorSystem:actorSystem] caller:self];
     });
     
     it(@"Should not be nil", ^{
@@ -38,7 +38,7 @@ describe(@"AuthActor", ^{
     });
     
     context(@"On Login message", ^{
-        __block Login *login = nil;
+        Login *login = [[Login alloc] initWithEmail:@"some" password:@""];
         __block RXPromise *successPromise = [RXPromise new];
         __block RXPromise *failedPromise = [RXPromise new];
         
@@ -50,11 +50,10 @@ describe(@"AuthActor", ^{
         beforeEach(^{
             [sessionActor stub:@selector(ask:) andReturn:successPromise];
             [settingsActor stub:@selector(ask:) andReturn:successPromise];
-            login = [[Login alloc] initWithEmail:@"some" password:@""];
         });
         
         it(@"Session should receive Login message", ^{
-            [[sessionActor shouldEventually] receive:@selector(ask:) withArguments:login];
+            [[sessionActor shouldEventually] receive:@selector(ask:) andReturn:successPromise withArguments:login];
             [authActor ask:login];
         });
 
@@ -82,7 +81,7 @@ describe(@"AuthActor", ^{
                 [sessionActor stub:@selector(ask:) andReturn:session];
                 [settingsActor stub:@selector(ask:) andReturn:settings];
                 
-                RXPromise *auth = [authActor ask:login];
+                RXPromise *auth = [authActor ask:[[Login alloc] initWithEmail:@"123" password:@"34"]];
                 NSArray *authResult = (NSArray *)[auth get];
                 [[[authResult firstObject] should] equal:sessionResult];
                 [[[authResult lastObject] should] equal:settingsResult];
@@ -92,7 +91,7 @@ describe(@"AuthActor", ^{
         context(@"If Session actor fails", ^{
             it(@"Should receive failed result", ^{
                 [sessionActor stub:@selector(ask:) andReturn:failedPromise];
-                RXPromise *result = [authActor ask:login];
+                RXPromise *result = [authActor ask:[[Login alloc] initWithEmail:@"123" password:@"34"]];
                 [result wait];
                 [[result should] beRejected];
             });

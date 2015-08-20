@@ -17,17 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         let locator:ServiceLocator = ServiceLocator { locator in
-            locator.register(DTSessionStorage())
-            locator.register(SettingsStorage())
+            locator.registerService(DTSessionStorage())
+            locator.registerService(SettingsStorage())
         }
 
         let system = DTMainActorSystem(configs: TripsConfigs(), serviceLocator: locator) { builder in
-            builder.addActor(AuthActor)
-            builder.addActor(DTSessionActor)
-            builder.addActor(SessionAPIActor)
-            builder.addActor(APIActor)
-            builder.addActor(MappingActor)
-            builder.addActor(SettingsActor)
+            builder.addSingleton(AuthActor)
+            builder.addSingleton(DTSessionActor)
+            builder.addSingleton(SessionAPIActor)
+            builder.addSingleton(APIActor)
+            builder.addSingleton(MappingActor)
+            builder.addSingleton(SettingsActor)
         }
 
         let loginViewModel = LoginViewModel(actorSystem: system)

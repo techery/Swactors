@@ -24,7 +24,7 @@ class LoginViewModel {
         loginInProccess.value = true
         error.value = ""
         
-        let sessionActor = actorSystem.actorOfClass(DTSessionActor)!
+        let sessionActor = actorSystem.actorOfClass(DTSessionActor.self, caller: self)!
         let result = sessionActor.ask(Login(email: email.value, password: password.value))
         result.thenOnMain({result in
             self.loginInProccess.value = false

@@ -13,7 +13,7 @@
 - (void)registerService:(id)service forProtocol:(Protocol *)protocol;
 - (id)serviceForProtocol:(Protocol *)protocol;
 
-- (void)registerService:(id)service forClass:(Class)class;
+- (void)registerService:(id)service;
 - (id)serviceForClass:(Class)class;
 
 @end

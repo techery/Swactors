@@ -9,6 +9,7 @@
 @protocol DTSystemActor;
 @protocol DTActorHandler;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol DTActorProvider
 
@@ -18,12 +19,4 @@
 
 @end
 
-@interface DTSingletonActorProvider: NSObject<DTActorProvider>
-
-@property (nonatomic, readonly) Class<DTSystemActor> actorType;
-@property (nonatomic, readonly) id<DTActorHandler> actorHandler;
-
-- (instancetype)initWithActorType:(Class)actorType;
-+ (instancetype)providerWithActorType:(Class)actorType;
-
-@end
+NS_ASSUME_NONNULL_END

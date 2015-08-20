@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DTActorConstants.h"
+#import "DTInvocation.h"
 
 @protocol DTActorHandler;
 
@@ -16,6 +17,6 @@
 
 @property(nonatomic, readonly) RXPromise *promise;
 
-- (instancetype)initWithMessage:(id)message handler:(id<DTActorHandler>)handler;
+- (instancetype)initWithInvocation:(DTInvocation *)invocation handler:(id<DTActorHandler>)handler;
 
 @end

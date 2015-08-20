@@ -1,9 +1,11 @@
 //
-// Created by Anastasiya Gorban on 7/31/15.
+// Created by Anastasiya Gorban on 8/19/15.
 // Copyright (c) 2015 Techery. All rights reserved.
 //
 
-#import "DTActorProvider.h"
+#import "DTSingletonActorProvider.h"
+
+
 #import "DTActor.h"
 #import "DTActorExecutor.h"
 

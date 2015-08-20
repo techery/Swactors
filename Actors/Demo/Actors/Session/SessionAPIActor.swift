@@ -25,14 +25,14 @@ public class GetSession: Endpoint {
 
 public class SessionAPIActor: DActor {
 
-    let apiActor: DTActorRef
+    private(set) var apiActor: DTActorRef!
     private(set) public var baseURL: NSURL = NSURL()
 
     // MARK: - DTActor
 
-    override public init!(actorSystem: DTActorSystem!) {
-        apiActor = actorSystem.actorOfClass(APIActor)!
+    override public init(actorSystem: DTActorSystem) {
         super.init(actorSystem: actorSystem)
+        apiActor = actorSystem.actorOfClass(APIActor.self, caller: self)
         let urlString: String = configs[TripsConfigs.Keys.baseURL] as! String
         baseURL = NSURL(string: urlString)!
     }

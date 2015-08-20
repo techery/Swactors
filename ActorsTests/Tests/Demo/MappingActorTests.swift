@@ -18,7 +18,7 @@ class MappingActorTests: QuickSpec {
             
             beforeSuite {
                 sut = MappingActorMock(actorSystem: ActorSystemMock())
-                mappingActorRef = DTActorRef(actor: sut)
+                mappingActorRef = DTActorRef(actor: sut, caller: self)
             }
             
             context("on MappingRequest message") {
@@ -61,7 +61,7 @@ class MappingActorTests: QuickSpec {
     // MARK: - Mocks
     
     class MappingActorMock: MappingActor {
-        override init!(actorSystem: DTActorSystem!) {
+        override init(actorSystem: DTActorSystem) {
             super.init(actorSystem: actorSystem)
             
             self.mappingProvider = MappingProviderMock()
