@@ -92,7 +92,6 @@
 		C14201DFC6BF5A8CD84EB936 /* Development-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C142057C4426374FAD7B9BF9 /* Development-Config.plist */; };
 		C14202288663AE1CD0C7F214 /* DTActorOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C142061CF26C7F7CD488B068 /* DTActorOperation.m */; };
 		C1420242C250E9AC45DB6DC8 /* DTServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C1420833E90CA81B3BA86F28 /* DTServiceLocator.m */; };
-		C14202641FB3F2EF09208BAC /* Settings+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142054DED00C41FDFF9DB2D /* Settings+NSCoding.swift */; };
 		C1420280CC0E397B2D01AEA2 /* TripsConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14205D66DCD8F4D5FE3B970 /* TripsConfigs.swift */; };
 		C14203B101601C48A4BAF4D9 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142074AA6EF117576566D94 /* Session.swift */; };
 		C14203EE09FC97DC091FA899 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1420D7A0953CEEB1302B7E7 /* Actor.swift */; };
@@ -392,7 +391,6 @@
 		C1420410CDB298429DEC274B /* Session+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+EasyMapping.swift"; sourceTree = "<group>"; };
 		C142044841D4C4F89FCA9280 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C142052A49AA8A2D6B01816D /* DTActorSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTActorSystem.h; sourceTree = "<group>"; };
-		C142054DED00C41FDFF9DB2D /* Settings+NSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+NSCoding.swift"; sourceTree = "<group>"; };
 		C142056BF99A94BBFA4D1573 /* Settings+EasyMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Settings+EasyMapping.swift"; sourceTree = "<group>"; };
 		C142057C4426374FAD7B9BF9 /* Development-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "Development-Config.plist"; sourceTree = "<group>"; };
 		C1420599480D2FF2F990C7F9 /* RXSettledResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RXSettledResult.mm; sourceTree = "<group>"; };
@@ -792,7 +790,6 @@
 			children = (
 				C1420FBC4D3857134382F628 /* SettingsActor.swift */,
 				C142040225C8C1F8E868436A /* SettingsStorage.swift */,
-				C142054DED00C41FDFF9DB2D /* Settings+NSCoding.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1259,7 +1256,6 @@
 				C14209EC5C211D2D64DC7BF7 /* SettingsActor.swift in Sources */,
 				C1420AAA7B033DBFB81861FE /* SettingsStorage.swift in Sources */,
 				4DDBE7201B7E152F004DEEA7 /* DTSessionActor.m in Sources */,
-				C14202641FB3F2EF09208BAC /* Settings+NSCoding.swift in Sources */,
 				4DFCBBA21B7CE2E200FCAF57 /* UserViewModel.swift in Sources */,
 				C142008BF01527574DF17B89 /* MappingActor.swift in Sources */,
 				C142091971294CE695030AF8 /* MappingProvider.swift in Sources */,
