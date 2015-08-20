@@ -50,6 +50,8 @@ Types of actor providers that could be added to system:
 - **Instance** - already inialized actor, could be useful if you need custom initialization;
 - **Actors Pull** - as was said before, every actor could handle only one message at a time, which sometime is not useful. For netwrok for example needed possibility to proccess few messages simultaniously. On sending messages to actors pull system eather take first free actor, or creates new if pull isn't filled yet, or if all actors are busy it just takes any actor from the pull.
 
+##Sending message##
+
 To send message to actor you need actor reference:
 ```
 DTActorRef *sessionActor = [sut actorOfClass:[NSObject class] caller:self];
