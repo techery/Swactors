@@ -32,7 +32,7 @@
 SPEC_BEGIN(DTActorSystemTest)
 
 describe(@"DTMainActorSystem", ^{
-    __block DTMainActorSystem *actorSystem = nil;
+    __block DTMainActorSystem *sut = nil;
     __block id<Configs> configs = nil;
     __block ServiceLocator *serviceLocator = nil;
     
@@ -42,7 +42,7 @@ describe(@"DTMainActorSystem", ^{
     beforeAll(^{
         serviceLocator =  [ServiceLocator mock];
         configs = [KWMock mockForProtocol:@protocol(Configs)];
-        actorSystem = [[DTMainActorSystem alloc] initWithConfigs:configs serviceLocator:serviceLocator builderBlock:^(DTActorSystemBuilder * builder) {
+        sut = [[DTMainActorSystem alloc] initWithConfigs:configs serviceLocator:serviceLocator builderBlock:^(DTActorSystemBuilder * builder) {
             [builder addSingleton:singleton];
             [builder addActor:^DTActor *(id<DTActorSystem> system) {
                 instance = [DTInstanceTest actorWithActorSystem:system];
@@ -52,24 +52,30 @@ describe(@"DTMainActorSystem", ^{
     });
     
     it(@"should be correctly initialized", ^{
-        [[actorSystem shouldNot] beNil];
-        [[(NSObject *)actorSystem.configs shouldNot] beNil];
-        [[actorSystem.serviceLocator shouldNot] beNil];
+        [[sut shouldNot] beNil];
+        [[(NSObject *)sut.configs shouldNot] beNil];
+        [[sut.serviceLocator shouldNot] beNil];
     });
     
-    it(@"should return nil if provider wasn't added", ^{
-        id actor = [actorSystem actorOfClass:[NSObject class] caller:self];
-        [[actor should] beNil];
-    });    
-    
-    it(@"should returt singleton if provider was added", ^{
-        id actorRef = [actorSystem actorOfClass:singleton caller:self];
-        [[actorRef shouldNot] beNil];
-    });
-    
-    it(@"should return actor instance if provider was added", ^{
-        DTActorRef *actorRef = [actorSystem actorOfClass:[instance class] caller:self];
-        [[actorRef shouldNot] beNil];
+    context(@"asking for actor", ^{
+        context(@"provider wasn't added", ^{
+            it(@"should return nil", ^{
+                id actor = [sut actorOfClass:[NSObject class] caller:self];
+                [[actor should] beNil];
+            });
+        });
+        
+        context(@"provider was added", ^{
+            it(@"should returt singleton", ^{
+                id actorRef = [sut actorOfClass:singleton caller:self];
+                [[actorRef shouldNot] beNil];
+            });
+            
+            it(@"should return actor instance", ^{
+                DTActorRef *actorRef = [sut actorOfClass:[instance class] caller:self];
+                [[actorRef shouldNot] beNil];
+            });
+        });
     });
 });
 
@@ -82,34 +88,34 @@ describe(@"DTActorSystemBuilder", ^{
     DTActorSystemBuilder *sut = [[DTActorSystemBuilder alloc] initWithActorSystem:actorSystem];
     
     it(@"should be correctly initialized", ^{
+        [[(id)sut.actorSystem shouldNot] beNil];
         [[(id)sut.actorSystem should] equal:actorSystem];
+    });
+    
+    context(@"adding providers", ^{
+        it(@"should add singleton provider to system", ^{
+            [[(id)actorSystem should] receive:@selector(addActorProvider:)];
+            KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
+            [sut addSingleton:[DTActor class]];
+            [[spy.argument should] beKindOfClass:[DTSingletonActorProvider class]];
+        });
         
-        DTActorSystemBuilder *s = [DTActorSystemBuilder builderWithActorSystem:actorSystem];
-        [[(id)s.actorSystem should] equal:actorSystem];
-    });
-    
-    it(@"should add singleton provider", ^{
-        [[(id)actorSystem should] receive:@selector(addActorProvider:)];
-        KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
-        [sut addSingleton:[DTActor class]];
-        [[spy.argument should] beKindOfClass:[DTSingletonActorProvider class]];
-    });
-    
-    it(@"should add instance provider", ^{
-        [[(id)actorSystem should] receive:@selector(addActorProvider:)];
-        KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
-        [sut addActor:^DTActor *(id<DTActorSystem> system) {
-            return [DTActor actorWithActorSystem:system];
-        }];
-        [[spy.argument should] beKindOfClass:[DTInstanceActorProvider class]];
-    });
-
-    it(@"should add pull provider", ^{
-        [[(id)actorSystem should] receive:@selector(addActorProvider:)];
-        KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
-        [sut addActorsPull:[DTActor class] count:3];
-        [[spy.argument should] beKindOfClass:[DTPullActorProvider class]];
-        [[theValue([spy.argument count]) should] equal:theValue(3)];
+        it(@"should add instance provider to system", ^{
+            [[(id)actorSystem should] receive:@selector(addActorProvider:)];
+            KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
+            [sut addActor:^DTActor *(id<DTActorSystem> system) {
+                return [DTActor actorWithActorSystem:system];
+            }];
+            [[spy.argument should] beKindOfClass:[DTInstanceActorProvider class]];
+        });
+        
+        it(@"should add pull provider to system", ^{
+            [[(id)actorSystem should] receive:@selector(addActorProvider:)];
+            KWCaptureSpy *spy = [(id)actorSystem captureArgument:@selector(addActorProvider:) atIndex:0];
+            [sut addActorsPull:[DTActor class] count:3];
+            [[spy.argument should] beKindOfClass:[DTPullActorProvider class]];
+            [[theValue([spy.argument count]) should] equal:theValue(3)];
+        });
     });
 });
 

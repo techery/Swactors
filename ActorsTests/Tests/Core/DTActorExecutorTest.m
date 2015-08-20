@@ -14,14 +14,14 @@ describe(@"DTActorExecutor", ^{
         sut = [DTActorExecutor executorWithActorHandler:actorHandler];
     });
     
-    it(@"Should be correctly initialized", ^{
+    it(@"should be correctly initialized", ^{
         [[sut.operationQueue shouldNot] beNil];
         [[theValue(sut.operationQueue.maxConcurrentOperationCount) should] equal:theValue(1)];
         [[(NSObject *)sut.actorHandler shouldNot] beNil];
     });
     
-    context(@"On handle", ^{
-        it(@"Should add operation to operation queue", ^{
+    context(@"handle", ^{
+        it(@"should add operation to operation queue", ^{
             [[theValue(sut.operationQueue.operationCount) should] beZero];
             [sut handle:[KWMock partialMockForObject:[DTInvocation invocationWithMessage:[NSObject new] caller:self]]];
             [[theValue(sut.operationQueue.operationCount) should] equal:theValue(1)];

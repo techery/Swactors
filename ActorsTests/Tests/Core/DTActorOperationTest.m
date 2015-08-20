@@ -28,19 +28,24 @@ describe(@"DTActorOperation", ^{
         [[sut.promise shouldNot] beNil];
     });
     
-    context(@"on start", ^{
+    context(@"start", ^{
         it(@"should send message to handler", ^{
             [[handler should] receive:@selector(handle:) withArguments:invocation];
             [sut start];
         });
         
-        it(@"shouldn't send message to handler if already started", ^{
-            [sut start];
-            [[handler shouldNot] receive:@selector(handle:) withArguments:invocation];
-            [sut start];
-        });        
+        context(@"already started", ^{
+            beforeEach(^{
+                [sut start];
+            });
+            
+            it(@"shouldn't send message to handler", ^{
+                [[handler shouldNot] receive:@selector(handle:) withArguments:invocation];
+                [sut start];
+            });
+        });
         
-        context(@"if handler fails", ^{
+        context(@"handler fails", ^{
             it(@"should return failed result", ^{
                 [sut start];
                 [[sut.promise shouldEventually] beRejected];
@@ -52,7 +57,7 @@ describe(@"DTActorOperation", ^{
             });
         });
         
-        context(@"if handler succeeded", ^{
+        context(@"handler succeeded", ^{
             RXPromise *successPromise = [RXPromise new];
             id result = any();
             

@@ -20,26 +20,37 @@ describe(@"DTServiceLocator", ^{
         }];
     });
     
-    it(@"should return service for class if registered", ^{
-        id service = [sut serviceForClass:[classService class]];
-        [[service shouldNot] beNil];
-        [[service should] beKindOfClass:[classService class]];
+    describe(@"ask service for class", ^{
+        context(@"class is registered", ^{
+            it(@"should return service", ^{
+                id service = [sut serviceForClass:[classService class]];
+                [[service shouldNot] beNil];
+                [[service should] beKindOfClass:[classService class]];
+            });
+        });
+        
+        context(@"class isn't registered", ^{
+            it(@"should return nil", ^{
+                id service = [sut serviceForClass:[NSObject class]];
+                [[service should] beNil];
+            });
+        });
     });
     
-    it(@"should return nil if no registered class", ^{
-        id service = [sut serviceForClass:[NSObject class]];
-        [[service should] beNil];
+    describe(@"ask service for protocol", ^{
+        context(@"instance for protocol is regirstered", ^{
+            it(@"should return service for protocol", ^{
+                id service = [sut serviceForProtocol:@protocol(DTServiceLocatorTestProtocol)];
+                [[service shouldNot] beNil];
+            });
+        });
+        
+        context(@"instance for protocol isn't registered", ^{
+            it(@"should return nil", ^{
+                id service = [sut serviceForProtocol:@protocol(NSObject)];
+                [[service should] beNil];
+            });
+        });
     });
-    
-    it(@"should return service for protocol if registered", ^{
-        id service = [sut serviceForProtocol:@protocol(DTServiceLocatorTestProtocol)];
-        [[service shouldNot] beNil];
-    });
-    
-    it(@"should return nil if no registered service for protocol", ^{
-        id service = [sut serviceForProtocol:@protocol(NSObject)];
-        [[service should] beNil];
-    });
-    
 });
 SPEC_END

@@ -25,17 +25,19 @@ describe(@"DTSingletonActorProvider", ^{
         [[(NSObject *)sut.actorType shouldNot] beNil];
     });
     
-    it(@"Should correctly create handler", ^{
-        id handler = [sut create:actorSystem];
-        [[handler shouldNot] beNil];
-        [[handler should] equal:sut.actorHandler];
-    });
-    
-    it(@"Should act like singleton and return old instance rather then create new", ^{
-        id oldHandler = sut.actorHandler;
-        [[oldHandler shouldNot] beNil];
-        id newHandler = [sut create:actorSystem];
-        [[newHandler should] equal:oldHandler];
+    context(@"creating handler", ^{
+        it(@"Should correctly create handler", ^{
+            id handler = [sut create:actorSystem];
+            [[handler shouldNot] beNil];
+            [[handler should] equal:sut.actorHandler];
+        });
+        
+        it(@"Should act like singleton and return old instance rather then create new", ^{
+            id oldHandler = sut.actorHandler;
+            [[oldHandler shouldNot] beNil];
+            id newHandler = [sut create:actorSystem];
+            [[newHandler should] equal:oldHandler];
+        });
     });
 });
 

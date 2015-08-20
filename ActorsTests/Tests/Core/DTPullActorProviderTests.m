@@ -53,21 +53,27 @@ describe(@"DTPullActorProvider", ^{
                 [handler1 handle:invocation];
             });
 
-            it(@"should create new if no free handerls", ^{
-                handler2 = [sut create:actorSystem];
-                [[(id)handler2 shouldNot] equal:handler1];
+            context(@"no free handlers", ^{
+                it(@"should create new", ^{
+                    handler2 = [sut create:actorSystem];
+                    [[(id)handler2 shouldNot] equal:handler1];
+                });
             });
 
-            it(@"should not create new handler if there is free handler", ^{
-                id secondHanlder = [sut create:actorSystem];
-                [[secondHanlder should] equal:handler2];
+            context(@"there is free handler", ^{
+                it(@"should not create new and return one that was created before", ^{
+                    id secondHanlder = [sut create:actorSystem];
+                    [[secondHanlder should] equal:handler2];
+                });
             });
 
-            it(@"should create new if no free handerls", ^{
-                [handler2 handle:invocation];
-                handler3 = [sut create:actorSystem];
-                [[(id)handler3 shouldNot] equal:handler1];
-                [[(id)handler3 shouldNot] equal:handler2];
+            context(@"no free handlers ", ^{
+                it(@"should create new", ^{
+                    [handler2 handle:invocation];
+                    handler3 = [sut create:actorSystem];
+                    [[(id)handler3 shouldNot] equal:handler1];
+                    [[(id)handler3 shouldNot] equal:handler2];
+                });
             });
         });
 

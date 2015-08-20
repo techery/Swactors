@@ -25,7 +25,7 @@ describe(@"DTActor", ^{
         sutRef = [[DTActorRef alloc] initWithActor:sut caller:self];
     });
     
-    it(@"Should be correctly initialized", ^{
+    it(@"should be correctly initialized", ^{
         [[sut.serviceLocator shouldNot] beNil];
         [[(NSObject *)sut.actorSystem shouldNot] beNil];
         [[(NSObject *)sut.configs shouldNot] beNil];
